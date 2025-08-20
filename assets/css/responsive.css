@@ -1,0 +1,45 @@
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .gallery-img {
+        min-height: 250px !important;
+    }
+    
+    .hero__caption h1 {
+        font-size: 2.5rem;
+    }
+    
+    .count-down-wrapper .single-counter {
+        margin-bottom: 15px;
+    }
+    
+    .music-player {
+        padding: 20px 15px;
+    }
+    
+    .story-img img {
+        margin-bottom: 20px;
+    }
+    
+    .footer-logo {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero__caption h1 {
+        font-size: 2rem;
+    }
+    
+    .section-tittle h2 {
+        font-size: 1.8rem;
+    }
+    
+    .gallery-img {
+        min-height: 200px !important;
+    }
+}

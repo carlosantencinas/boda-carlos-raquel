@@ -1,0 +1,46 @@
+/* Agregar al final de tu archivo style.css o crear un nuevo archivo parallax.css */
+
+/* Estilos generales para elementos con efecto parallax */
+.parallax {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* Efecto parallax para el slider */
+.slider-area .single-slider {
+    background-attachment: fixed;
+}
+
+/* Efecto parallax para la sección de historia */
+.Our-story-area {
+    position: relative;
+}
+
+.story-caption.background-img {
+    background-attachment: fixed;
+}
+
+/* Efecto parallax para la sección de regalos */
+.gift-area {
+    background-attachment: fixed !important;
+}
+
+/* Efecto parallax para imágenes específicas */
+.parallax-img {
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    .parallax, 
+    .slider-area .single-slider,
+    .story-caption.background-img,
+    .gift-area {
+        background-attachment: scroll !important;
+    }
+}
