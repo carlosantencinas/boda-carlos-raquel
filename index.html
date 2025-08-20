@@ -667,5 +667,43 @@
             alert('Error al cargar Google Maps. Por favor, verifica tu conexión a internet.');
         };
     </script>
+    <body>
+    <!-- Audio para reproducción automática -->
+    <audio id="player" autoplay muted>
+        <source src="assets/audio/SOWK.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
+
+    <!-- Slider Area Start -->
+    <div class="slider-area">
+        <div class="slider-active">
+            <!-- Single Slider -->
+            <div class="single-slider slider-height hero-overly d-flex align-items-center">
+                <div class="container">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-xl-8 col-lg-6 col-md-8 ">
+                            <div class="hero__caption">
+                                <span data-animation="fadeInLeft" data-delay=".3s">04 de Octubre de 2025</span>
+                                <h1 data-animation="fadeInLeft" data-delay=".5s" data-duration="2000ms">Carlos<strong> & </strong> Raquel</h1>
+                                <p data-animation="fadeInLeft" data-delay=".9s">Nos casamos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Slider Area End -->
+
+    <!-- Script para activar sonido al click -->
+    <script>
+        const audio = document.getElementById("player");
+        document.addEventListener("click", () => {
+            audio.muted = false;
+            audio.play();
+        });
+    </script>
+</body>
+
 </body>
 </html>
