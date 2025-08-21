@@ -13,7 +13,19 @@ function shufflePlaylist() {
     const j = Math.floor(Math.random() * (i + 1));
     [shuffledPlaylist[i], shuffledPlaylist[j]] = [shuffledPlaylist[j], shuffledPlaylist[i]];
   }
-  currentIndex = 0;
+  
+  // Obtener el último índice reproducido o generar uno aleatorio
+  const lastPlayedIndex = localStorage.getItem('lastPlayedIndex');
+  const lastPlayedTime = localStorage.getItem('lastPlayedTime');
+  const currentTime = new Date().getTime();
+  
+  // Si ha pasado más de 1 hora desde la última reproducción, o es la primera vez
+  if (!lastPlayedIndex || !lastPlayedTime || (currentTime - lastPlayedTime > 3600000)) {
+    currentIndex = Math.floor(Math.random() * shuffledPlaylist.length);
+  } else {
+    // Reproducir la siguiente canción en la lista
+    currentIndex = (parseInt(lastPlayedIndex) + 1) % shuffledPlaylist.length;
+  }
 }
 
 // Reproducir canción
@@ -22,8 +34,14 @@ function playSong(index) {
   const song = shuffledPlaylist[index];
   const src = song.dataset.src;
   player.src = src;
-  player.play();
+  player.play().catch(error => {
+    console.log('La reproducción automática fue prevenida:', error);
+  });
   songTitle.textContent = song.textContent;
+
+  // Guardar en localStorage
+  localStorage.setItem('lastPlayedIndex', currentIndex);
+  localStorage.setItem('lastPlayedTime', new Date().getTime());
 
   // Actualizar clases
   playlistItems.forEach((item) => item.classList.remove('playing'));
@@ -34,7 +52,9 @@ function playSong(index) {
 playlistItems.forEach((item) => {
   item.addEventListener('click', () => {
     const index = shuffledPlaylist.indexOf(item);
-    playSong(index);
+    if (index !== -1) {
+      playSong(index);
+    }
   });
 });
 
@@ -53,6 +73,6 @@ player.addEventListener('ended', () => {
   playSong(currentIndex);
 });
 
-// 🔥 Inicializar: mezclar y empezar aleatorio
+// Inicializar: mezclar y empezar con canción aleatoria
 shufflePlaylist();
 playSong(currentIndex);

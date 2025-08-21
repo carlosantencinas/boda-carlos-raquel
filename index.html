@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="es">
 <head>
     <meta charset="utf-8">
@@ -6,10 +6,9 @@
     <title>Boda de Carlos & Raquel | 4 de Octubre 2025</title>
     <meta name="description" content="Celebra con nosotros nuestra boda el 4 de Octubre de 2025">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <!-- <link rel="manifest" href="site.webmanifest"> -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
-    <!-- CSS here -->
+    <!-- CSS aquí -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/flaticon.css">
@@ -26,6 +25,59 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
     <!-- Estilos para el reproductor de música -->
     <link rel="stylesheet" href="assets/css/music-player.css">
+    
+    <style>
+        /* Estilos para el mapa alternativo */
+        .map-container {
+            height: 400px;
+            background-color: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .map-placeholder {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .map-placeholder i {
+            font-size: 48px;
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+        
+        .map-placeholder h3 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .map-placeholder p {
+            margin-bottom: 5px;
+            color: #6c757d;
+        }
+        
+        .btn-map {
+            background-color: #d4af37;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 15px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-map:hover {
+            background-color: #b8941f;
+            color: white;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
 <!-- Preloader Start -->
@@ -39,8 +91,6 @@
         </div>
     </div>
 </div>
-
-
 
 <main>
     <!--? Slider Area Start-->
@@ -113,92 +163,106 @@
             </div>
             
             <!-- Tarjeta centrada -->
-            <div class="row justify-content-center align-items-end">
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single-card active text-center mb-30">
-                        <div class="card-top">
-                            <span class="flaticon-project"></span>
-                            <h4>La Ceremonia</h4>
-                        </div>
-                        <div class="card-bottom">
-                            <ul>
-                                <li><i class="fas fa-calendar-alt"></i>04 de Octubre, 2025</li>
-                                <li><i class="far fa-clock"></i>6:00 PM</li>
-                                <li><i class="fas fa-map-marker-alt"></i>Parroquia San Miguel</li>
-                                <li>Arenales N°10, Sucre</li>
-                                <li><a href="#map" class="map-link"><i class="far fa-map"></i> Ver en el mapa</a></li>
-                            </ul>
-                        </div>
-                    </div>
+<div class="row justify-content-center align-items-end">
+    <div class="col-xl-4 col-lg-4 col-md-6">
+        <div class="single-card active text-center mb-30">
+            <div class="card-top">
+                <!-- Imagen con marco circular -->
+                <div class="icon-container">
+                    <img src="assets/img/gallery/iglesia.png" alt="Iglesia" class="church-icon">
                 </div>
+                <h4>La Ceremonia</h4>
             </div>
+            <div class="card-bottom">
+                <ul>
+                    <li><i class="fas fa-calendar-alt"></i>04 de Octubre, 2025</li>
+                    <li><i class="far fa-clock"></i>6:00 PM</li>
+                    <li><i class="fas fa-map-marker-alt"></i>Parroquia San Miguel</li>
+                    <li>Arenales N°10, Sucre</li>
+                    <li><a href="#map-section" class="map-link"><i class="far fa-map"></i> Ver en el mapa</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .icon-container {
+        width: 180px;
+        height: 180px;
+        margin: 0 auto 15px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: #f8f9fa;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        border: 2px solid #d4af37;
+    }
+    
+    .church-icon {
+        max-width: 150px;
+        max-height: 150px;
+        object-fit: contain;
+    }
+</style>
         </div>
     </section>
     <!-- Services Card End -->
 
     <!-- Count Down Start -->
-<div class="count-down-area">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-12 col-md-12">
-        <div class="count-down-wrapper">
-          <div class="row justify-content-between">
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <!-- Counter Up -->
-              <div class="single-counter text-center">
-                <span id="days" class="counter">0</span>
-                <p>días</p>
-              </div>
+    <div class="count-down-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12 col-md-12">
+                    <div class="count-down-wrapper">
+                        <div class="row justify-content-between">
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <!-- Counter Up -->
+                                <div class="single-counter text-center">
+                                    <span id="days" class="counter">0</span>
+                                    <p>días</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-6 col-sm-6">
+                                <!-- Counter Up -->
+                                <div class="single-counter text-center">
+                                    <span id="hours" class="counter">0</span>
+                                    <p>horas</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-6 col-sm-6">
+                                <!-- Counter Up -->
+                                <div class="single-counter text-center">
+                                    <span id="minutes" class="counter">0</span>
+                                    <p>mins</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <!-- Counter Up -->
+                                <div class="single-counter text-center">
+                                    <span id="seconds" class="counter">0</span>
+                                    <p>seg</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-2 col-md-6 col-sm-6">
-              <!-- Counter Up -->
-              <div class="single-counter text-center">
-                <span id="hours" class="counter">0</span>
-                <p>horas</p>
-              </div>
-            </div>
-            <div class="col-lg-2 col-md-6 col-sm-6">
-              <!-- Counter Up -->
-              <div class="single-counter text-center">
-                <span id="minutes" class="counter">0</span>
-                <p>mins</p>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <!-- Counter Up -->
-              <div class="single-counter text-center">
-                <span id="seconds" class="counter">0</span>
-                <p>seg</p>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
-</div>
-<!-- Count Down End -->
-
+    <!-- Count Down End -->
+     
 <style>
 /* Fondo estilo Win11 */
-.count-down-wrapper {
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(12px);
-  border-radius: 20px;
-  padding: 40px 20px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease-in-out;
-}
+
 
 /* Animación sutil */
-.count-down-wrapper:hover {
-  transform: scale(1.02);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
-}
+
 
 /* Estilo de cada contador */
 .single-counter {
-  background: rgba(0, 39, 46, 1);
+  background: rgba(0, 39, 46, 0.6);
   backdrop-filter: blur(10px);
   padding: 25px 15px;
   border-radius: 16px;
@@ -206,7 +270,7 @@
 }
 
 .single-counter:hover {
-  background: rgba(0, 162, 255, 0.9);
+  background: rgba(0, 162, 255, 0.5);
   transform: translateY(-5px);
 }
 
@@ -232,7 +296,6 @@
   color: #444;
 }
 </style>
-
 
     <!--? Gallery Area Start -->
     <div class="gallery-area section-padding4">
@@ -438,7 +501,18 @@
     <!--? Start map Area-->
     <section class="contact-sections" id="map-section">
         <div class="d-area">
-            <div id="map" style="height: 400px; position: relative; overflow: hidden;"></div>
+            <!-- Mapa alternativo en caso de que Google Maps falle -->
+            <div id="map-alternative" class="map-container">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Ubicación de la Ceremonia</h3>
+                    <p><strong>Parroquia San Miguel</strong></p>
+                    <p>Arenales N°10, Sucre</p>
+                    <p>4 de Octubre, 2025 - 6:00 PM</p>
+                    <a href="https://www.google.com/maps?q=Parroquia+San+Miguel+Arenales+Sucre" target="_blank" class="btn-map">Abrir en Google Maps</a>
+                </div>
+            </div>
+            <div id="map" style="height: 400px; position: relative; overflow: hidden; display: none;"></div>
         </div>
     </section>
     <!--? End map Area -->
@@ -539,11 +613,6 @@
     <script src="assets/js/music-player.js"></script>
     <script src="assets/js/gallery.js"></script>
     
-    <!-- Google Maps - Carga optimizada -->
-    <script async defer 
-        src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY_VÁLIDA&callback=initMap&loading=async">
-    </script>
-    
     <!-- Script para el contador regresivo -->
     <script>
         const countdownDate = new Date("October 4, 2025 18:00:00").getTime();
@@ -579,40 +648,36 @@
     <!-- Script para ajustar imágenes en móviles - Optimizado -->
     <script>
         function adjustImagesForMobile() {
-            // Usar requestAnimationFrame para minimizar reflujos
-            requestAnimationFrame(() => {
-                document.querySelectorAll('img').forEach(function(img) {
-                    if (!img.classList.contains('img-responsive')) {
-                        img.classList.add('img-responsive');
-                    }
-                });
+            document.querySelectorAll('img').forEach(function(img) {
+                if (!img.classList.contains('img-responsive')) {
+                    img.classList.add('img-responsive');
+                }
+            });
+            
+            document.querySelectorAll('[style*="background-image"]').forEach(function(el) {
+                el.style.backgroundSize = 'cover';
+                el.style.backgroundPosition = 'center';
+                el.style.backgroundRepeat = 'no-repeat';
                 
-                document.querySelectorAll('[style*="background-image"]').forEach(function(el) {
-                    el.style.backgroundSize = 'cover';
-                    el.style.backgroundPosition = 'center';
-                    el.style.backgroundRepeat = 'no-repeat';
-                    
-                    if (window.innerWidth < 768) {
-                        if (!el.style.minHeight) {
-                            el.style.minHeight = '250px';
-                        }
+                if (window.innerWidth < 768) {
+                    if (!el.style.minHeight) {
+                        el.style.minHeight = '250px';
                     }
-                });
-                
-                document.querySelectorAll('.gallery-img').forEach(function(galleryImg) {
-                    if (window.innerWidth < 768) {
-                        galleryImg.style.height = '250px';
-                    } else {
-                        galleryImg.style.height = '';
-                    }
-                });
+                }
+            });
+            
+            document.querySelectorAll('.gallery-img').forEach(function(galleryImg) {
+                if (window.innerWidth < 768) {
+                    galleryImg.style.height = '250px';
+                } else {
+                    galleryImg.style.height = '';
+                }
             });
         }
 
-        // Usar event listeners pasivos
-        window.addEventListener('load', adjustImagesForMobile, { passive: true });
-        window.addEventListener('resize', adjustImagesForMobile, { passive: true });
-        document.addEventListener('DOMContentLoaded', adjustImagesForMobile, { passive: true });
+        window.addEventListener('load', adjustImagesForMobile);
+        window.addEventListener('resize', adjustImagesForMobile);
+        document.addEventListener('DOMContentLoaded', adjustImagesForMobile);
     </script>
     
     <!-- Script para validación del formulario -->
@@ -634,56 +699,91 @@
         });
     </script>
     
-    <!-- Google Maps con AdvancedMarkerElement -->
+    <!-- Script para el reproductor de música -->
     <script>
-        function initMap() {
-            // Coordenadas de la Parroquia San Miguel en Sucre (coordenadas de ejemplo)
-            const uluru = {lat: -19.0472, lng: -65.2596};
-            const grayStyles = [{
-                featureType: "all",
-                stylers: [
-                    {saturation: -90},
-                    {lightness: 50}
-                ]
-            }];
-            
-            const map = new google.maps.Map(document.getElementById('map'), {
-                center: uluru,
-                zoom: 15,
-                styles: grayStyles,
-                scrollwheel: false
+    document.addEventListener('DOMContentLoaded', function() {
+        const player = document.getElementById('player');
+        const playlist = document.getElementById('playlist');
+        const items = playlist.getElementsByTagName('li');
+        const songTitle = document.getElementById('song-title');
+        const randomBtn = document.getElementById('random-btn');
+        
+        let currentIndex = 0;
+        let shuffledPlaylist = [];
+        
+        // Función para barajar la lista de reproducción
+        function shufflePlaylist() {
+            shuffledPlaylist = Array.from(items);
+            for (let i = shuffledPlaylist.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffledPlaylist[i], shuffledPlaylist[j]] = [shuffledPlaylist[j], shuffledPlaylist[i]];
+            }
+            // Seleccionar un índice aleatorio inicial
+            currentIndex = Math.floor(Math.random() * shuffledPlaylist.length);
+        }
+        
+        // Reproducir canción
+        function playSong(index) {
+            currentIndex = index;
+            const song = shuffledPlaylist[index];
+            const src = song.getAttribute('data-src');
+            player.src = src;
+            player.play().catch(error => {
+                console.log('La reproducción automática fue prevenida:', error);
             });
-            
-            // Usar AdvancedMarkerElement en lugar del marcador obsoleto
-            const marker = new google.maps.marker.AdvancedMarkerElement({
-                map,
-                position: uluru,
-                title: 'Parroquia San Miguel - Lugar de la ceremonia'
+            songTitle.textContent = song.textContent;
+
+            // Actualizar clases
+            for (let j = 0; j < items.length; j++) {
+                items[j].classList.remove('playing');
+            }
+            song.classList.add('playing');
+        }
+        
+        // Inicializar: mezclar y empezar con canción aleatoria
+        shufflePlaylist();
+        playSong(currentIndex);
+        
+        // Reproducir al hacer clic en una canción de la lista
+        for (let i = 0; i < items.length; i++) {
+            items[i].addEventListener('click', function() {
+                const index = shuffledPlaylist.indexOf(this);
+                if (index !== -1) {
+                    playSong(index);
+                }
             });
         }
         
-        // Manejar errores de carga de Google Maps
-        window.gm_authFailure = function() {
-            alert('Error al cargar Google Maps. Por favor, verifica tu conexión a internet.');
-        };
-    </script>
-    <body>
-    <!-- Audio para reproducción automática -->
-    <audio id="player" autoplay muted>
-        <source src="assets/audio/SOWK.mp3" type="audio/mpeg">
-        Tu navegador no soporta audio.
-    </audio>
-
-
-    <!-- Script para activar sonido al click -->
+        // Botón de canción aleatoria (nuevo orden aleatorio)
+        randomBtn.addEventListener('click', function() {
+            shufflePlaylist();
+            playSong(currentIndex);
+        });
+        
+        // Pasar a la siguiente canción al terminar
+        player.addEventListener('ended', function() {
+            currentIndex = (currentIndex + 1) % shuffledPlaylist.length;
+            playSong(currentIndex);
+        });
+    });
+</script>
+    
+    <!-- Script para activar sonido al click (solo una vez) -->
     <script>
-        const audio = document.getElementById("player");
-        document.addEventListener("click", () => {
-            audio.muted = false;
-            audio.play();
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('player');
+            let audioEnabled = false;
+            
+            document.addEventListener('click', function() {
+                if (!audioEnabled) {
+                    audio.play().then(() => {
+                        audioEnabled = true;
+                    }).catch(error => {
+                        console.log('La reproducción automática fue prevenida:', error);
+                    });
+                }
+            });
         });
     </script>
-</body>
-
 </body>
 </html>
