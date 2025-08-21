@@ -81,16 +81,67 @@
 </head>
 <body>
 <!-- Preloader Start -->
+<!-- Preloader Start -->
 <div id="preloader-active">
-    <div class="preloader d-flex align-items-center justify-content-center">
-        <div class="preloader-inner position-relative">
-            <div class="preloader-circle"></div>
-            <div class="preloader-img pere-text">
-                <img src="assets/img/logo/logo.png" alt="Logo Carlos y Raquel">
-            </div>
-        </div>
+  <div class="preloader d-flex align-items-center justify-content-center">
+    <div class="preloader-inner">
+      <div class="preloader-circle"></div>
+      <div class="preloader-img">
+        <img src="assets/img/logo/logo.png" alt="Logo Carlos y Raquel">
+      </div>
     </div>
+  </div>
 </div>
+
+<style>
+  #preloader-active {
+    position: fixed;
+    inset: 0;
+    background: #fff;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .preloader-inner {
+    position: relative;
+    width: 120px;
+    height: 120px;
+  }
+
+  /* círculo fijo en su lugar */
+  .preloader-circle {
+    position: absolute;
+    inset: 0;
+    border: 4px solid #ccc;
+    border-top: 4px solid #2E8B57;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  /* logo perfectamente centrado */
+  .preloader-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(-500%); /* súbelo un poco */
+    width: 60%;
+  }
+
+  .preloader-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>
+
 
 <main>
     <!--? Slider Area Start-->
