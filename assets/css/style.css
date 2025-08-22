@@ -1601,7 +1601,7 @@ hr {
   position: relative;
   border-style: solid;
   border-width: 1px;
-  border-top-color: #ff2828;
+  border-top-color: #004872ff;
   border-bottom-color: transparent;
   border-left-color: transparent;
   border-right-color: transparent;
@@ -1630,7 +1630,7 @@ hr {
   display: inline-block;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  transform: translateY(-100%);
   padding-top: 6px;
   -webkit-transition: 0.6s;
   -o-transition: 0.6s;
