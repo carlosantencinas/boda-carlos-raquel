@@ -1,1110 +1,1331 @@
 <!DOCTYPE html>
 <html class="no-js" lang="es">
 <head>
-
     <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boda de Carlos & Raquel | 4 de Octubre 2025</title>
-  <meta name="description" content="¡Celebra con nosotros nuestra boda el 4 de Octubre 2025!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boda de Carlos & Raquel | 4 de Octubre 2025</title>
+    <meta name="description" content="¡Celebra con nosotros nuestra boda el 4 de Octubre 2025!">
 
-  <!-- Open Graph para WhatsApp -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://carlosantencinas.github.io/boda-carlos-raquel/">
-  <meta property="og:title" content="Boda de Carlos & Raquel">
-  <meta property="og:description" content="¡Acompáñanos en nuestro gran día, el 4 de Octubre 2025!">
-  <meta property="og:image" content="https://carlosantencinas.github.io/boda-carlos-raquel/logo.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-
-  
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Boda de Carlos & Raquel | 4 de Octubre 2025</title>
-  <meta name="description" content="Celebra con nosotros nuestra boda el 4 de Octubre de 2025">
-  
-  <!-- Vista responsive y pantalla completa -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  
-  <link rel="shortcut icon" type="image/x-icon" href="assets/img/navi.ico">
-
-  <!-- Librerías CSS -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-  <link rel="stylesheet" href="assets/css/flaticon.css">
-  <link rel="stylesheet" href="assets/css/slicknav.css">
-  <link rel="stylesheet" href="assets/css/animate.min.css">
-  <link rel="stylesheet" href="assets/css/magnific-popup.css">
-  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-  <link rel="stylesheet" href="assets/css/themify-icons.css">
-  <link rel="stylesheet" href="assets/css/slick.css">
-  <link rel="stylesheet" href="assets/css/nice-select.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/parallax.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
-  <link rel="stylesheet" href="assets/css/music-player.css">
-
-  <!-- Estilos personalizados consolidados -->
-  <style>
-    /* ===== EFECTOS PARALLAX ===== */
-    .parallax-container {
-      position: relative;
-      overflow: hidden;
-      width: 100%;
-    }
+    <!-- Open Graph para WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://carlosantencinas.github.io/boda-carlos-raquel/">
+    <meta property="og:title" content="Boda de Carlos & Raquel">
+    <meta property="og:description" content="¡Acompáñanos en nuestro gran día, el 4 de Octubre 2025!">
+    <meta property="og:image" content="https://carlosantencinas.github.io/boda-carlos-raquel/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     
-    .parallax-layer {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      will-change: transform;
-    }
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     
-    .parallax-back { transform: translateZ(-300px) scale(2); z-index: 1; }
-    .parallax-base { transform: translateZ(0); z-index: 2; }
-    .parallax-fore { transform: translateZ(150px) scale(0.8); z-index: 3; }
+    <!-- Vista responsive y pantalla completa -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     
-    /* Ajustes para las secciones existentes */
-    .slider-area, .Our-story-area, .pricing-card-area, .count-down-area,
-    .gallery-area, .gift-area, .contact-form, .brand-area, .contact-sections {
-      position: relative;
-      z-index: 2;
-    }
-    
-    /* Capas de fondo para el efecto parallax */
-    .parallax-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      pointer-events: none;
-    }
-    
-    .parallax-bg-1 {
-      background: url('assets/img/parallax/bg1.png') center center no-repeat;
-      background-size: cover;
-      opacity: 0.1;
-      transform: translateZ(-500px) scale(2);
-    }
-    
-    .parallax-bg-2 {
-      background: url('assets/img/parallax/bg2.png') center center no-repeat;
-      background-size: cover;
-      opacity: 0.15;
-      transform: translateZ(-300px) scale(1.8);
-    }
-    
-    .parallax-bg-3 {
-      background: url('assets/img/parallax/bg3.png') center center no-repeat;
-      background-size: cover;
-      opacity: 0.2;
-      transform: translateZ(-100px) scale(1.2);
-    }
-    
-    /* Elementos flotantes para parallax */
-    .parallax-element {
-      position: absolute;
-      will-change: transform;
-    }
-    
-    .floating-hearts {
-      background: url('assets/img/parallax/hearts.png') no-repeat;
-      width: 150px;
-      height: 150px;
-      top: 20%;
-      left: 10%;
-      opacity: 0.7;
-      transform: translateZ(100px) scale(0.8);
-      animation: float 8s ease-in-out infinite;
-    }
-    
-    .floating-ring {
-      background: url('assets/img/parallax/ring.png') no-repeat;
-      width: 100px;
-      height: 100px;
-      top: 60%;
-      right: 15%;
-      opacity: 0.8;
-      transform: translateZ(200px) scale(0.7);
-      animation: float 10s ease-in-out infinite;
-    }
-    
-    .floating-flower {
-      background: url('assets/img/parallax/flower.png') no-repeat;
-      width: 120px;
-      height: 120px;
-      bottom: 15%;
-      left: 15%;
-      opacity: 0.6;
-      transform: translateZ(150px) scale(0.9);
-      animation: float 12s ease-in-out infinite;
-    }
-    
-    @keyframes float {
-      0%, 100% { transform: translateY(0) translateZ(100px) scale(0.8); }
-      50% { transform: translateY(-20px) translateZ(100px) scale(0.8); }
-    }
-    
-    /* ===== Estilos mapa alternativo ===== */
-    .map-container {
-      height: 400px;
-      background-color: #f8f9fa;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      border-radius: 8px;
-      margin: 20px 0;
-    }
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/navi.ico">
 
-    .map-placeholder {
-      text-align: center;
-      padding: 20px;
-    }
+    <!-- Librerías CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/parallax.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/music-player.css">
 
-    .map-placeholder i {
-      font-size: 48px;
-      color: #d4af37;
-      margin-bottom: 15px;
-    }
+    <!-- Estilos personalizados consolidados -->
+    <style>
+        /* ===== EFECTOS PARALLAX ===== */
+        .parallax-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+        
+        .parallax-layer {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            will-change: transform;
+        }
+        
+        .parallax-back { transform: translateZ(-300px) scale(2); z-index: 1; }
+        .parallax-base { transform: translateZ(0); z-index: 2; }
+        .parallax-fore { transform: translateZ(150px) scale(0.8); z-index: 3; }
+        
+        /* Ajustes para las secciones existentes */
+        .slider-area, .Our-story-area, .pricing-card-area, .count-down-area,
+        .gallery-area, .gift-area, .contact-form, .brand-area, .contact-sections {
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Capas de fondo para el efecto parallax */
+        .parallax-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        .parallax-bg-1 {
+            background: url('assets/img/parallax/bg1.png') center center no-repeat;
+            background-size: cover;
+            opacity: 0.1;
+            transform: translateZ(-500px) scale(2);
+        }
+        
+        .parallax-bg-2 {
+            background: url('assets/img/parallax/bg2.png') center center no-repeat;
+            background-size: cover;
+            opacity: 0.15;
+            transform: translateZ(-300px) scale(1.8);
+        }
+        
+        .parallax-bg-3 {
+            background: url('assets/img/parallax/bg3.png') center center no-repeat;
+            background-size: cover;
+            opacity: 0.2;
+            transform: translateZ(-100px) scale(1.2);
+        }
+        
+        /* Elementos flotantes para parallax */
+        .parallax-element {
+            position: absolute;
+            will-change: transform;
+        }
+        
+        .floating-hearts {
+            background: url('assets/img/parallax/hearts.png') no-repeat;
+            width: 150px;
+            height: 150px;
+            top: 20%;
+            left: 10%;
+            opacity: 0.7;
+            transform: translateZ(100px) scale(0.8);
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        .floating-ring {
+            background: url('assets/img/parallax/ring.png') no-repeat;
+            width: 100px;
+            height: 100px;
+            top: 60%;
+            right: 15%;
+            opacity: 0.8;
+            transform: translateZ(200px) scale(0.7);
+            animation: float 10s ease-in-out infinite;
+        }
+        
+        .floating-flower {
+            background: url('assets/img/parallax/flower.png') no-repeat;
+            width: 120px;
+            height: 120px;
+            bottom: 15%;
+            left: 15%;
+            opacity: 0.6;
+            transform: translateZ(150px) scale(0.9);
+            animation: float 12s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateZ(100px) scale(0.8); }
+            50% { transform: translateY(-20px) translateZ(100px) scale(0.8); }
+        }
+        
+        /* ===== Estilos mapa alternativo ===== */
+        .map-container {
+            height: 400px;
+            background-color: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
 
-    .map-placeholder h3 {
-      margin-bottom: 15px;
-      color: #2c3e50;
-    }
+        .map-placeholder {
+            text-align: center;
+            padding: 20px;
+        }
 
-    .map-placeholder p {
-      margin-bottom: 5px;
-      color: #6c757d;
-    }
+        .map-placeholder i {
+            font-size: 48px;
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
 
-    .btn-map {
-      background-color: #d4af37;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      margin-top: 15px;
-      text-decoration: none;
-      display: inline-block;
-      transition: background-color 0.3s;
-    }
+        .map-placeholder h3 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
 
-    .btn-map:hover {
-      background-color: #b8941f;
-      color: white;
-      text-decoration: none;
-    }
+        .map-placeholder p {
+            margin-bottom: 5px;
+            color: #6c757d;
+        }
 
-    /* ===== Pantalla completa y hojas ===== */
-    body {
-      margin: 0;
-      padding: 0;
-      background: #fafafa;
-      overflow-x: hidden;
-      font-family: 'Segoe UI', sans-serif;
-      color: #333;
-    }
+        .btn-map {
+            background-color: #d4af37;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 15px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
 
-    .hoja {
-      position: fixed;
-      top: -50px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      pointer-events: none;
-      opacity: 0.9;
-      animation: caer linear;
-    }
+        .btn-map:hover {
+            background-color: #b8941f;
+            color: white;
+            text-decoration: none;
+        }
 
-    @keyframes caer {
-      to {
-        transform: translateY(100vh) rotate(360deg);
-        opacity: 0;
-      }
-    }
+        /* ===== Pantalla completa y hojas ===== */
+        body {
+            margin: 0;
+            padding: 0;
+            background: #fafafa;
+            overflow-x: hidden;
+            font-family: 'Segoe UI', sans-serif;
+            color: #333;
+        }
 
-    /* Botón fijo para activar/desactivar lluvia */
-    #btnLluvia {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      z-index: 9999;
-    }
+        .hoja {
+            position: fixed;
+            top: -50px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            pointer-events: none;
+            opacity: 0.9;
+            animation: caer linear;
+        }
 
-    #btnLluvia img {
-      width: 50px;
-      height: 50px;
-    }
-    
-    /* Preloader */
-    #preloader-active {
-      position: fixed;
-      inset: 0;
-      background: #fff;
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+        @keyframes caer {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
 
-    .preloader-inner {
-      position: relative;
-      width: 120px;
-      height: 120px;
-    }
+        /* Botón fijo para activar/desactivar lluvia */
+        #btnLluvia {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 9999;
+        }
 
-    .preloader-circle {
-      position: absolute;
-      inset: 0;
-      border: 4px solid #ccc;
-      border-top: 4px solid #2E8B57;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
+        #btnLluvia img {
+            width: 50px;
+            height: 50px;
+        }
+        
+        /* Preloader */
+        #preloader-active {
+            position: fixed;
+            inset: 0;
+            background: #fff;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    .preloader-img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) translateY(-500%);
-      width: 60%;
-    }
+        .preloader-inner {
+            position: relative;
+            width: 120px;
+            height: 120px;
+        }
 
-    .preloader-img img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
+        .preloader-circle {
+            position: absolute;
+            inset: 0;
+            border: 4px solid #ccc;
+            border-top: 4px solid #2E8B57;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
 
-    @keyframes spin {
-      100% { transform: rotate(360deg); }
-    }
-    
-    /* Nuestra historia */
-    .historia { padding: 20px; }
-    .titulo-modern {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #222;
-      margin-bottom: 20px;
-    }
-    .decorador {
-      width: 300px;
-      height: 4px;
-      background: linear-gradient(90deg, #00284eff, #00e2e2ff);
-      margin: 0 auto 25px auto;
-      border-radius: 10px;
-    }
-    .texto-intro {
-      color: #666;
-      font-size: 1.1rem;
-      line-height: 1.7;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    .card-historia {
-      background: #fff;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card-historia:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 25px rgba(0,0,0,0.15);
-    }
-    .card-historia h4 { font-weight: 600; color: #444; }
-    .card-historia p { color: #555; line-height: 1.6; }
-    .story-img img {
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      transition: transform 0.4s ease;
-    }
-    .story-img img:hover { transform: scale(1.05); }
-    
-    /* Icono iglesia */
-    .icon-container {
-      width: 180px;
-      height: 180px;
-      margin: 0 auto 15px auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      background-color: #f8f9fa;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      border: 2px solid #d4af37;
-    }
-    .church-icon {
-      max-width: 150px;
-      max-height: 150px;
-      object-fit: contain;
-    }
-    
-    /* Contador */
-    .single-counter {
-      background: rgba(0, 39, 46, 0.6);
-      backdrop-filter: blur(10px);
-      padding: 25px 15px;
-      border-radius: 16px;
-      transition: all 0.3s ease;
-    }
-    .single-counter:hover {
-      background: rgba(0, 162, 255, 0.5);
-      transform: translateY(-5px);
-    }
-    .counter {
-      display: block;
-      font-size: 5rem;
-      font-weight: 700;
-      color: #1a1a1a;
-      animation: pop 1s ease-in-out infinite alternate;
-    }
-    @keyframes pop {
-      from { transform: scale(1); }
-      to { transform: scale(1.05); }
-    }
-    .single-counter p {
-      margin-top: 10px;
-      font-size: 1.1rem;
-      font-weight: 500;
-      color: #444;
-    }
-    
-    /* Galería final */
-    .Gallery {
-      display: block;
-      position: relative;
-      padding-top: 90%;
-      transform-style: preserve-3d;
-      perspective: 100vw;
-    }
-    .Gallery > img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      cursor: pointer;
-      --circle-x: 50%;
-      --circle-y: 50%;
-    }
-    @keyframes openup {
-      to { clip-path: circle(100vw at var(--circle-x) var(--circle-y)); }
-    }
-    .open-enter-active {
-      clip-path: circle(0 at var(--circle-x) var(--circle-y));
-    }
-    .open-enter-to {
-      animation: openup 500ms ease-in;
-    }
-  </style>
+        .preloader-img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) translateY(-500%);
+            width: 60%;
+        }
+
+        .preloader-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Nuestra historia */
+        .historia { padding: 20px; }
+        .titulo-modern {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 20px;
+        }
+        .decorador {
+            width: 300px;
+            height: 4px;
+            background: linear-gradient(90deg, #00284eff, #00e2e2ff);
+            margin: 0 auto 25px auto;
+            border-radius: 10px;
+        }
+        .texto-intro {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .card-historia {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-historia:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+        }
+        .card-historia h4 { font-weight: 600; color: #444; }
+        .card-historia p { color: #555; line-height: 1.6; }
+        .story-img img {
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: transform 0.4s ease;
+        }
+        .story-img img:hover { transform: scale(1.05); }
+        
+        /* Icono iglesia */
+        .icon-container {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 15px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #f8f9fa;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border: 2px solid #d4af37;
+        }
+        .church-icon {
+            max-width: 150px;
+            max-height: 150px;
+            object-fit: contain;
+        }
+        
+        /* Contador */
+        .single-counter {
+            background: rgba(0, 39, 46, 0.6);
+            backdrop-filter: blur(10px);
+            padding: 25px 15px;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+        .single-counter:hover {
+            background: rgba(0, 162, 255, 0.5);
+            transform: translateY(-5px);
+        }
+        .counter {
+            display: block;
+            font-size: 5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            animation: pop 1s ease-in-out infinite alternate;
+        }
+        @keyframes pop {
+            from { transform: scale(1); }
+            to { transform: scale(1.05); }
+        }
+        .single-counter p {
+            margin-top: 10px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #444;
+        }
+        
+        /* Galería final */
+        .Gallery {
+            display: block;
+            position: relative;
+            padding-top: 90%;
+            transform-style: preserve-3d;
+            perspective: 100vw;
+        }
+        .Gallery > img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+            --circle-x: 50%;
+            --circle-y: 50%;
+        }
+        @keyframes openup {
+            to { clip-path: circle(100vw at var(--circle-x) var(--circle-y)); }
+        }
+        .open-enter-active {
+            clip-path: circle(0 at var(--circle-x) var(--circle-y));
+        }
+        .open-enter-to {
+            animation: openup 500ms ease-in;
+        }
+
+        /* ===== MEJORAS PARA EL REPRODUCTOR DE MÚSICA EN MÓVILES ===== */
+        .music-player {
+            padding: 20px 0;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .music-player h2 {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        #current-song {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        #current-song i {
+            margin-right: 10px;
+            color: #d4af37;
+        }
+
+        #song-title {
+            font-weight: bold;
+            color: #d4af37;
+        }
+
+        #player {
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        /* Para navegadores WebKit (Chrome, Safari) */
+        #player::-webkit-media-controls-panel {
+            background: linear-gradient(90deg, #e1fff9ff, #ffffffff);
+        }
+
+        #playlist {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+        }
+
+        #playlist li {
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #playlist li:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        #playlist li.playing {
+            background: rgba(212, 175, 55, 0.3);
+            border-left: 4px solid #d4af37;
+        }
+
+        .music-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .music-btn {
+            padding: 12px 20px;
+            background: #d4af37;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .music-btn:hover {
+            background: #b8941f;
+            transform: translateY(-2px);
+        }
+
+        .music-btn i {
+            margin-right: 8px;
+        }
+
+        /* Para dispositivos móviles */
+        @media (max-width: 768px) {
+            #player {
+                height: 40px;
+            }
+            
+            #playlist li {
+                padding: 15px;
+                font-size: 16px;
+            }
+            
+            .music-btn {
+                padding: 15px 25px;
+                font-size: 18px;
+            }
+            
+            #current-song {
+                font-size: 18px;
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            #current-song i {
+                margin-right: 0;
+                margin-bottom: 5px;
+                font-size: 24px;
+            }
+        }
+
+        /* Botón de activación de audio para móviles */
+        #audio-permission {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 15px 25px;
+            background: #d4af37;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 10000;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        #audio-permission.show {
+            display: block;
+            animation: fadeInUp 0.5s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate(-50%, 20px);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, 0);
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <!-- Indicador de scroll -->
-  <div class="scroll-indicator">
-    <span>Nos casamos</span>
-    <div class="arrow"></div>
-  </div>
+    <!-- Botón de activación de audio (aparece solo en móviles) -->
+    <button id="audio-permission">Activar música 🎵</button>
 
-  <!-- Botón con imagen PNG -->
-  <button id="btnLluvia">
-    <img src="assets/img/kolog/navi.png" alt="lluvia">
-  </button>
-
-  <script>
-    // Array con imágenes de hojas
-    const hojas = [
-      "assets/img/kolog/hoja1.png",
-      "assets/img/kolog/hoja2.png",
-      "assets/img/kolog/hoja3.png",
-      "assets/img/kolog/hoja4.png",
-      "assets/img/kolog/obab.png"
-    ];
-
-    let intervaloLluvia = null;
-    let lluviaActiva = false;
-
-    function crearHoja() {
-      const hoja = document.createElement("div");
-      hoja.classList.add("hoja");
-      const img = hojas[Math.floor(Math.random() * hojas.length)];
-      hoja.style.backgroundImage = `url(${img})`;
-      hoja.style.left = Math.random() * 100 + "vw";
-      const size = 40 + Math.random() * 40;
-      hoja.style.width = size + "px";
-      hoja.style.height = size + "px";
-      const duracion = 5 + Math.random() * 5;
-      hoja.style.animationDuration = duracion + "s";
-      document.body.appendChild(hoja);
-      setTimeout(() => hoja.remove(), duracion * 1000);
-    }
-
-    document.getElementById("btnLluvia").addEventListener("click", () => {
-      if (lluviaActiva) {
-        clearInterval(intervaloLluvia);
-        intervaloLluvia = null;
-        lluviaActiva = false;
-      } else {
-        intervaloLluvia = setInterval(crearHoja, 400);
-        lluviaActiva = true;
-      }
-    });
-  </script>
-
-  <!-- Preloader Start -->
-  <div id="preloader-active">
-    <div class="preloader d-flex align-items-center justify-content-center">
-      <div class="preloader-inner">
-        <div class="preloader-circle"></div>
-        <div class="preloader-img">
-          <img src="assets/img/logo/logo.png" alt="Logo Carlos y Raquel">
-        </div>
-      </div>
+    <!-- Indicador de scroll -->
+    <div class="scroll-indicator">
+        <span>Nos casamos</span>
+        <div class="arrow"></div>
     </div>
-  </div>
 
-  <main>
-    <!-- Slider Area Start -->
-    <div class="slider-area">
-      <div class="slider-active" style="height: 500px;">
-        <!-- Single Slider -->
-        <div class="single-slider slider-height hero-overly d-flex align-items-center" style="height: 450px;">
-          <div class="container" style="height: 50px;">
-            <div class="row d-flex align-items-center">
-              <div class="col-xl-8 col-lg-6 col-md-8">
-                <div class="hero__caption" style="top: 90px;height: 253.8px;bottom: 0px;">
-                  <span data-animation="fadeInLeft" data-delay=".3s">04 de Octubre de 2025</span>
-                  <h1 data-animation="fadeInLeft" data-delay=".5s" data-duration="2000ms">
-                    Carlos<strong> & </strong> Raquel
-                  </h1>
+    <!-- Botón con imagen PNG -->
+    <button id="btnLluvia">
+        <img src="assets/img/kolog/navi.png" alt="lluvia">
+    </button>
+
+    <script>
+        // Array con imágenes de hojas
+        const hojas = [
+            "assets/img/kolog/hoja1.png",
+            "assets/img/kolog/hoja2.png",
+            "assets/img/kolog/hoja3.png",
+            "assets/img/kolog/hoja4.png",
+            "assets/img/kolog/obab.png"
+        ];
+
+        let intervaloLluvia = null;
+        let lluviaActiva = false;
+
+        function crearHoja() {
+            const hoja = document.createElement("div");
+            hoja.classList.add("hoja");
+            const img = hojas[Math.floor(Math.random() * hojas.length)];
+            hoja.style.backgroundImage = `url(${img})`;
+            hoja.style.left = Math.random() * 100 + "vw";
+            const size = 40 + Math.random() * 40;
+            hoja.style.width = size + "px";
+            hoja.style.height = size + "px";
+            const duracion = 5 + Math.random() * 5;
+            hoja.style.animationDuration = duracion + "s";
+            document.body.appendChild(hoja);
+            setTimeout(() => hoja.remove(), duracion * 1000);
+        }
+
+        document.getElementById("btnLluvia").addEventListener("click", () => {
+            if (lluviaActiva) {
+                clearInterval(intervaloLluvia);
+                intervaloLluvia = null;
+                lluviaActiva = false;
+            } else {
+                intervaloLluvia = setInterval(crearHoja, 400);
+                lluviaActiva = true;
+            }
+        });
+    </script>
+
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img">
+                    <img src="assets/img/logo/logo.png" alt="Logo Carlos y Raquel">
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-    <!-- Slider Area End -->
 
-    <!-- Our Story Start -->
-    <div class="Our-story-area story-padding" style="padding-top: 5px; padding-bottom: 5px;">
-      <div class="container historia">
-        <div class="row justify-content-center">
-          <div class="col-xl-7 col-lg-8 text-center">
-            <div class="section-tittle mb-5">
-              <h2 class="titulo-modern">Nuestra Historia de Amor</h2>
-              <div class="decorador"></div>
-              <p class="texto-intro">
-                “Entre los senderos de la vida nos encontramos, construimos nuestro amor con el tiempo y hoy somos felices de recibir la bendición de Dios.”
-              </p>
+    <main>
+        <!-- Slider Area Start -->
+        <div class="slider-area">
+            <div class="slider-active" style="height: 500px;">
+                <!-- Single Slider -->
+                <div class="single-slider slider-height hero-overly d-flex align-items-center" style="height: 450px;">
+                    <div class="container" style="height: 50px;">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-xl-8 col-lg-6 col-md-8">
+                                <div class="hero__caption" style="top: 90px;height: 253.8px;bottom: 0px;">
+                                    <span data-animation="fadeInLeft" data-delay=".3s">04 de Octubre de 2025</span>
+                                    <h1 data-animation="fadeInLeft" data-delay=".5s" data-duration="2000ms">
+                                        Carlos<strong> & </strong> Raquel
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
+        <!-- Slider Area End -->
 
-        <div class="row justify-content-center align-items-center g-5">
-          <div class="col-lg-5 col-md-6">
-            <div class="card-historia p-4">
-              <h4 class="mb-3">💍 La Propuesta</h4>
-              <p>Lo que parecía una celebración más se convirtió en la sorpresa más hermosa: luces, velas flores y una propuesta para unir nuestras vidas frente a Dios. Con un 'sí', decidimos continuar forjando nuestra leyenda.</p>
-            </div>
-          </div>
+        <!-- Our Story Start -->
+        <div class="Our-story-area story-padding" style="padding-top: 5px; padding-bottom: 5px;">
+            <div class="container historia">
+                <div class="row justify-content-center">
+                    <div class="col-xl-7 col-lg-8 text-center">
+                        <div class="section-tittle mb-5">
+                            <h2 class="titulo-modern">Nuestra Historia de Amor</h2>
+                            <div class="decorador"></div>
+                            <p class="texto-intro">
+                                “Entre los senderos de la vida nos encontramos, construimos nuestro amor con el tiempo y hoy somos felices de recibir la bendición de Dios.”
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
-          <div class="col-lg-5 col-md-6">
-            <div class="story-img text-center">
-              <img class="img-fluid" src="assets/img/gallery/story1.jpg" alt="Carlos y Raquel juntos">
+                <div class="row justify-content-center align-items-center g-5">
+                    <div class="col-lg-5 col-md-6">
+                        <div class="card-historia p-4">
+                            <h4 class="mb-3">💍 La Propuesta</h4>
+                            <p>Lo que parecía una celebración más se convirtió en la sorpresa más hermosa: luces, velas flores y una propuesta para unir nuestras vidas frente a Dios. Con un 'sí', decidimos continuar forjando nuestra leyenda.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 col-md-6">
+                        <div class="story-img text-center">
+                            <img class="img-fluid" src="assets/img/gallery/story1.jpg" alt="Carlos y Raquel juntos">
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-    <!-- Our Story End -->
-    
-    <!-- Services Start -->
-     
-     <section class="pricing-card-area section-padding30 section-bg" data-background="assets/img/gallery/section_bg1.png" style="background-image: url(&quot;assets/img/gallery/section_bg1.png&quot;);background-size: cover;background-position: center center;background-repeat: no-repeat;padding-top: 10px;padding-bottom: 10px;">
-      <div class="container">
-        <div class="row d-flex justify-content-center">
-          <div class="col-lg-8">
-            <div class="section-tittle text-center mb-70">
-              <h2>Información de la boda</h2>
-              <img src="assets/img/gallery/tittle_img.png" alt="Separador decorativo">
-              <p>“Cada pareja celebra el amor a su manera; nosotros hemos decidido hacerlo un poco distinto: en lugar de una recepción, cambiaremos el vals y las luces de salón por maletas y paisajes nuevos. Así, nuestro viaje será la mejor manera de recordar para siempre este gran comienzo.”</p>
-            </div>
-          </div>
-        </div>
+        <!-- Our Story End -->
         
-        <div class="row justify-content-center align-items-end">
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single-card active text-center mb-30">
-              <div class="card-top">
-                <div class="icon-container">
-                  <img src="assets/img/gallery/iglesia.png" alt="Iglesia" class="church-icon">
+        <!-- Services Start -->
+         
+         <section class="pricing-card-area section-padding30 section-bg" data-background="assets/img/gallery/section_bg1.png" style="background-image: url(&quot;assets/img/gallery/section_bg1.png&quot;);background-size: cover;background-position: center center;background-repeat: no-repeat;padding-top: 10px;padding-bottom: 10px;">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="section-tittle text-center mb-70">
+                            <h2>Información de la boda</h2>
+                            <img src="assets/img/gallery/tittle_img.png" alt="Separador decorativo">
+                            <p>“Cada pareja celebra el amor a su manera; nosotros hemos decidido hacerlo un poco distinto: en lugar de una recepción, cambiaremos el vals y las luces de salón por maletas y paisajes nuevos. Así, nuestro viaje será la mejor manera de recordar para siempre este gran comienzo.”</p>
+                        </div>
+                    </div>
                 </div>
-                <h4>La Ceremonia</h4>
-              </div>
-              <div class="card-bottom">
-                <ul>
-                  <li><i class="fas fa-calendar-alt"></i>04 de Octubre, 2025</li>
-                  <li><i class="far fa-clock"></i>6:00 PM</li>
-                  <li><i class="fas fa-map-marker-alt"></i>Parroquia San Miguel</li>
-                  <li>Arenales N°10, Sucre</li>
-                </ul>
-              </div>
+                
+                <div class="row justify-content-center align-items-end">
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="single-card active text-center mb-30">
+                            <div class="card-top">
+                                <div class="icon-container">
+                                    <img src="assets/img/gallery/iglesia.png" alt="Iglesia" class="church-icon">
+                                </div>
+                                <h4>La Ceremonia</h4>
+                            </div>
+                            <div class="card-bottom">
+                                <ul>
+                                    <li><i class="fas fa-calendar-alt"></i>04 de Octubre, 2025</li>
+                                    <li><i class="far fa-clock"></i>6:00 PM</li>
+                                    <li><i class="fas fa-map-marker-alt"></i>Parroquia San Miguel</li>
+                                    <li>Arenales N°10, Sucre</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Services Card End -->
+        </section>
+        <!-- Services Card End -->
 
-    <!-- Count Down Start -->
-    <div class="count-down-area">
-      <div class="container">
-        <div class="row justify-content-center">
-          <h2>Faltan estos días para el evento</h2>
-          <div class="col-lg-12 col-md-12">
-            <div class="count-down-wrapper">
-              <div class="row justify-content-between">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                  <div class="single-counter text-center">
-                    <span id="days" class="counter">0</span>
-                    <p>días</p>
-                  </div>
+        <!-- Count Down Start -->
+        <div class="count-down-area">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <h2>Faltan estos días para el evento</h2>
+                    <div class="col-lg-12 col-md-12">
+                        <div class="count-down-wrapper">
+                            <div class="row justify-content-between">
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <div class="single-counter text-center">
+                                        <span id="days" class="counter">0</span>
+                                        <p>días</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-6 col-sm-6">
+                                    <div class="single-counter text-center">
+                                        <span id="hours" class="counter">0</span>
+                                        <p>horas</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-6 col-sm-6">
+                                    <div class="single-counter text-center">
+                                        <span id="minutes" class="counter">0</span>
+                                        <p>mins</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <div class="single-counter text-center">
+                                        <span id="seconds" class="counter">0</span>
+                                        <p>seg</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-2 col-md-6 col-sm-6">
-                  <div class="single-counter text-center">
-                    <span id="hours" class="counter">0</span>
-                    <p>horas</p>
-                  </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6">
-                  <div class="single-counter text-center">
-                    <span id="minutes" class="counter">0</span>
-                    <p>mins</p>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                  <div class="single-counter text-center">
-                    <span id="seconds" class="counter">0</span>
-                    <p>seg</p>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
+        <!-- Count Down End -->
+         
+        <!-- Gallery Area Start -->
+        <div class="gallery-area section-padding4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-gallery mb-30">
+                            <div class="gallery-img" style="background-image: url(assets/img/gallery/gallery1.png);"></div>
+                            <div class="thumb-content-box">
+                                <div class="thumb-content">
+                                    <h3>Cita especial</h3>
+                                    <a href="assets/img/gallery/gallery1.png" class="menorie-icon"> <i class="ti-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-6 col-sm-6">
+                        <div class="single-gallery mb-30">
+                            <div class="gallery-img" style="background-image: url(assets/img/gallery/gallery2.png);"></div>
+                            <div class="thumb-content-box">
+                                <div class="thumb-content">
+                                    <h3>Tercer aniversario</h3>
+                                    <a href="assets/img/gallery/gallery2.png" class="menorie-icon"> <i class="ti-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-6 col-sm-6">
+                        <div class="single-gallery mb-30">
+                            <div class="gallery-img" style="background-image: url(assets/img/gallery/gallery3.png);"></div>
+                            <div class="thumb-content-box">
+                                <div class="thumb-content">
+                                    <h3>Primera cita</h3>
+                                    <a href="assets/img/gallery/gallery3.png" class="menorie-icon"> <i class="ti-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-gallery mb-30">
+                            <div class="gallery-img" style="background-image: url(assets/img/gallery/gallery4.png);"></div>
+                            <div class="thumb-content-box">
+                                <div class="thumb-content">
+                                    <h3>Nuestro Primer Viaje</h3>
+                                    <a href="assets/img/gallery/gallery4.png" class="menorie-icon"> <i class="ti-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Gallery Area End -->
+        
+        <!-- Gift Start -->
+        <section class="gift-area gift-padding fix" data-background="assets/img/gallery/section_bg3.png">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="gift-caption text-center">
+                            <h2>El mejor regalo</h2>
+                            <!-- Texto con efecto resaltado -->
+        <p style="font-size:1.6rem; line-height:1.6; text-align:center; padding:1rem; background:linear-gradient(90deg, #00725fff, #00363aff); border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.15);">
+            <span style="font-weight: normal ; color:#ffffff; text-shadow:1px 1px 3px rgba(0,0,0,0.1);">
+            No cargues con cajas ni envoltorios; mejor ayúdanos a llenar la alcancía para una gran aventura… tu aporte económico nos ayudará a vivirla.
+            </span> 
+        </p>
+
+        <!-- QR centrado -->
+        <div style="text-align: center;">
+            <a href="assets/img/gallery/QR-Carlos-Raquel.png" download="QR_Boda_Carlos&Raquel">
+                <img src="assets/img/gallery/QR-Carlos-Raquel.png" 
+                     alt="QR para aportar" 
+                     style="display:block; margin:0 auto; width:480px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.2); cursor:pointer;" />
+            </a>
+            <p style="margin-top:10px; color:#fff;">Haz clic en el QR para descargarlo</p>
+        </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Gift End -->
+        
+        <section class="brand-area" style="padding-top: 20px; padding-bottom: 0px;">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="section-tittle text-center mb-80" style="margin-bottom: 10px;">
+                            <img src="assets/img/gallery/tittle_img.png" alt="Separador decorativo">
+                            <h3>Con el amor de nuestras familias y el apoyo de nuestros Padrinos uniremos nuestras vidas ante Dios</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    <div class="contact-form fix" id="rsvp-section" style="padding-top: 20px; padding-bottom: 20px;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-lg-6">
+                    <div class="form-wrapper" style="text-align:center;">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="section-tittle tittle-form text-center mb-30">
+                                    <h2>Nuestros Padrinos y Padres</h2>
+                                    <img src="assets/img/gallery/tittle_img2.png" alt="Separador decorativo">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 mb-20">
+                                <h3>Padrinos de Religioso</h3>
+                                <p>Oscar José Duran Cárdenas<br>Hilda Ayala Castro</p>
+                            </div>
+
+                            <div class="col-12 mb-20">
+                                <h3>Padrinos de Anillos</h3>
+                                <p>Jorge Encinas Garate<br>Norah M. Cari Cayo</p>
+                            </div>
+
+                            <div class="col-12 mb-20">
+                                <h3>Padres de la Novia</h3>
+                                <p>Porfirio Yucra Bolivar<br>Felicidad Durán Cardenas</p>
+                            </div>
+
+                            <div class="col-12 mb-20">
+                                <h3>Padres del Novio</h3>
+                                <p>Marcos Domingo Antequera Ortega<br>Melbi Encinas Garate</p>
+                            </div>
+                        </div>
+
+                        <div class="shape-inner-flower">
+                            <img src="assets/img/gallery/shape2.png" class="shpe2" alt="Decoración floral">
+                        </div>
+                        <div class="shape-outer-flower">
+                            <img src="assets/img/flower/from-top.png" class="outer-top" alt="Decoración floral">
+                            <img src="assets/img/flower/from-bottom.png" class="outer-bottom" alt="Decoración floral">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- Count Down End -->
-     
-    <!-- Gallery Area Start -->
-    <div class="gallery-area section-padding4">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="single-gallery mb-30">
-              <div class="gallery-img" style="background-image: url(assets/img/gallery/gallery1.png);"></div>
-              <div class="thumb-content-box">
-                <div class="thumb-content">
-                  <h3>Cita especial</h3>
-                  <a href="assets/img/gallery/gallery1.png" class="menorie-icon"> <i class="ti-plus"></i></a>
+
+    <!-- Contact form End -->
+
+        
+
+        <!-- Galería Vue -->
+        <main id="main">
+            <gallery ref="gallery" v-bind:images="images" v-on:next="next"></gallery>
+        </main>
+
+        <template id="gallery_template">
+            <transition-group tag="figure" class="Gallery" name="open">
+                <img v-for="(image, index) in images"
+                     :src="image"
+                     :key="index"
+                     @click="onClick"
+                     :style="{'--circle-x': x, '--circle-y': y}">
+            </transition-group>
+        </template>
+        
+        <!-- Start map Area-->
+        <section class="contact-sections" id="map-section">
+            <div class="d-area">
+                <div id="map-alternative" class="map-container">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+
+                        <h2>Ubicación de la Ceremonia</h2>
+                          <img src="assets/img/gallery/tittle_img.png" alt="Separador decorativo">
+
+                        <h3>Parroquia San Miguel</h3>
+                        <p>Arenales N°10, Sucre</p>
+                        <p>4 de Octubre, 2025 - 6:00 PM</p>
+                        <a href="https://www.google.com/maps?q=Parroquia+San+Miguel+Arenales+Sucre" target="_blank" class="btn-map">Abrir en Google Maps</a>
+                    </div>
                 </div>
-              </div>
+                <div id="map" style="height: 400px; position: relative; overflow: hidden; display: none;"></div>
             </div>
-          </div>
-          <div class="col-lg-8 col-md-6 col-sm-6">
-            <div class="single-gallery mb-30">
-              <div class="gallery-img" style="background-image: url(assets/img/gallery/gallery2.png);"></div>
-              <div class="thumb-content-box">
-                <div class="thumb-content">
-                  <h3>Tercer aniversario</h3>
-                  <a href="assets/img/gallery/gallery2.png" class="menorie-icon"> <i class="ti-plus"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-8 col-md-6 col-sm-6">
-            <div class="single-gallery mb-30">
-              <div class="gallery-img" style="background-image: url(assets/img/gallery/gallery3.png);"></div>
-              <div class="thumb-content-box">
-                <div class="thumb-content">
-                  <h3>Primera cita</h3>
-                  <a href="assets/img/gallery/gallery3.png" class="menorie-icon"> <i class="ti-plus"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="single-gallery mb-30">
-              <div class="gallery-img" style="background-image: url(assets/img/gallery/gallery4.png);"></div>
-              <div class="thumb-content-box">
-                <div class="thumb-content">
-                  <h3>Nuestro Primer Viaje</h3>
-                  <a href="assets/img/gallery/gallery4.png" class="menorie-icon"> <i class="ti-plus"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Gallery Area End -->
-    
-    <!-- Gift Start -->
-    <section class="gift-area gift-padding fix" data-background="assets/img/gallery/section_bg3.png">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="gift-caption text-center">
-              <h2>El mejor regalo</h2>
-              <!-- Texto con efecto resaltado -->
-<p style="font-size:1.6rem; line-height:1.6; text-align:center; padding:1rem; background:linear-gradient(90deg, #00725fff, #00363aff); border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.15);">
-  <span style="font-weight: normal ; color:#ffffff; text-shadow:1px 1px 3px rgba(0,0,0,0.1);">
-  No cargues con cajas ni envoltorios; mejor ayúdanos a llenar la alcancía para una gran aventura… tu aporte económico nos ayudará a vivirla.
-  </span> 
-</p>
-
-<!-- QR centrado -->
-<div style="text-align: center;">
-  <a href="assets/img/gallery/QR-Carlos-Raquel.png" download="QR_Boda_Carlos&Raquel">
-    <img src="assets/img/gallery/QR-Carlos-Raquel.png" 
-         alt="QR para aportar" 
-         style="display:block; margin:0 auto; width:480px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.2); cursor:pointer;" />
-  </a>
-  <p style="margin-top:10px; color:#fff;">Haz clic en el QR para descargarlo</p>
-</div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Gift End -->
-    
-    <section class="brand-area" style="padding-top: 20px; padding-bottom: 0px;">
-      <div class="container">
-        <div class="row d-flex justify-content-center">
-          <div class="col-lg-8">
-            <div class="section-tittle text-center mb-80" style="margin-bottom: 10px;">
-              <img src="assets/img/gallery/tittle_img.png" alt="Separador decorativo">
-              <h3>Con el amor de nuestras familias y el apoyo de nuestros Padrinos uniremos nuestras vidas ante Dios</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-<div class="contact-form fix" id="rsvp-section" style="padding-top: 20px; padding-bottom: 20px;">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-xl-6 col-lg-6">
-        <div class="form-wrapper" style="text-align:center;">
-          <div class="row">
-            <div class="col-12">
-              <div class="section-tittle tittle-form text-center mb-30">
-                <h2>Nuestros Padrinos y Padres</h2>
-                <img src="assets/img/gallery/tittle_img2.png" alt="Separador decorativo">
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-12 mb-20">
-              <h3>Padrinos de Religioso</h3>
-              <p>Oscar José Duran Cárdenas<br>Hilda Ayala Castro</p>
-            </div>
-
-            <div class="col-12 mb-20">
-              <h3>Padrinos de Anillos</h3>
-              <p>Jorge Encinas Garate<br>Norah Cari C.</p>
-            </div>
-
-            <div class="col-12 mb-20">
-              <h3>Padres de la Novia</h3>
-              <p>Porfirio Yucra Bolivar<br>Felicidad Durán Cardenas</p>
-            </div>
-
-            <div class="col-12 mb-20">
-              <h3>Padres del Novio</h3>
-              <p>Marcos Domingo Antequera Ortega<br>Melbi Encinas Garate</p>
-            </div>
-          </div>
-
-          <div class="shape-inner-flower">
-            <img src="assets/img/gallery/shape2.png" class="shpe2" alt="Decoración floral">
-          </div>
-          <div class="shape-outer-flower">
-            <img src="assets/img/flower/from-top.png" class="outer-top" alt="Decoración floral">
-            <img src="assets/img/flower/from-bottom.png" class="outer-bottom" alt="Decoración floral">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Contact form End -->
-
-    
-
-    <!-- Galería Vue -->
-    <main id="main">
-      <gallery ref="gallery" v-bind:images="images" v-on:next="next"></gallery>
+        </section>
+        <!-- End map Area -->
     </main>
 
-    <template id="gallery_template">
-      <transition-group tag="figure" class="Gallery" name="open">
-        <img v-for="(image, index) in images"
-             :src="image"
-             :key="index"
-             @click="onClick"
-             :style="{'--circle-x': x, '--circle-y': y}">
-      </transition-group>
-    </template>
+    <footer>
+        <!-- Footer Start-->
+        <div class="footer-main" data-background="assets/img/gallery/section_bg4.png">
+            <div class="footer-area footer-padding">
+                <div class="container">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-xl-2  col-lg-3 col-md-5 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="single-footer-caption mb-30">
+                                    <div class="footer-logo">
+                                        <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt="Logo Carlos y Raquel"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Playlist de música local - VERSIÓN MEJORADA -->
+            <section id="musica" class="music-player">
+                <div class="container" >
+                    <h2>Nuestra Música</h2>
+                    <div id="current-song">
+                        <i class="fas fa-music"></i>
+                        <span>Reproduciendo: <span id="song-title">Selecciona una canción</span></span>
+                    </div>
+                    <audio id="player" controls></audio>
+                    <ul id="playlist">
+                        <li data-src="assets/audio/SOWK.mp3">Somewhere Only We Know - Keane</li>
+                        <li data-src="assets/audio/Only-one.mp3">Only one - Yellowcard</li>
+                        <li data-src="assets/audio/Vida-mia.mp3">Vida mía - José y el Toro</li>
+                        <li data-src="assets/audio/The-Reason.mp3">The reason - Hoobastank</li>
+                        <li data-src="assets/audio/TIME.mp3">How Long Will I Love You - Jon Boden</li>
+                    </ul>
+                    <div class="music-controls">
+                        <button id="prev-btn" class="music-btn"><i class="fas fa-step-backward"></i> Anterior</button>
+                        <button id="random-btn" class="music-btn">Aleatoria <i class="fas fa-random"></i></button>
+                        <button id="next-btn" class="music-btn">Siguiente <i class="fas fa-step-forward"></i></button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- footer-bottom area -->
+            <div class="footer-bottom-area">
+                <div class="container">
+                    <div class="footer-border">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-xl-12 ">
+                                <div class="footer-copy-right text-center">
+                                    <p>
+                                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> Carlos & Raquel 
+                                        | Diseñado con <i class="fa fa-heart" aria-hidden="true"></i> para nuestro día especial
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+
+    <!-- JS aquí -->
+    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <script src="./assets/js/gijgo.min.js"></script>
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/animated.headline.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.js"></script>
+    <script src="./assets/js/jquery.scrollUp.min.js"></script>
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
+    <script src="./assets/js/jquery.counterup.min.js"></script>
+    <script src="./assets/js/waypoints.min.js"></script>
+    <script src="./assets/js/contact.js"></script>
+    <script src="./assets/js/jquery.form.js"></script>
+    <script src="./assets/js/jquery.validate.min.js"></script>
+    <script src="./assets/js/mail-script.js"></script>
+    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="assets/js/parallax.js"></script>
     
-    <!-- Start map Area-->
-    <section class="contact-sections" id="map-section">
-      <div class="d-area">
-        <div id="map-alternative" class="map-container">
-          <div class="map-placeholder">
-            <i class="fas fa-map-marked-alt"></i>
-
-            <h2>Ubicación de la Ceremonia</h2>
-              <img src="assets/img/gallery/tittle_img.png" alt="Separador decorativo">
-
-            <h3>Parroquia San Miguel</h3>
-            <p>Arenales N°10, Sucre</p>
-            <p>4 de Octubre, 2025 - 6:00 PM</p>
-            <a href="https://www.google.com/maps?q=Parroquia+San+Miguel+Arenales+Sucre" target="_blank" class="btn-map">Abrir en Google Maps</a>
-          </div>
-        </div>
-        <div id="map" style="height: 400px; position: relative; overflow: hidden; display: none;"></div>
-      </div>
-    </section>
-    <!-- End map Area -->
-  </main>
-
-  <footer>
-    <!-- Footer Start-->
-    <div class="footer-main" data-background="assets/img/gallery/section_bg4.png">
-      <div class="footer-area footer-padding">
-        <div class="container">
-          <div class="row d-flex justify-content-between">
-            <div class="col-xl-2  col-lg-3 col-md-5 col-sm-6">
-              <div class="single-footer-caption mb-50">
-                <div class="single-footer-caption mb-30">
-                  <div class="footer-logo">
-                    <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt="Logo Carlos y Raquel"></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Playlist de música local -->
-      <section id="musica" class="music-player">
-        <div class="container">
-          <h2>Nuestra Música</h2>
-          <div id="current-song">
-            <i class="fas fa-music"></i>
-            <span>Reproduciendo: <span id="song-title">Selecciona una canción</span></span>
-          </div>
-          <audio id="player" controls></audio>
-          <ul id="playlist">
-            <li data-src="assets/audio/SOWK.mp3">Somewhere Only We Know - Keane</li>
-            <li data-src="assets/audio/Only-one.mp3">Only one - Yellowcard</li>
-            <li data-src="assets/audio/Vida-mia.mp3">Vida mía - José y el Toro</li>
-            <li data-src="assets/audio/The-Reason.mp3">The reason - Hoobastank</li>
-            <li data-src="assets/audio/TIME.mp3">How Long Will I Love You - Jon Boden</li>
-          </ul>
-          <button id="random-btn" class="btn">Canción Aleatoria <i class="fas fa-random"></i></button>
-        </div>
-      </section>
-
-      <!-- footer-bottom area -->
-      <div class="footer-bottom-area">
-        <div class="container">
-          <div class="footer-border">
-            <div class="row d-flex align-items-center">
-              <div class="col-xl-12 ">
-                <div class="footer-copy-right text-center">
-                  <p>
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> Carlos & Raquel 
-                    | Diseñado con <i class="fa fa-heart" aria-hidden="true"></i> para nuestro día especial
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Footer End-->
-  </footer>
-
-  <!-- JS aquí -->
-  <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
-  <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-  <script src="./assets/js/popper.min.js"></script>
-  <script src="./assets/js/bootstrap.min.js"></script>
-  <script src="./assets/js/jquery.slicknav.min.js"></script>
-  <script src="./assets/js/owl.carousel.min.js"></script>
-  <script src="./assets/js/slick.min.js"></script>
-  <script src="./assets/js/gijgo.min.js"></script>
-  <script src="./assets/js/wow.min.js"></script>
-  <script src="./assets/js/animated.headline.js"></script>
-  <script src="./assets/js/jquery.magnific-popup.js"></script>
-  <script src="./assets/js/jquery.scrollUp.min.js"></script>
-  <script src="./assets/js/jquery.nice-select.min.js"></script>
-  <script src="./assets/js/jquery.sticky.js"></script>
-  <script src="./assets/js/jquery.counterup.min.js"></script>
-  <script src="./assets/js/waypoints.min.js"></script>
-  <script src="./assets/js/contact.js"></script>
-  <script src="./assets/js/jquery.form.js"></script>
-  <script src="./assets/js/jquery.validate.min.js"></script>
-  <script src="./assets/js/mail-script.js"></script>
-  <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
-  <script src="./assets/js/plugins.js"></script>
-  <script src="./assets/js/main.js"></script>
-  <script src="assets/js/parallax.js"></script>
-  
-  <!-- Scripts personalizados -->
-  <script src="assets/js/music-player.js"></script>
-  <script src="assets/js/gallery.js"></script>
-  
-  <!-- VueJS (incluye desde CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  
-  <!-- Scripts consolidados -->
-  <script>
-    // Componente Vue para la galería
-    Vue.component('gallery', {
-      template: '#gallery_template',
-      props: {
-        images: Array
-      },
-      data() {
-        return {
-          x: '50%',
-          y: '50%'
-        }
-      },
-      methods: {
-        onClick(event) {
-          const x = event.offsetX - event.target.offsetLeft;
-          const y = event.offsetY - event.target.offsetTop;
-          const xPercent = `${Math.round(100 * x / event.target.offsetWidth)}%`;
-          const yPercent = `${Math.round(100 * y / event.target.offsetHeight)}%`;
-          this.x = xPercent;
-          this.y = yPercent;
-          this.$emit('next', {x: xPercent, y: yPercent});
-        }
-      }
-    });
-
-    // Instancia Vue para la galería
-    const vm = new Vue({
-      el: '#main',
-      data: {
-        images: [
-          'assets/img/gallery/gallery01.png',
-          'assets/img/gallery/gallery02.png',
-          'assets/img/gallery/gallery03.png',
-          'assets/img/gallery/gallery04.png',
-          'assets/img/gallery/gallery05.png',
-          'assets/img/gallery/gallery06.png'
-        ],
-        intervalId: null,
-        isPaused: false
-      },
-      methods: {
-        next() {
-          const image = this.images.shift();
-          this.$nextTick(() => this.images.push(image));
-        },
-        startAuto() {
-          this.intervalId = setInterval(() => {
-            if (!this.isPaused) this.next();
-          }, 10000);
-        },
-        stopAuto() {
-          clearInterval(this.intervalId);
-          this.intervalId = null;
-        },
-        pauseAuto() {
-          this.isPaused = true;
-        },
-        resumeAuto() {
-          this.isPaused = false;
-        }
-      },
-      mounted() {
-        this.startAuto();
-      }
-    });
-
-    // Contador regresivo
-    const countdownDate = new Date("October 4, 2025 18:00:00").getTime();
-
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = countdownDate - now;
-
-      if (distance < 0) {
-        document.getElementById("days").innerText = 0;
-        document.getElementById("hours").innerText = 0;
-        document.getElementById("minutes").innerText = 0;
-        document.getElementById("seconds").innerText = 0;
-        clearInterval(countdownInterval);
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      document.getElementById("days").innerText = days;
-      document.getElementById("hours").innerText = hours;
-      document.getElementById("minutes").innerText = minutes;
-      document.getElementById("seconds").innerText = seconds;
-    }
-
-    const countdownInterval = setInterval(updateCountdown, 1000);
-    updateCountdown();
-
-    // Ajustar imágenes para móviles
-    function adjustImagesForMobile() {
-      document.querySelectorAll('img').forEach(function(img) {
-        if (!img.classList.contains('img-responsive')) {
-          img.classList.add('img-responsive');
-        }
-      });
-      
-      document.querySelectorAll('[style*="background-image"]').forEach(function(el) {
-        el.style.backgroundSize = 'cover';
-        el.style.backgroundPosition = 'center';
-        el.style.backgroundRepeat = 'no-repeat';
-        
-        if (window.innerWidth < 768 && !el.style.minHeight) {
-          el.style.minHeight = '250px';
-        }
-      });
-      
-      document.querySelectorAll('.gallery-img').forEach(function(galleryImg) {
-        galleryImg.style.height = (window.innerWidth < 768) ? '250px' : '';
-      });
-    }
-
-    window.addEventListener('load', adjustImagesForMobile);
-    window.addEventListener('resize', adjustImagesForMobile);
-    document.addEventListener('DOMContentLoaded', adjustImagesForMobile);
-
-    // Validación del formulario
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const name = this.querySelector('input[name="name"]').value;
-      const email = this.querySelector('input[name="email"]').value;
-      const guests = this.querySelector('select[name="guests"]').value;
-      
-      if (!name || !email || !guests) {
-        alert('Por favor, complete todos los campos obligatorios.');
-        return;
-      }
-      
-      alert('¡Gracias por confirmar su asistencia! Nos vemos el 4 de Octubre.');
-      this.reset();
-    });
-
-    // Reproductor de música
-    document.addEventListener('DOMContentLoaded', function() {
-      const player = document.getElementById('player');
-      const playlist = document.getElementById('playlist');
-      const items = playlist.getElementsByTagName('li');
-      const songTitle = document.getElementById('song-title');
-      const randomBtn = document.getElementById('random-btn');
-      
-      let currentIndex = 0;
-      let shuffledPlaylist = [];
-      
-      function shufflePlaylist() {
-        shuffledPlaylist = Array.from(items);
-        for (let i = shuffledPlaylist.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [shuffledPlaylist[i], shuffledPlaylist[j]] = [shuffledPlaylist[j], shuffledPlaylist[i]];
-        }
-        currentIndex = Math.floor(Math.random() * shuffledPlaylist.length);
-      }
-      
-      function playSong(index) {
-        currentIndex = index;
-        const song = shuffledPlaylist[index];
-        const src = song.getAttribute('data-src');
-        player.src = src;
-        player.play().catch(error => {
-          console.log('La reproducción automática fue prevenida:', error);
+    <!-- Scripts personalizados -->
+    <script src="assets/js/music-player.js"></script>
+    <script src="assets/js/gallery.js"></script>
+    
+    <!-- VueJS (incluye desde CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
+    <!-- Scripts consolidados -->
+    <script>
+        // Componente Vue para la galería
+        Vue.component('gallery', {
+            template: '#gallery_template',
+            props: {
+                images: Array
+            },
+            data() {
+                return {
+                    x: '50%',
+                    y: '50%'
+                }
+            },
+            methods: {
+                onClick(event) {
+                    const x = event.offsetX - event.target.offsetLeft;
+                    const y = event.offsetY - event.target.offsetTop;
+                    const xPercent = `${Math.round(100 * x / event.target.offsetWidth)}%`;
+                    const yPercent = `${Math.round(100 * y / event.target.offsetHeight)}%`;
+                    this.x = xPercent;
+                    this.y = yPercent;
+                    this.$emit('next', {x: xPercent, y: yPercent});
+                }
+            }
         });
-        songTitle.textContent = song.textContent;
 
-        for (let j = 0; j < items.length; j++) {
-          items[j].classList.remove('playing');
-        }
-        song.classList.add('playing');
-      }
-      
-      shufflePlaylist();
-      playSong(currentIndex);
-      
-      for (let i = 0; i < items.length; i++) {
-        items[i].addEventListener('click', function() {
-          const index = shuffledPlaylist.indexOf(this);
-          if (index !== -1) playSong(index);
+        // Instancia Vue para la galería
+        const vm = new Vue({
+            el: '#main',
+            data: {
+                images: [
+                    'assets/img/gallery/gallery01.png',
+                    'assets/img/gallery/gallery02.png',
+                    'assets/img/gallery/gallery03.png',
+                    'assets/img/gallery/gallery04.png',
+                    'assets/img/gallery/gallery05.png',
+                    'assets/img/gallery/gallery06.png'
+                ],
+                intervalId: null,
+                isPaused: false
+            },
+            methods: {
+                next() {
+                    const image = this.images.shift();
+                    this.$nextTick(() => this.images.push(image));
+                },
+                startAuto() {
+                    this.intervalId = setInterval(() => {
+                        if (!this.isPaused) this.next();
+                    }, 20000);
+                },
+                stopAuto() {
+                    clearInterval(this.intervalId);
+                    this.intervalId = null;
+                },
+                pauseAuto() {
+                    this.isPaused = true;
+                },
+                resumeAuto() {
+                    this.isPaused = false;
+                }
+            },
+            mounted() {
+                this.startAuto();
+            }
         });
-      }
-      
-      randomBtn.addEventListener('click', function() {
-        shufflePlaylist();
-        playSong(currentIndex);
-      });
-      
-      player.addEventListener('ended', function() {
-        currentIndex = (currentIndex + 1) % shuffledPlaylist.length;
-        playSong(currentIndex);
-      });
-    });
 
-    // Activar sonido al click (solo una vez)
-    document.addEventListener('DOMContentLoaded', function() {
-      const audio = document.getElementById('player');
-      let audioEnabled = false;
-      
-      document.addEventListener('click', function() {
-        if (!audioEnabled) {
-          audio.play().then(() => {
-            audioEnabled = true;
-          }).catch(error => {
-            console.log('La reproducción automática fue prevenida:', error);
-          });
+        // Contador regresivo
+        const countdownDate = new Date("October 4, 2025 18:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            if (distance < 0) {
+                document.getElementById("days").innerText = 0;
+                document.getElementById("hours").innerText = 0;
+                document.getElementById("minutes").innerText = 0;
+                document.getElementById("seconds").innerText = 0;
+                clearInterval(countdownInterval);
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days;
+            document.getElementById("hours").innerText = hours;
+            document.getElementById("minutes").innerText = minutes;
+            document.getElementById("seconds").innerText = seconds;
         }
-      });
-    });
-  </script>
+
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Ajustar imágenes para móviles
+        function adjustImagesForMobile() {
+            document.querySelectorAll('img').forEach(function(img) {
+                if (!img.classList.contains('img-responsive')) {
+                    img.classList.add('img-responsive');
+                }
+            });
+            
+            document.querySelectorAll('[style*="background-image"]').forEach(function(el) {
+                el.style.backgroundSize = 'cover';
+                el.style.backgroundPosition = 'center';
+                el.style.backgroundRepeat = 'no-repeat';
+                
+                if (window.innerWidth < 768 && !el.style.minHeight) {
+                    el.style.minHeight = '250px';
+                }
+            });
+            
+            document.querySelectorAll('.gallery-img').forEach(function(galleryImg) {
+                galleryImg.style.height = (window.innerWidth < 768) ? '250px' : '';
+            });
+        }
+
+        window.addEventListener('load', adjustImagesForMobile);
+        window.addEventListener('resize', adjustImagesForMobile);
+        document.addEventListener('DOMContentLoaded', adjustImagesForMobile);
+
+        // Validación del formulario
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = this.querySelector('input[name="name"]').value;
+            const email = this.querySelector('input[name="email"]').value;
+            const guests = this.querySelector('select[name="guests"]').value;
+            
+            if (!name || !email || !guests) {
+                alert('Por favor, complete todos los campos obligatorios.');
+                return;
+            }
+            
+            alert('¡Gracias por confirmar su asistencia! Nos vemos el 4 de Octubre.');
+            this.reset();
+        });
+
+        // ===== REPRODUCTOR DE MÚSICA MEJORADO =====
+        document.addEventListener('DOMContentLoaded', function() {
+            const player = document.getElementById('player');
+            const playlist = document.getElementById('playlist');
+            const items = playlist.getElementsByTagName('li');
+            const songTitle = document.getElementById('song-title');
+            const randomBtn = document.getElementById('random-btn');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const audioPermissionBtn = document.getElementById('audio-permission');
+            
+            let currentIndex = 0;
+            let shuffledPlaylist = [];
+            let audioEnabled = false;
+            
+            // Mostrar botón de activación en móviles
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                audioPermissionBtn.classList.add('show');
+            }
+            
+            // Activar audio cuando el usuario hace clic en el botón
+            audioPermissionBtn.addEventListener('click', function() {
+                // Intentar reproducir un audio silencioso para activar la reproducción
+                const silentAudio = new Audio("data:audio/wav;base64,UklGRnoAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoAAAC");
+                silentAudio.play().then(function() {
+                    audioEnabled = true;
+                    audioPermissionBtn.style.display = 'none';
+                    silentAudio.pause();
+                    
+                    // Iniciar la reproducción de la música
+                    if (shuffledPlaylist.length > 0) {
+                        playSong(currentIndex);
+                    }
+                }).catch(function(error) {
+                    console.log('Error al activar audio:', error);
+                    alert('Por favor, permite la reproducción de audio en tu navegador para disfrutar de la música.');
+                });
+            });
+            
+            function shufflePlaylist() {
+                shuffledPlaylist = Array.from(items);
+                for (let i = shuffledPlaylist.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [shuffledPlaylist[i], shuffledPlaylist[j]] = [shuffledPlaylist[j], shuffledPlaylist[i]];
+                }
+                currentIndex = Math.floor(Math.random() * shuffledPlaylist.length);
+            }
+            
+            function playSong(index) {
+                // Si estamos en móvil y el audio no está habilitado, mostrar el botón
+                if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && !audioEnabled) {
+                    audioPermissionBtn.classList.add('show');
+                    return;
+                }
+                
+                currentIndex = index;
+                const song = shuffledPlaylist[index];
+                const src = song.getAttribute('data-src');
+                player.src = src;
+                
+                // Intentar reproducir
+                player.play().then(() => {
+                    songTitle.textContent = song.textContent;
+
+                    for (let j = 0; j < items.length; j++) {
+                        items[j].classList.remove('playing');
+                    }
+                    song.classList.add('playing');
+                }).catch(error => {
+                    console.log('Error al reproducir:', error);
+                    // En móviles, mostrar el botón de activación si hay un error de política de autoplay
+                    if (error.name === 'NotAllowedError') {
+                        audioPermissionBtn.classList.add('show');
+                    }
+                });
+            }
+            
+            function playNext() {
+                currentIndex = (currentIndex + 1) % shuffledPlaylist.length;
+                playSong(currentIndex);
+            }
+            
+            function playPrev() {
+                currentIndex = (currentIndex - 1 + shuffledPlaylist.length) % shuffledPlaylist.length;
+                playSong(currentIndex);
+            }
+            
+            // Inicializar la lista de reproducción
+            shufflePlaylist();
+            
+            // Configurar eventos
+            for (let i = 0; i < items.length; i++) {
+                items[i].addEventListener('click', function() {
+                    const index = shuffledPlaylist.indexOf(this);
+                    if (index !== -1) playSong(index);
+                });
+            }
+            
+            randomBtn.addEventListener('click', function() {
+                shufflePlaylist();
+                playSong(currentIndex);
+            });
+            
+            prevBtn.addEventListener('click', playPrev);
+            nextBtn.addEventListener('click', playNext);
+            
+            player.addEventListener('ended', playNext);
+            
+            // En dispositivos de escritorio, intentar reproducir automáticamente
+            if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                playSong(currentIndex);
+            }
+        });
+
+        // Activar sonido al click (solo una vez)
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('player');
+            let audioEnabled = false;
+            
+            document.addEventListener('click', function() {
+                if (!audioEnabled && !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                    audio.play().then(() => {
+                        audioEnabled = true;
+                    }).catch(error => {
+                        console.log('La reproducción automática fue prevenida:', error);
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
