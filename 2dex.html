@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Boda de Carlos & Raquel | 4 de Octubre 2025</title>
+  <meta name="description" content="Celebra con nosotros nuestra boda el 4 de Octubre de 2025">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/navi.ico">
+
+  <!-- Librerías CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/css/flaticon.css">
+  <link rel="stylesheet" href="assets/css/slicknav.css">
+  <link rel="stylesheet" href="assets/css/animate.min.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="assets/css/themify-icons.css">
+  <link rel="stylesheet" href="assets/css/slick.css">
+  <link rel="stylesheet" href="assets/css/nice-select.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!-- Estilos personalizados -->
+  <style>
+    /* ===== Pantalla completa y hojas ===== */
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fafafa;
+      overflow-x: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
+    }
+
+    .hoja {
+      position: fixed;
+      top: -50px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      pointer-events: none;
+      opacity: 0.9;
+      animation: caer linear;
+    }
+
+    @keyframes caer {
+      to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* Botón fijo para activar/desactivar lluvia */
+    #btnLluvia {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 9999;
+    }
+
+    #btnLluvia img {
+      width: 50px;
+      height: 50px;
+    }
+
+    /* ===== EFECTO PARALLAX ===== */
+    .parallax-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+    
+    .parallax-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+    }
+    
+    .parallax-bg-1 {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(255, 255, 255, 0.1) 100%);
+      opacity: 0.3;
+    }
+    
+    .parallax-bg-2 {
+      background: radial-gradient(circle at 30% 70%, rgba(46, 139, 87, 0.1) 0%, transparent 50%);
+      opacity: 0.2;
+    }
+    
+    .parallax-bg-3 {
+      background: radial-gradient(circle at 70% 30%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+      opacity: 0.15;
+    }
+    
+    /* Elementos flotantes para parallax */
+    .parallax-element {
+      position: absolute;
+      will-change: transform;
+      pointer-events: none;
+    }
+    
+    .floating-hearts {
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23d4af37" opacity="0.6"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>') no-repeat;
+      width: 150px;
+      height: 150px;
+      top: 20%;
+      left: 10%;
+      opacity: 0.7;
+      animation: float 8s ease-in-out infinite;
+    }
+    
+    .floating-ring {
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%232E8B57" stroke-width="1" opacity="0.7"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/></svg>') no-repeat;
+      width: 100px;
+      height: 100px;
+      top: 60%;
+      right: 15%;
+      opacity: 0.8;
+      animation: float 10s ease-in-out infinite;
+    }
+    
+    .floating-flower {
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23d4af37" opacity="0.5"><path d="M12 22s8-4 8-10c0-2.5-1.5-4-4-4-1.4 0-2.8.6-4 2-1.2-1.4-2.6-2-4-2-2.5 0-4 1.5-4 4 0 6 8 10 8 10z"/></svg>') no-repeat;
+      width: 120px;
+      height: 120px;
+      bottom: 15%;
+      left: 15%;
+      opacity: 0.6;
+      animation: float 12s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    /* Indicador de scroll personalizado */
+    .scroll-indicator {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      color: #d4af37;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 14px;
+      text-align: center;
+      opacity: 0.8;
+      transition: opacity 0.3s;
+    }
+    
+    .scroll-indicator:hover {
+      opacity: 1;
+    }
+    
+    .scroll-indicator .arrow {
+      width: 20px;
+      height: 20px;
+      margin: 5px auto 0;
+      border-right: 2px solid #d4af37;
+      border-bottom: 2px solid #d4af37;
+      transform: rotate(45deg);
+      animation: bounce 2s infinite;
+    }
+    
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) rotate(45deg);
+      }
+      40% {
+        transform: translateY(-10px) rotate(45deg);
+      }
+      60% {
+        transform: translateY(-5px) rotate(45deg);
+      }
+    }
+
+    /* ===== ESTILOS PERSONALIZADOS ===== */
+    /* Sección general */
+    .historia {
+      padding: 20px;
+    }
+
+    /* Título principal */
+    .titulo-modern {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 20px;
+    }
+
+    /* Línea decorativa */
+    .decorador {
+      width: 300px;
+      height: 4px;
+      background: linear-gradient(90deg, #00284eff, #00e2e2ff);
+      margin: 0 auto 25px auto;
+      border-radius: 10px;
+    }
+
+    /* Texto introductorio */
+    .texto-intro {
+      color: #666;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Tarjeta de historia */
+    .card-historia {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-historia:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+    }
+
+    .card-historia h4 {
+      font-weight: 600;
+      color: #444;
+    }
+
+    .card-historia p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* Imagen */
+    .story-img img {
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease;
+    }
+    .story-img img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Fondo estilo Win11 para contador */
+    .count-down-area {
+      background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(240,240,240,0.9) 100%);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 30px;
+      margin: 40px 0;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    }
+
+    /* Animación sutil */
+    .single-counter {
+      background: rgba(0, 39, 46, 0.6);
+      backdrop-filter: blur(10px);
+      padding: 25px 15px;
+      border-radius: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .single-counter:hover {
+      background: rgba(0, 162, 255, 0.5);
+      transform: translateY(-5px);
+    }
+
+    /* Números grandes estilo moderno */
+    .counter {
+      display: block;
+      font-size: 5rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      animation: pop 1s ease-in-out infinite alternate;
+    }
+
+    @keyframes pop {
+      from { transform: scale(1); }
+      to { transform: scale(1.05); }
+    }
+
+    /* Texto descriptivo */
+    .single-counter p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #444;
+    }
+
+    .icon-container {
+        width: 180px;
+        height: 180px;
+        margin: 0 auto 15px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: #f8f9fa;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        border: 2px solid #d4af37;
+    }
+    
+    .church-icon {
+        max-width: 150px;
+        max-height: 150px;
+        object-fit: contain;
+    }
+
+    /* Estilos para la galería de fotos final */
+    .Gallery {
+      display: block;
+      position: relative;
+      padding-top: 90%;
+      transform-style: preserve-3d;
+      perspective: 100vw;
+    }
+
+    .Gallery > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+      --circle-x: 50%;
+      --circle-y: 50%;
+    }
+
+    @keyframes openup {
+      to {
+        clip-path: circle(100vw at var(--circle-x) var(--circle-y));
+      }
+    }
+
+    .open-enter-active {
+      clip-path: circle(0 at var(--circle-x) var(--circle-y));
+    }
+
+    .open-enter-to {
+      animation: openup 500ms ease-in;
+    }
+
+    /* Preloader */
+    #preloader-active {
+      position: fixed;
+      inset: 0;
+      background: #fff;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .preloader-inner {
+      position: relative;
+      width: 120px;
+      height: 120px;
+    }
+
+    /* círculo fijo en su lugar */
+    .preloader-circle {
+      position: absolute;
+      inset: 0;
+      border: 4px solid #ccc;
+      border-top: 4px solid #2E8B57;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    /* logo perfectamente centrado */
+    .preloader-img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60%;
+    }
+
+    .preloader-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @keyframes spin {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Estilos mapa alternativo */
+    .map-container {
+      height: 400px;
+      background-color: #f8f9fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .map-placeholder {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .map-placeholder i {
+      font-size: 48px;
+      color: #d4af37;
+      margin-bottom: 15px;
+    }
+
+    .map-placeholder h3 {
+      margin-bottom: 15px;
+      color: #2c3e50;
+    }
+
+    .map-placeholder p {
+      margin-bottom: 5px;
+      color: #6c757d;
+    }
+
+    .btn-map {
+      background-color: #d4af37;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin-top: 15px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+
+    .btn-map:hover {
+      background-color: #b8941f;
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Estilos para el reproductor de música */
+    .music-player {
+      padding: 40px 0;
+      text-align: center;
+    }
+    
+    #playlist {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+    
+    #playlist li {
+      padding: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    
+    #playlist li:hover {
+      background: rgba(212, 175, 55, 0.1);
+    }
+    
+    #playlist li.playing {
+      background: rgba(212, 175, 55, 0.2);
+      font-weight: bold;
+    }
+    
+    #current-song {
+      margin-bottom: 15px;
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+
+    <!-- Indicador de scroll -->
+    <div class="scroll-indicator">
+      <span>Nos casamos</span>
+      <div class="arrow"></div>
+    </div>
+
+  <!-- Botón con imagen PNG -->
+  <button id="btnLluvia">
+    <img src="assets/img/kolog/navi.png" alt="lluvia">
+  </button>
+
+  <!-- Capas de fondo para el efecto parallax -->
+  <div class="parallax-bg parallax-bg-1"></div>
+  <div class="parallax-bg parallax-bg-2"></div>
+  <div class="parallax-bg parallax-bg-3"></div>
+  
+  <!-- Elementos flotantes para parallax -->
+  <div class="parallax-element floating-hearts"></div>
+  <div class="parallax-element floating-ring"></div>
+  <div class="parallax-element floating-flower"></div>
+
+<!-- Preloader Start -->
+<div id="preloader-active">
+  <div class="preloader d-flex align-items-center justify-content-center">
+    <div class="preloader-inner">
+      <div class="preloader-circle"></div>
+      <div class="preloader-img">
+        <img src="assets/img/logo/logo.png" alt="Logo Carlos y Raquel">
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+<!-- Slider Area Start -->
+<div class="slider-area">
+    <div class="slider-active" style="height: 500px;">
+        <!-- Single Slider -->
+        <div class="single-slider slider-height hero-overly d-flex align-items-center" style="height: 450px;">
+            <div class="container" style="height: 50px;">
+                <div class="row d-flex align-items-center">
+                    <div class="col-xl-8 col-lg-6 col-md-8">
+                        <div class="hero__caption" style="top: 90px;height: 253.8px;bottom: 0px;">
+                            <span data-animation="fadeInLeft" data-delay=".3s">04 de Octubre de 2025</span>
+                            <h1 data-animation="fadeInLeft" data-delay=".5s" data-duration="2000ms">
+                                Carlos<strong> & </strong> Raquel
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Slider Area End -->
+    
+    <!--? Our Story Start -->
+    <div class="Our-story-area story-padding" style="padding-top: 5px; padding-bottom: 5px;">
+  <div class="container historia">
+    <!-- Título -->
+    <div class="row justify-content-center">
+      <div class="col-xl-7 col-lg-8 text-center">
+        <div class="section-tittle mb-5">
+          <h2 class="titulo-modern">Nuestra Historia de Amor</h2>
+          <div class="decorador"></div>
+          <p class="texto-intro">
+            “Entre los senderos de la vida nos encontramos, construimos nuestro amor con el tiempo y hoy somos felices de recibir la bendición de Dios.”
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bloques historia -->
+    <div class="row justify-content-center align-items-center g-5">
+      <!-- Bloque 1 -->
+      <div class="col-lg-5 col-md-6">
+        <div class="card-historia p-4">
+          <h4 class="mb-3">💍 La Propuesta</h4>
+          <p>Lo que parecía una celebración más se convirtió en la sorpresa más hermosa: luces, velas flores y una propuesta para unir nuestras vidas frente a Dios. Con un 'sí', decidimos continuar forjando nuestra leyenda.</p>
+        </div>
+      </div>
+
+      <!-- Imagen -->
+      <div class="col-lg-5 col-md-6">
+        <div class="story-img text-center">
+          <img class="img-fluid" src="assets/img/gallery/story1.jpg" alt="Carlos y Raquel juntos">
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+    <!-- Our Story End -->
+    
+    <!--? Services Start -->
+    <section class="pricing-card-area section-padding30 section-bg" data-background="assets/img/gallery/section_bg1.png">
+        <div class="container">
+            <!-- Section Tittle -->
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-tittle text-center mb-70">
+                        <h2>Información de la boda</h2>
+                        <img src="assets/img/gallery/tittle_img.png" alt="Separador decorativo">
+                        <p>Quisque nec facilisis sem. In at commodo velit. Aliquam tempor volutpat laoreet. Quisque non tellus eleifend arcu gravida aliquam. Vivamus quis consequat nisl</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tarjeta centrada -->
+<div class="row justify-content-center align-items-end">
+    <div class="col-xl-4 col-lg-4 col-md-6">
+        <div class="single-card active text-center mb-30">
+            <div class="card-top">
+                <!-- Imagen con marco circular -->
+                <div class="icon-container">
+                    <img src="assets/img/gallery/iglesia.png" alt="Iglesia" class="church-icon">
+                </div>
+                <h4>La Ceremonia</h4>
+            </div>
+            <div class="card-bottom">
+                <ul>
+                    <li><i class="fas fa-calendar-alt"></i>04 de Octubre, 2025</li>
+                    <li><i class="far fa-clock"></i>6:00 PM</li>
+                    <li><i class="fas fa-map-marker-alt"></i>Parroquia San Miguel</li>
+                    <li>Arenales N°10, Sucre</li>
+                    <li><a href="#map-section" class="map-link"><i class="far fa-map"></i> Ver en el mapa</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </section>
+
+    <!-- Count Down Start -->
+    <div class="count-down-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                     <h2>Faltan estos días para el evento</h2>
+                <div class="col-lg-12 col-md-12">
+                    <div class="count-down-wrapper">
+                        <div class="row justify-content-between">
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <!-- Counter Up -->
+                                <div class="single-counter text-center">
+                                    <span id="days" class="counter">0</span>
+                                    <p>días</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-6 col-sm-6">
+                                <!-- Counter Up -->
+                                <div class="single-counter text-center">
+                                    <span id="hours" class="counter">0</span>
+                                    <p>horas</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-6 col-sm-6">
+                                <!-- Counter Up -->
+                                <div class="single-counter text-center">
+                                    <span id="minutes" class="counter">0</span>
+                                    <p>mins</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <!-- Counter Up -->
+                                <div class="single-counter text-center">
+                                    <span id="seconds" class="counter">0</span>
+                                    <p>seg</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Count Down End -->
+     
+    <!--? Gallery Area Start -->
+    <div class="gallery-area section-padding4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-gallery mb-30">
+                        <div class="gallery-img" style="background-image: url(assets/img/gallery/gallery1.png);">
+                        </div>
+                        <div class="thumb-content-box">
+                            <div class="thumb-content">
+                                <h3>Imagen 01</h3>
+                                <a href="assets/img/gallery/gallery1.png" class="menorie-icon"> <i class="ti-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-6 col-sm-6">
+                    <div class="single-gallery mb-30">
+                        <div class="gallery-img" style="background-image: url(assets/img/gallery/gallery2.png);">
+                        </div>
+                        <div class="thumb-content-box">
+                            <div class="thumb-content">
+                                <h3>Imagen 02</h3>
+                                <a href="assets/img/gallery/gallery2.png" class="menorie-icon"> <i class="ti-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-6 col-sm-6">
+                    <div class="single-gallery mb-30">
+                        <div class="gallery-img" style="background-image: url(assets/img/gallery/gallery3.png);">
+                        </div>
+                        <div class="thumb-content-box">
+                            <div class="thumb-content">
+                                <h3>Imagen 03</h3>
+                                <a href="assets/img/gallery/gallery3.png" class="menorie-icon"> <i class="ti-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-gallery mb-30">
+                        <div class="gallery-img" style="background-image: url(assets/img/gallery/gallery4.png);">
+                        </div>
+                        <div class="thumb-content-box">
+                            <div class="thumb-content">
+                                <h3>Imagen 04</h3>
+                                <a href="assets/img/gallery/gallery4.png" class="menorie-icon"> <i class="ti-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Gallery Area End -->
+    
+    <!--? Gift Start -->
+    <section class="gift-area gift-padding fix" data-background="assets/img/gallery/section_bg3.png">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="gift-caption text-center">
+                        <h2>El mejor regalo</h2>
+                        <p>es tu presencia en nuestra boda</p>
+                        <a href="#rsvp-section" class="btn btn-whit">Confirmar Asistencia</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gift End -->
+    
+    <!--? Contact form Start -->
+    <div class="contact-form section-padding30 fix" id="rsvp-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-lg-6">
+                    <div class="form-wrapper">
+                        <form id="contact-form" action="#" method="POST">
+                            <!-- section tittle -->
+                            <div class="row ">
+                                <div class="col-lg-12">
+                                    <div class="section-tittle tittle-form text-center mb-30">
+                                        <h2>¿Vendrás a celebrar con nosotros?</h2>
+                                        <img src="assets/img/gallery/tittle_img2.png" alt="Separador decorativo">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-box mb-30">
+                                        <input type="text" name="name" placeholder="Nombre completo" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-box subject-icon mb-30">
+                                        <input type="email" name="email" placeholder="Correo electrónico" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 mb-30">
+                                    <div class="select-itms">
+                                        <select name="guests" id="select2" required>
+                                            <option value="">Número de invitados</option>
+                                            <option value="1">1 Invitado</option>
+                                            <option value="2">2 Invitados</option>
+                                            <option value="3">3 Invitados</option>
+                                            <option value="4">4 Invitados</option>
+                                            <option value="5">5 o más invitados</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-box message-icon mb-30">
+                                        <textarea name="message" id="message" placeholder="Tu mensaje (opcional)"></textarea>
+                                    </div>
+                                <div class="submit-info">
+                                    <button class="btn" type="submit">Confirmar ahora</button>
+                                </div>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- Shape inner Flower -->
+                        <div class="shape-inner-flower">
+                            <img src="assets/img/gallery/shape2.png" class="shpe2" alt="Decoración floral">
+                        </div>
+                        <!-- Shape outer Flower -->
+                        <div class="shape-outer-flower">
+                            <img src="assets/img/flower/from-top.png" class="outer-top" alt="Decoración floral">
+                            <img src="assets/img/flower/from-bottom.png" class="outer-bottom" alt="Decoración floral">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact form End -->
+    
+    <section class="brand-area section-padding-b">
+        <div class="container">
+                <!-- Section Tittle -->
+                <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-tittle text-center mb-80">
+                        <h2>Lista de Regalos</h2>
+                        <img src="assets/img/gallery/tittle_img.png" alt="Separador decorativo">
+                        <p>Quisque nec facilisis sem. In at commodo velit. Aliquam tempor volutpat laoreet. Quisque non tellus eleifend arcu gravida aliquam. Vivamus quis consequat nisl</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <main id="main">
+    <gallery ref="gallery" v-bind:images="images" v-on:next="next"></gallery>
+  </main>
+
+  <!-- Template de Vue -->
+  <template id="gallery_template">
+    <transition-group tag="figure" class="Gallery" name="open">
+      <img v-for="(image, index) in images"
+           :src="image"
+           :key="index"
+           @click="onClick"
+           :style="{'--circle-x': x, '--circle-y': y}">
+    </transition-group>
+  </template>
+    
+    <!--? Start map Area-->
+    <section class="contact-sections" id="map-section">
+        <div class="d-area">
+            <!-- Mapa alternativo en caso de que Google Maps falle -->
+            <div id="map-alternative" class="map-container">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Ubicación de la Ceremonia</h3>
+                    <p><strong>Parroquia San Miguel</strong></p>
+                    <p>Arenales N°10, Sucre</p>
+                    <p>4 de Octubre, 2025 - 6:00 PM</p>
+                    <a href="https://www.google.com/maps?q=Parroquia+San+Miguel+Arenales+Sucre" target="_blank" class="btn-map">Abrir en Google Maps</a>
+                </div>
+            </div>
+            <div id="map" style="height: 400px; position: relative; overflow: hidden; display: none;"></div>
+        </div>
+    </section>
+    <!--? End map Area -->
+</main>
+
+<footer>
+    <!-- Footer Start-->
+    <div class="footer-main" data-background="assets/img/gallery/section_bg4.png">
+        <div class="footer-area footer-padding" >
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-xl-2  col-lg-3 col-md-5 col-sm-6">
+                        <div class="single-footer-caption mb-50">
+                            <div class="single-footer-caption mb-30">
+                                <!-- logo -->
+                                <div class="footer-logo">
+                                    <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt="Logo Carlos y Raquel"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Playlist de música local -->
+        <section id="musica" class="music-player">
+            <div class="container">
+                <h2>Nuestra Música</h2>
+                
+                <div id="current-song">
+                    <i class="fas fa-music"></i>
+                    <span>Reproduciendo: <span id="song-title">Selecciona una canción</span></span>
+                </div>
+                
+                <audio id="player" controls></audio>
+                
+                <ul id="playlist">
+                    <li data-src="assets/audio/SOWK.mp3">Somewhere Only We Know - Keane</li>
+                    <li data-src="assets/audio/Only-one.mp3">Only one - Yellowcard</li>
+                    <li data-src="assets/audio/Vida-mia.mp3">Vida mía - José y el Toro</li>
+                    <li data-src="assets/audio/The-Reason.mp3">The reason - Hoobastank</li>
+                    <li data-src="assets/audio/TIME.mp3">How Long Will I Love You - Jon Boden</li>
+                </ul>
+                
+                <button id="random-btn" class="btn">Canción Aleatoria <i class="fas fa-random"></i></button>
+            </div>
+        </section>
+
+        <!-- footer-bottom area -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="footer-border">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-xl-12 ">
+                            <div class="footer-copy-right text-center">
+                                <p>
+                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> Carlos & Raquel 
+                                    | Diseñado con <i class="fa fa-heart" aria-hidden="true"></i> para nuestro día especial
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End-->
+</footer>
+
+    <!-- JS aquí -->
+    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <script src="./assets/js/gijgo.min.js"></script>
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/animated.headline.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.js"></script>
+    <script src="./assets/js/jquery.scrollUp.min.js"></script>
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
+    <script src="./assets/js/jquery.counterup.min.js"></script>
+    <script src="./assets/js/waypoints.min.js"></script>
+    <script src="./assets/js/contact.js"></script>
+    <script src="./assets/js/jquery.form.js"></script>
+    <script src="./assets/js/jquery.validate.min.js"></script>
+    <script src="./assets/js/mail-script.js"></script>
+    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/main.js"></script>
+    
+    <!-- VueJS (incluye desde CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Scripts personalizados -->
+    <script>
+        // Array con imágenes de hojas
+        const hojas = [
+          "assets/img/kolog/hoja1.png",
+          "assets/img/kolog/hoja2.png",
+          "assets/img/kolog/hoja3.png",
+          "assets/img/kolog/hoja4.png",
+          "assets/img/kolog/obab.png"
+        ];
+
+        let intervaloLluvia = null; // Guardar el setInterval
+        let lluviaActiva = false;   // Estado de la lluvia
+
+        function crearHoja() {
+          const hoja = document.createElement("div");
+          hoja.classList.add("hoja");
+
+          // Imagen aleatoria
+          const img = hojas[Math.floor(Math.random() * hojas.length)];
+          hoja.style.backgroundImage = `url(${img})`;
+
+          // Posición aleatoria
+          hoja.style.left = Math.random() * 100 + "vw";
+
+          // Tamaño aleatorio
+          const size = 40 + Math.random() * 40;
+          hoja.style.width = size + "px";
+          hoja.style.height = size + "px";
+
+          // Duración caída aleatoria
+          const duracion = 5 + Math.random() * 5;
+          hoja.style.animationDuration = duracion + "s";
+
+          document.body.appendChild(hoja);
+
+          // Eliminar después de caer
+          setTimeout(() => hoja.remove(), duracion * 1000);
+        }
+
+        // Función para activar/desactivar la lluvia
+        document.getElementById("btnLluvia").addEventListener("click", () => {
+          if (lluviaActiva) {
+            // Apagar lluvia
+            clearInterval(intervaloLluvia);
+            intervaloLluvia = null;
+            lluviaActiva = false;
+          } else {
+            // Encender lluvia
+            intervaloLluvia = setInterval(crearHoja, 400);
+            lluviaActiva = true;
+          }
+        });
+
+        // Script para el contador regresivo
+        const countdownDate = new Date("October 4, 2025 18:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            if (distance < 0) {
+                document.getElementById("days").innerText = 0;
+                document.getElementById("hours").innerText = 0;
+                document.getElementById("minutes").innerText = 0;
+                document.getElementById("seconds").innerText = 0;
+                clearInterval(countdownInterval);
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days;
+            document.getElementById("hours").innerText = hours;
+            document.getElementById("minutes").innerText = minutes;
+            document.getElementById("seconds").innerText = seconds;
+        }
+
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Script para ajustar imágenes en móviles - Optimizado
+        function adjustImagesForMobile() {
+            document.querySelectorAll('img').forEach(function(img) {
+                if (!img.classList.contains('img-responsive')) {
+                    img.classList.add('img-responsive');
+                }
+            });
+            
+            document.querySelectorAll('[style*="background-image"]').forEach(function(el) {
+                el.style.backgroundSize = 'cover';
+                el.style.backgroundPosition = 'center';
+                el.style.backgroundRepeat = 'no-repeat';
+                
+                if (window.innerWidth < 768) {
+                    if (!el.style.minHeight) {
+                        el.style.minHeight = '250px';
+                    }
+                }
+            });
+            
+            document.querySelectorAll('.gallery-img').forEach(function(galleryImg) {
+                if (window.innerWidth < 768) {
+                    galleryImg.style.height = '250px';
+                } else {
+                    galleryImg.style.height = '';
+                }
+            });
+        }
+
+        window.addEventListener('load', adjustImagesForMobile);
+        window.addEventListener('resize', adjustImagesForMobile);
+        document.addEventListener('DOMContentLoaded', adjustImagesForMobile);
+
+        // Script para validación del formulario
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = this.querySelector('input[name="name"]').value;
+            const email = this.querySelector('input[name="email"]').value;
+            const guests = this.querySelector('select[name="guests"]').value;
+            
+            if (!name || !email || !guests) {
+                alert('Por favor, complete todos los campos obligatorios.');
+                return;
+            }
+            
+            alert('¡Gracias por confirmar su asistencia! Nos vemos el 4 de Octubre.');
+            this.reset();
+        });
+
+        // Script para el reproductor de música
+        document.addEventListener('DOMContentLoaded', function() {
+            const player = document.getElementById('player');
+            const playlist = document.getElementById('playlist');
+            const items = playlist.getElementsByTagName('li');
+            const songTitle = document.getElementById('song-title');
+            const randomBtn = document.getElementById('random-btn');
+            
+            let currentIndex = 0;
+            let shuffledPlaylist = [];
+            
+            // Función para barajar la lista de reproducción
+            function shufflePlaylist() {
+                shuffledPlaylist = Array.from(items);
+                for (let i = shuffledPlaylist.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [shuffledPlaylist[i], shuffledPlaylist[j]] = [shuffledPlaylist[j], shuffledPlaylist[i]];
+                }
+                // Seleccionar un índice aleatorio inicial
+                currentIndex = Math.floor(Math.random() * shuffledPlaylist.length);
+            }
+            
+            // Reproducir canción
+            function playSong(index) {
+                currentIndex = index;
+                const song = shuffledPlaylist[index];
+                const src = song.getAttribute('data-src');
+                player.src = src;
+                player.play().catch(error => {
+                    console.log('La reproducción automática fue prevenida:', error);
+                });
+                songTitle.textContent = song.textContent;
+
+                // Actualizar clases
+                for (let j = 0; j < items.length; j++) {
+                    items[j].classList.remove('playing');
+                }
+                song.classList.add('playing');
+            }
+            
+            // Inicializar: mezclar y empezar con canción aleatoria
+            shufflePlaylist();
+            playSong(currentIndex);
+            
+            // Reproducir al hacer clic en una canción de la lista
+            for (let i = 0; i < items.length; i++) {
+                items[i].addEventListener('click', function() {
+                    const index = shuffledPlaylist.indexOf(this);
+                    if (index !== -1) {
+                        playSong(index);
+                    }
+                });
+            }
+            
+            // Botón de canción aleatoria (nuevo orden aleatorio)
+            randomBtn.addEventListener('click', function() {
+                shufflePlaylist();
+                playSong(currentIndex);
+            });
+            
+            // Pasar a la siguiente canción al terminar
+            player.addEventListener('ended', function() {
+                currentIndex = (currentIndex + 1) % shuffledPlaylist.length;
+                playSong(currentIndex);
+            });
+        });
+
+        // Script para activar sonido al click (solo una vez)
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('player');
+            let audioEnabled = false;
+            
+            document.addEventListener('click', function() {
+                if (!audioEnabled) {
+                    audio.play().then(() => {
+                        audioEnabled = true;
+                    }).catch(error => {
+                        console.log('La reproducción automática fue prevenida:', error);
+                    });
+                }
+            });
+        });
+
+        // Script para el efecto parallax
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar el efecto parallax
+            initParallax();
+            
+            function initParallax() {
+                const parallaxElements = document.querySelectorAll('.parallax-bg, .parallax-element');
+                const scrollSpeed = 0.5;
+                
+                // Ajustar la posición inicial
+                window.addEventListener('scroll', updateParallax);
+                updateParallax();
+                
+                function updateParallax() {
+                    const scrollY = window.pageYOffset;
+                    
+                    parallaxElements.forEach(element => {
+                        // Obtener la profundidad del elemento
+                        let depth = 0;
+                        if (element.classList.contains('parallax-bg-1')) depth = -0.5;
+                        else if (element.classList.contains('parallax-bg-2')) depth = -0.3;
+                        else if (element.classList.contains('parallax-bg-3')) depth = -0.1;
+                        else if (element.classList.contains('floating-hearts')) depth = 0.1;
+                        else if (element.classList.contains('floating-ring')) depth = 0.2;
+                        else if (element.classList.contains('floating-flower')) depth = 0.15;
+                        
+                        const movement = -(scrollY * depth * scrollSpeed);
+                        const translate = `translate3d(0, ${movement}px, 0)`;
+                        
+                        // Aplicar la transformación
+                        element.style.transform = translate;
+                    });
+                }
+            }
+            
+            // Asegurar que el parallax no interfiera con elementos existentes
+            const mainContent = document.querySelector('main');
+            if (mainContent) {
+                mainContent.style.position = 'relative';
+                mainContent.style.zIndex = '2';
+            }
+
+            // Ocultar preloader cuando la página cargue
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    document.getElementById('preloader-active').style.display = 'none';
+                }, 1500);
+            });
+        });
+
+        // Script para la galería Vue
+        Vue.component('gallery', {
+          template: '#gallery_template',
+          props: {
+            images: Array
+          },
+          data() {
+            return {
+              x: '50%',
+              y: '50%'
+            }
+          },
+          methods: {
+            onClick(event) {
+              const x = event.offsetX - event.target.offsetLeft
+              const y = event.offsetY - event.target.offsetTop
+              const xPercent = `${Math.round(100 * x / event.target.offsetWidth)}%`
+              const yPercent = `${Math.round(100 * y / event.target.offsetHeight)}%`
+              this.x = xPercent
+              this.y = yPercent
+              this.$emit('next', {x: xPercent, y: yPercent})
+            }
+          }
+        })
+
+        const vm = new Vue({
+          el: '#main',
+          data: {
+            images: [
+              'assets/img/gallery/gallery01.png',
+              'assets/img/gallery/gallery02.png',
+              'assets/img/gallery/gallery03.png',
+              'assets/img/gallery/gallery04.png',
+              'assets/img/gallery/gallery05.png',
+              'assets/img/gallery/gallery06.png'
+            ],
+            intervalId: null,   // guardamos el temporizador
+            isPaused: false     // control para pausar/reanudar
+          },
+          methods: {
+            next() {
+              const image = this.images.shift()
+              this.$nextTick(() => this.images.push(image))
+            },
+            startAuto() {
+              this.intervalId = setInterval(() => {
+                if (!this.isPaused) this.next()
+              }, 20000)
+            },
+            stopAuto() {
+              clearInterval(this.intervalId)
+              this.intervalId = null
+            },
+            pauseAuto() {
+              this.isPaused = true
+            },
+            resumeAuto() {
+              this.isPaused = false
+            }
+          },
+          mounted() {
+            this.startAuto()   // inicia el carrusel automático al cargar
+          }
+        });
+    </script>
+</body>
+</html>

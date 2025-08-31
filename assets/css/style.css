@@ -1706,7 +1706,7 @@ hr {
 }
 @media (max-width: 575px) {
   .section-padding2 {
-    padding-top: 70px;
+    padding-top: 0px;
     padding-bottom: 70px;
   }
 }
@@ -1772,7 +1772,7 @@ hr {
 }
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
   .section-padding30 {
-    padding-top: 19px;
+    padding-top: 100%;
     padding-bottom: 50px;
   }
 }
@@ -2135,12 +2135,12 @@ hr {
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .slider-height {
-    height: 600px;
+    height: 800px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .slider-height {
-    height: 500px;
+    height: 700px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -2153,6 +2153,30 @@ hr {
     height: 350px;
   }
 }
+
+.single-slider {
+  display: flex;
+  align-items: flex-end;        /* centra verticalmente el contenido */
+  justify-content: flex-start; /* texto a la izquierda */
+  height: 80vh;              /* ocupa toda la pantalla */
+  position: relative;
+  padding: 0 15px 5vh 15px; /* opcional: padding lateral y un poquito desde el fondo */        /* opcional, espacio lateral */
+
+}
+@media (max-width: 767px) and (orientation: portrait) {
+  .single-slider {
+    height: 100vh;   /* más alto en portrait */
+    padding-bottom: 7vh;
+  }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+  .single-slider {
+    height: 100vh;   /* menos altura para que se vea todo */
+    padding-bottom: 100%;
+  }
+}
+
 .slider-height2 {
   height: 500px;
   background-size: cover;
@@ -2180,9 +2204,53 @@ hr {
 .slider-area {
   background-image: url(../img/hero/homeHero_1.jpg);
   background-repeat: no-repeat;
-  background-position: center center;
   background-size: cover;
+  background-position: center center; /* centra horizontal y vertical */
+  height: 100vh; /* ocupa toda la pantalla */
+
 }
+
+/* Para móviles verticales */
+@media (max-width: 767px) and (orientation: portrait) {
+  .slider-area {
+    background-position: center center; /* centra la imagen */
+  }
+}
+
+/* Para móviles horizontales */
+@media (max-width: 767px) and (orientation: landscape) {
+  .slider-area {
+    background-position: center center; /* centra la imagen */
+  }
+}
+
+.hero__caption {
+  position: absolute;
+  bottom: 5%;             /* distancia desde el fondo de la imagen */
+  left: 5%;               /* distancia desde la izquierda */
+  z-index: 2;
+  max-width: 1200px;
+  height: 100px;
+}
+/* Móviles verticales */
+@media (max-width: 767px) and (orientation: portrait) {
+  .hero__caption {
+    padding-top: 20vh; /* ajusta para que el texto baje sin recortar la imagen */
+  }
+}
+
+/* Móviles horizontales */
+@media (max-width: 767px) and (orientation: landscape) {
+  .hero__caption {
+    padding-top: 5vh; /* menos padding para que no tape la parte importante de la imagen */
+  }
+}
+
+
+
+
+
+
 .slider-area .hero__caption {
   overflow: hidden;
 }
@@ -2199,16 +2267,23 @@ hr {
   letter-spacing: 0.3em;
   position: relative;
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .slider-area .hero__caption span {
+    font-size: 20px;
+    margin-bottom: 7px;
+  }
+}
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .slider-area .hero__caption span {
-    font-size: 18px;
+    font-size: 15px;
     margin-bottom: 7px;
   }
 }
 @media (max-width: 575px) {
   .slider-area .hero__caption span {
-    font-size: 18px;
-    margin-bottom: 7px;
+    font-size: 15px;
+    margin-bottom: 0px;
   }
 }
 .slider-area .hero__caption span::before {
@@ -2216,7 +2291,7 @@ hr {
   position: absolute;
   left: 0;
   bottom: 0;
-  top: 0;
+  top: 800;
   background-image: url(../img/hero/hero_shape1.png);
   width: 36px;
   height: 45px;
@@ -2225,19 +2300,19 @@ hr {
 .slider-area .hero__caption h1 {
   font-size: 99px;
   font-weight: 700;
-  margin-bottom: 14px;
   color: #fff;
   font-family: "Playfair Display", serif;
   line-height: 1.2;
   text-transform: capitalize;
-  margin-bottom: 30px;
   position: relative;
+  margin-bottom: 30px;    /* espacio controlado sin usar negativo */
 }
+
 .slider-area .hero__caption h1::before {
   content: "";
   position: absolute;
-  right: 34px;
-  top: -17px;
+  right: 5%;   /* usar % mejor que px para que se ajuste en pantallas pequeñas */
+  top: -20px;  /* ajusta según la altura del texto */
   background-image: url(../img/hero/hero_shape2.png);
   width: 80px;
   height: 84px;
@@ -2255,41 +2330,47 @@ hr {
     top: -42px;
   }
 }
-@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+@media (max-width: 767px) and (orientation: portrait) {
   .slider-area .hero__caption h1::before {
-    display: none;
+    right: -2%;
+    top: -42px;
   }
 }
-@media (max-width: 575px) {
+
+@media (max-width: 767px) and (orientation: landscape) {
   .slider-area .hero__caption h1::before {
-    display: none;
+    right: 30%;
+    top: -42px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .slider-area .hero__caption h1 {
     font-size: 50px;
-    line-height: 1.2;
+    line-height: 1;
+    
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .slider-area .hero__caption h1 {
     font-size: 52px;
-    line-height: 1.2;
+    line-height: 1;
     margin-bottom: 10px;
   }
 }
-@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+@media (max-width: 767px) and (orientation: portrait) {
   .slider-area .hero__caption h1 {
-    font-size: 47px;
+    font-size: 42px;
     line-height: 1.4;
-    margin-bottom: 8px;
+    padding-bottom: 0%;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 767px) and (orientation: landscape) {
   .slider-area .hero__caption h1 {
-    font-size: 33px;
+    font-size: 42px;
     line-height: 1.4;
-    margin-bottom: 8px;
+    padding-bottom: 0%;
   }
 }
 .slider-area .hero__caption h1 strong {
@@ -2455,7 +2536,7 @@ hr {
 }
 .pricing-card-area .single-card {
   background: #fffefbff;
-  padding: 70px 25px;
+  padding: 10px 25px;
   padding-bottom: 0;
   box-shadow: 0px 0px 9px 0px rgba(131, 93, 248, 0.07);
   -webkit-transition: all 0.3s ease-out 0s;
@@ -2511,7 +2592,7 @@ hr {
 }
 .pricing-card-area .single-card:hover {
   box-shadow: 0px 10px 30px 0px rgba(133, 66, 189, 0.1);
-  border: 1px solid #ff2828;
+  border: 1px solid #d4af37;
   padding-bottom: 10px;
 }
 .pricing-card-area .single-card:hover .card-buttons {
@@ -2613,7 +2694,7 @@ hr {
   position: absolute;
   bottom: 0;
   align-items: end;
-  background: #e72526;
+  background: #004261ff;
   display: flex;
   padding: 32px 97px 32px 40px;
   opacity: 0;
@@ -5379,4 +5460,34 @@ img {
     margin: 20px auto;   /* margen automático horizontal = centrado */
     max-width: 400px;    /* opcional: tamaño máximo */
     height: auto;        /* mantener proporción */
+}
+
+/* Estilo del indicador */
+.scroll-indicator {
+  position: absolute;
+  bottom: 5%;
+  right: -5%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* Flecha animada */
+.scroll-indicator .arrow {
+  width: 24px;
+  height: 24px;
+  margin: -5px auto 0; /* antes 10px */
+  border-left: 3px solid white;
+  border-bottom: 3px solid white;
+  transform: rotate(-45deg);
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0) rotate(-45deg); }
+  40% { transform: translateY(8px) rotate(-45deg); }
+  60% { transform: translateY(4px) rotate(-45deg); }
 }
