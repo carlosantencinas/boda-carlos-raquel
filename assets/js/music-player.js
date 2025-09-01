@@ -76,3 +76,14 @@ player.addEventListener('ended', () => {
 // Inicializar: mezclar y empezar con canción aleatoria
 shufflePlaylist();
 playSong(currentIndex);
+// Inicializar: mezclar playlist
+shufflePlaylist();
+
+// En móviles: iniciar al hacer scroll
+let musicStarted = false;
+document.addEventListener('touchstart', () => {
+  if (!musicStarted) {
+    playSong(currentIndex);
+    musicStarted = true;
+  }
+}, { once: true });

@@ -1262,22 +1262,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let audioEnabled = false;
 
     // =====================
-    // Función para activar audio
-    // =====================
-    function enableAudio() {
-        const silentAudio = new Audio("data:audio/wav;base64,UklGRnoAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoAAAC");
-        silentAudio.play().then(() => {
-            audioEnabled = true;
-            audioPermissionBtn.style.display = 'none';
-            audioOverlay.style.display = 'none';
-            silentAudio.pause();
-            if (shuffledPlaylist.length > 0) playSong(currentIndex);
-        }).catch(error => {
-            console.log('Error al activar audio:', error);
-            alert('Por favor, permite la reproducción de audio en tu navegador para disfrutar de la música.');
-        });
-    }
-
     // =====================
     // Detectar dispositivo móvil
     // =====================
@@ -1378,5 +1362,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
     </script>
+     <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const player = document.getElementById('player');
+
+      function startAudio() {
+        player.play().catch(err => console.log("No se pudo reproducir aún:", err));
+        document.removeEventListener('click', startAudio);
+        document.removeEventListener('touchstart', startAudio);
+      }
+
+      document.addEventListener('click', startAudio, { once: true });
+      document.addEventListener('touchstart', startAudio, { once: true });
+    });
+  </script>
 </body>
 </html>
