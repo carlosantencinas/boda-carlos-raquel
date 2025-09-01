@@ -11,7 +11,7 @@
     <meta property="og:url" content="https://carlosantencinas.github.io/boda-carlos-raquel/">
     <meta property="og:title" content="Boda de Carlos & Raquel | 4 de Octubre 2025">
     <meta property="og:description" content="¡Acompáñanos en nuestro gran día, el 4 de Octubre 2025!">
-    <meta property="og:image" content="https://carlosantencinas.github.io/boda-carlos-raquel/assets/img/logo/logo.png">
+    <meta property="og:image" content="https://carlosantencinas.github.io/boda-carlos-raquel/assets/img/logo/logo22.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/png">
@@ -21,7 +21,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Boda de Carlos & Raquel | 4 de Octubre 2025">
     <meta name="twitter:description" content="¡Acompáñanos en nuestro gran día, el 4 de Octubre 2025!">
-    <meta name="twitter:image" content="https://carlosantencinas.github.io/boda-carlos-raquel/assets/img/logo/logo.png">
+    <meta name="twitter:image" content="https://carlosantencinas.github.io/boda-carlos-raquel/assets/img/logo/logo22.png">
     
     <!-- Vista responsive y pantalla completa -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -1242,155 +1242,141 @@
         window.addEventListener('resize', adjustImagesForMobile);
         document.addEventListener('DOMContentLoaded', adjustImagesForMobile);
 
-        // Validación del formulario
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = this.querySelector('input[name="name"]').value;
-            const email = this.querySelector('input[name="email"]').value;
-            const guests = this.querySelector('select[name="guests"]').value;
-            
-            if (!name || !email || !guests) {
-                alert('Por favor, complete todos los campos obligatorios.');
-                return;
-            }
-            
-            alert('¡Gracias por confirmar su asistencia! Nos vemos el 4 de Octubre.');
-            this.reset();
-        });
+       
 
         // ===== REPRODUCTOR DE MÚSICA MEJORADO =====
-        document.addEventListener('DOMContentLoaded', function() {
-            const player = document.getElementById('player');
-            const playlist = document.getElementById('playlist');
-            const items = playlist.getElementsByTagName('li');
-            const songTitle = document.getElementById('song-title');
-            const randomBtn = document.getElementById('random-btn');
-            const prevBtn = document.getElementById('prev-btn');
-            const nextBtn = document.getElementById('next-btn');
-            const audioPermissionBtn = document.getElementById('audio-permission');
-            const audioOverlay = document.getElementById('audio-overlay');
-            const activateAudioBtn = document.getElementById('activate-audio');
-            
-            let currentIndex = 0;
-            let shuffledPlaylist = [];
-            let audioEnabled = false;
-            
-            // Función para activar el audio
-            function enableAudio() {
-                // Intentar reproducir un audio silencioso para activar la reproducción
-                const silentAudio = new Audio("data:audio/wav;base64,UklGRnoAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoAAAC");
-                silentAudio.play().then(function() {
-                    audioEnabled = true;
-                    audioPermissionBtn.style.display = 'none';
-                    audioOverlay.style.display = 'none';
-                    silentAudio.pause();
-                    
-                    // Iniciar la reproducción de la música
-                    if (shuffledPlaylist.length > 0) {
-                        playSong(currentIndex);
-                    }
-                }).catch(function(error) {
-                    console.log('Error al activar audio:', error);
-                    alert('Por favor, permite la reproducción de audio en tu navegador para disfrutar de la música.');
-                });
-            }
-            
-            // Mostrar overlay en dispositivos móviles
-            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                audioOverlay.style.display = 'flex';
+document.addEventListener('DOMContentLoaded', function() {
+    const player = document.getElementById('player');
+    const playlist = document.getElementById('playlist');
+    const items = playlist.getElementsByTagName('li');
+    const songTitle = document.getElementById('song-title');
+    const randomBtn = document.getElementById('random-btn');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const audioPermissionBtn = document.getElementById('audio-permission');
+    const audioOverlay = document.getElementById('audio-overlay');
+    const activateAudioBtn = document.getElementById('activate-audio');
+
+    let currentIndex = 0;
+    let shuffledPlaylist = [];
+    let audioEnabled = false;
+
+    // =====================
+    // Función para activar audio
+    // =====================
+    function enableAudio() {
+        const silentAudio = new Audio("data:audio/wav;base64,UklGRnoAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoAAAC");
+        silentAudio.play().then(() => {
+            audioEnabled = true;
+            audioPermissionBtn.style.display = 'none';
+            audioOverlay.style.display = 'none';
+            silentAudio.pause();
+            if (shuffledPlaylist.length > 0) playSong(currentIndex);
+        }).catch(error => {
+            console.log('Error al activar audio:', error);
+            alert('Por favor, permite la reproducción de audio en tu navegador para disfrutar de la música.');
+        });
+    }
+
+    // =====================
+    // Detectar dispositivo móvil
+    // =====================
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+    if (isMobile) {
+        audioOverlay.style.display = 'flex';
+        audioPermissionBtn.classList.add('show');
+    } else {
+        // Desktop: intentar autoplay tras 1 segundo
+        setTimeout(enableAudio, 1000);
+    }
+
+    // =====================
+    // Botones de activación de audio
+    // =====================
+    activateAudioBtn.addEventListener('click', enableAudio);
+    audioPermissionBtn.addEventListener('click', enableAudio);
+
+    // =====================
+    // Shuffle playlist
+    // =====================
+    function shufflePlaylist() {
+        shuffledPlaylist = Array.from(items);
+        for (let i = shuffledPlaylist.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffledPlaylist[i], shuffledPlaylist[j]] = [shuffledPlaylist[j], shuffledPlaylist[i]];
+        }
+        currentIndex = Math.floor(Math.random() * shuffledPlaylist.length);
+    }
+
+    // =====================
+    // Reproducir canción
+    // =====================
+    function playSong(index) {
+        if (!audioEnabled) return;
+
+        currentIndex = index;
+        const song = shuffledPlaylist[index];
+        player.src = song.getAttribute('data-src');
+
+        player.play().then(() => {
+            songTitle.textContent = song.textContent;
+            Array.from(items).forEach(li => li.classList.remove('playing'));
+            song.classList.add('playing');
+        }).catch(error => {
+            console.log('Error al reproducir:', error);
+            if (error.name === 'NotAllowedError') {
                 audioPermissionBtn.classList.add('show');
-            } else {
-                // En desktop, intentar reproducir automáticamente
-                setTimeout(enableAudio, 1000);
             }
-            
-            // Evento para el botón de activación de audio
-            activateAudioBtn.addEventListener('click', enableAudio);
-            audioPermissionBtn.addEventListener('click', enableAudio);
-            
-            function shufflePlaylist() {
-                shuffledPlaylist = Array.from(items);
-                for (let i = shuffledPlaylist.length - 1; i > 0; i--) {
-                    const j = Math.floor(Math.random() * (i + 1));
-                    [shuffledPlaylist[i], shuffledPlaylist[j]] = [shuffledPlaylist[j], shuffledPlaylist[i]];
-                }
-                currentIndex = Math.floor(Math.random() * shuffledPlaylist.length);
-            }
-            
-            function playSong(index) {
-                // Si el audio no está habilitado, no reproducir
-                if (!audioEnabled) return;
-                
-                currentIndex = index;
-                const song = shuffledPlaylist[index];
-                const src = song.getAttribute('data-src');
-                player.src = src;
-                
-                // Intentar reproducir
+        });
+    }
+
+    function playNext() {
+        currentIndex = (currentIndex + 1) % shuffledPlaylist.length;
+        playSong(currentIndex);
+    }
+
+    function playPrev() {
+        currentIndex = (currentIndex - 1 + shuffledPlaylist.length) % shuffledPlaylist.length;
+        playSong(currentIndex);
+    }
+
+    // =====================
+    // Inicializar playlist
+    // =====================
+    shufflePlaylist();
+
+    Array.from(items).forEach(item => {
+        item.addEventListener('click', () => {
+            const index = shuffledPlaylist.indexOf(item);
+            if (index !== -1) playSong(index);
+        });
+    });
+
+    randomBtn.addEventListener('click', () => {
+        shufflePlaylist();
+        playSong(currentIndex);
+    });
+
+    prevBtn.addEventListener('click', playPrev);
+    nextBtn.addEventListener('click', playNext);
+
+    player.addEventListener('ended', playNext);
+
+    // =====================
+    // Activar sonido al primer clic en desktop
+    // =====================
+    if (!isMobile) {
+        document.addEventListener('click', function initAudio() {
+            if (!audioEnabled) {
                 player.play().then(() => {
-                    songTitle.textContent = song.textContent;
-
-                    for (let j = 0; j < items.length; j++) {
-                        items[j].classList.remove('playing');
-                    }
-                    song.classList.add('playing');
-                }).catch(error => {
-                    console.log('Error al reproducir:', error);
-                    // En móviles, mostrar el botón de activación si hay un error de política de autoplay
-                    if (error.name === 'NotAllowedError') {
-                        audioPermissionBtn.classList.add('show');
-                    }
-                });
+                    audioEnabled = true;
+                }).catch(err => console.log('Autoplay bloqueado:', err));
+                document.removeEventListener('click', initAudio);
             }
-            
-            function playNext() {
-                currentIndex = (currentIndex + 1) % shuffledPlaylist.length;
-                playSong(currentIndex);
-            }
-            
-            function playPrev() {
-                currentIndex = (currentIndex - 1 + shuffledPlaylist.length) % shuffledPlaylist.length;
-                playSong(currentIndex);
-            }
-            
-            // Inicializar la lista de reproducción
-            shufflePlaylist();
-            
-            // Configurar eventos
-            for (let i = 0; i < items.length; i++) {
-                items[i].addEventListener('click', function() {
-                    const index = shuffledPlaylist.indexOf(this);
-                    if (index !== -1) playSong(index);
-                });
-            }
-            
-            randomBtn.addEventListener('click', function() {
-                shufflePlaylist();
-                playSong(currentIndex);
-            });
-            
-            prevBtn.addEventListener('click', playPrev);
-            nextBtn.addEventListener('click', playNext);
-            
-            player.addEventListener('ended', playNext);
         });
-
-        // Activar sonido al click (solo una vez)
-        document.addEventListener('DOMContentLoaded', function() {
-            const audio = document.getElementById('player');
-            let audioEnabled = false;
-            
-            document.addEventListener('click', function() {
-                if (!audioEnabled && !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                    audio.play().then(() => {
-                        audioEnabled = true;
-                    }).catch(error => {
-                        console.log('La reproducción automática fue prevenida:', error);
-                    });
-                }
-            });
-        });
+    }
+});
     </script>
 </body>
 </html>
