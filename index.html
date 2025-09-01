@@ -446,7 +446,7 @@
 
         /* Para navegadores WebKit (Chrome, Safari) */
         #player::-webkit-media-controls-panel {
-            background: linear-gradient(90deg, #e1fff9ff, #ffffffff);
+            background: linear-gradient(90deg, #00284eff, #00e2e2ff);
         }
 
         #playlist {
@@ -566,10 +566,63 @@
                 transform: translate(-50%, 0);
             }
         }
+
+        /* Overlay para activar audio */
+        .audio-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9998;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .audio-overlay h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #d4af37;
+        }
+
+        .audio-overlay p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .audio-overlay-btn {
+            padding: 15px 30px;
+            background: #d4af37;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .audio-overlay-btn:hover {
+            background: #b8941f;
+            transform: scale(1.05);
+        }
     </style>
 </head>
 
 <body>
+    <!-- Overlay para activar audio -->
+    <div class="audio-overlay" id="audio-overlay">
+        <h2>Bienvenidos a nuestra boda</h2>
+        <p>Para una experiencia completa, activa el audio para disfrutar de nuestra música especial</p>
+        <button class="audio-overlay-btn" id="activate-audio">Activar música</button>
+    </div>
+
     <!-- Botón de activación de audio (aparece solo en móviles) -->
     <button id="audio-permission">Activar música 🎵</button>
 
@@ -890,7 +943,7 @@
 
                             <div class="col-12 mb-20">
                                 <h3>Padrinos de Anillos</h3>
-                                <p>Jorge Encinas Garate<br>Norah M. Cari Cayo</p>
+                                <p>Jorge Encinas Garate<br>Norah Cari C.</p>
                             </div>
 
                             <div class="col-12 mb-20">
@@ -979,7 +1032,7 @@
 
             <!-- Playlist de música local - VERSIÓN MEJORADA -->
             <section id="musica" class="music-player">
-                <div class="container" >
+                <div class="container">
                     <h2>Nuestra Música</h2>
                     <div id="current-song">
                         <i class="fas fa-music"></i>
@@ -994,9 +1047,9 @@
                         <li data-src="assets/audio/TIME.mp3">How Long Will I Love You - Jon Boden</li>
                     </ul>
                     <div class="music-controls">
-
+                        <button id="prev-btn" class="music-btn"><i class="fas fa-step-backward"></i> Anterior</button>
                         <button id="random-btn" class="music-btn">Aleatoria <i class="fas fa-random"></i></button>
-
+                        <button id="next-btn" class="music-btn">Siguiente <i class="fas fa-step-forward"></i></button>
                     </div>
                 </div>
             </section>
@@ -1207,23 +1260,21 @@
             const prevBtn = document.getElementById('prev-btn');
             const nextBtn = document.getElementById('next-btn');
             const audioPermissionBtn = document.getElementById('audio-permission');
+            const audioOverlay = document.getElementById('audio-overlay');
+            const activateAudioBtn = document.getElementById('activate-audio');
             
             let currentIndex = 0;
             let shuffledPlaylist = [];
             let audioEnabled = false;
             
-            // Mostrar botón de activación en móviles
-            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                audioPermissionBtn.classList.add('show');
-            }
-            
-            // Activar audio cuando el usuario hace clic en el botón
-            audioPermissionBtn.addEventListener('click', function() {
+            // Función para activar el audio
+            function enableAudio() {
                 // Intentar reproducir un audio silencioso para activar la reproducción
                 const silentAudio = new Audio("data:audio/wav;base64,UklGRnoAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoAAAC");
                 silentAudio.play().then(function() {
                     audioEnabled = true;
                     audioPermissionBtn.style.display = 'none';
+                    audioOverlay.style.display = 'none';
                     silentAudio.pause();
                     
                     // Iniciar la reproducción de la música
@@ -1234,7 +1285,20 @@
                     console.log('Error al activar audio:', error);
                     alert('Por favor, permite la reproducción de audio en tu navegador para disfrutar de la música.');
                 });
-            });
+            }
+            
+            // Mostrar overlay en dispositivos móviles
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                audioOverlay.style.display = 'flex';
+                audioPermissionBtn.classList.add('show');
+            } else {
+                // En desktop, intentar reproducir automáticamente
+                setTimeout(enableAudio, 1000);
+            }
+            
+            // Evento para el botón de activación de audio
+            activateAudioBtn.addEventListener('click', enableAudio);
+            audioPermissionBtn.addEventListener('click', enableAudio);
             
             function shufflePlaylist() {
                 shuffledPlaylist = Array.from(items);
@@ -1246,11 +1310,8 @@
             }
             
             function playSong(index) {
-                // Si estamos en móvil y el audio no está habilitado, mostrar el botón
-                if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && !audioEnabled) {
-                    audioPermissionBtn.classList.add('show');
-                    return;
-                }
+                // Si el audio no está habilitado, no reproducir
+                if (!audioEnabled) return;
                 
                 currentIndex = index;
                 const song = shuffledPlaylist[index];
@@ -1304,11 +1365,6 @@
             nextBtn.addEventListener('click', playNext);
             
             player.addEventListener('ended', playNext);
-            
-            // En dispositivos de escritorio, intentar reproducir automáticamente
-            if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                playSong(currentIndex);
-            }
         });
 
         // Activar sonido al click (solo una vez)
