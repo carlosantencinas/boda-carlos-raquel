@@ -1,663 +1,682 @@
 <!DOCTYPE html>
 <html class="no-js" lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Boda de Carlos & Raquel | 4 de Octubre 2025</title>
-  <meta name="description" content="Celebra con nosotros nuestra boda el 4 de Octubre de 2025">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  
-  <link rel="shortcut icon" type="image/x-icon" href="assets/img/navi.ico">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boda de Carlos & Raquel | 4 de Octubre 2025</title>
+    <meta name="description" content="¡Celebra con nosotros nuestra boda el 4 de Octubre 2025!">
 
-  <!-- Librerías CSS -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-  <link rel="stylesheet" href="assets/css/flaticon.css">
-  <link rel="stylesheet" href="assets/css/slicknav.css">
-  <link rel="stylesheet" href="assets/css/animate.min.css">
-  <link rel="stylesheet" href="assets/css/magnific-popup.css">
-  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-  <link rel="stylesheet" href="assets/css/themify-icons.css">
-  <link rel="stylesheet" href="assets/css/slick.css">
-  <link rel="stylesheet" href="assets/css/nice-select.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
-
-  <!-- Estilos personalizados -->
-  <style>
-    /* ===== Pantalla completa y hojas ===== */
-    body {
-      margin: 0;
-      padding: 0;
-      background: #fafafa;
-      overflow-x: hidden;
-      font-family: 'Segoe UI', sans-serif;
-      color: #333;
-    }
-
-    .hoja {
-      position: fixed;
-      top: -50px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      pointer-events: none;
-      opacity: 0.9;
-      animation: caer linear;
-    }
-
-    @keyframes caer {
-      to {
-        transform: translateY(100vh) rotate(360deg);
-        opacity: 0;
-      }
-    }
-
-    /* Botón fijo para activar/desactivar lluvia */
-    #btnLluvia {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      z-index: 9999;
-    }
-
-    #btnLluvia img {
-      width: 50px;
-      height: 50px;
-    }
-
-    /* ===== EFECTO PARALLAX ===== */
-    .parallax-container {
-      position: relative;
-      overflow: hidden;
-      width: 100%;
-    }
+    <!-- Metaetiquetas Open Graph optimizadas para WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://carlosantencinas.github.io/boda-carlos-raquel/">
+    <meta property="og:title" content="Boda de Carlos & Raquel | 4 de Octubre 2025">
+    <meta property="og:description" content="¡Acompáñanos en nuestro gran día, el 4 de Octubre 2025!">
+    <meta property="og:image" content="https://carlosantencinas.github.io/boda-carlos-raquel/assets/img/logo/logo22.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:locale" content="es_ES">
     
-    .parallax-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      pointer-events: none;
-    }
+    <!-- Metaetiquetas para Twitter (opcional pero recomendado) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Boda de Carlos & Raquel | 4 de Octubre 2025">
+    <meta name="twitter:description" content="¡Acompáñanos en nuestro gran día, el 4 de Octubre 2025!">
+    <meta name="twitter:image" content="https://carlosantencinas.github.io/boda-carlos-raquel/assets/img/logo/logo22.png">
     
-    .parallax-bg-1 {
-      background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(255, 255, 255, 0.1) 100%);
-      opacity: 0.3;
-    }
+    <!-- Vista responsive y pantalla completa -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     
-    .parallax-bg-2 {
-      background: radial-gradient(circle at 30% 70%, rgba(46, 139, 87, 0.1) 0%, transparent 50%);
-      opacity: 0.2;
-    }
-    
-    .parallax-bg-3 {
-      background: radial-gradient(circle at 70% 30%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
-      opacity: 0.15;
-    }
-    
-    /* Elementos flotantes para parallax */
-    .parallax-element {
-      position: absolute;
-      will-change: transform;
-      pointer-events: none;
-    }
-    
-    .floating-hearts {
-      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23d4af37" opacity="0.6"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>') no-repeat;
-      width: 150px;
-      height: 150px;
-      top: 20%;
-      left: 10%;
-      opacity: 0.7;
-      animation: float 8s ease-in-out infinite;
-    }
-    
-    .floating-ring {
-      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%232E8B57" stroke-width="1" opacity="0.7"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/></svg>') no-repeat;
-      width: 100px;
-      height: 100px;
-      top: 60%;
-      right: 15%;
-      opacity: 0.8;
-      animation: float 10s ease-in-out infinite;
-    }
-    
-    .floating-flower {
-      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23d4af37" opacity="0.5"><path d="M12 22s8-4 8-10c0-2.5-1.5-4-4-4-1.4 0-2.8.6-4 2-1.2-1.4-2.6-2-4-2-2.5 0-4 1.5-4 4 0 6 8 10 8 10z"/></svg>') no-repeat;
-      width: 120px;
-      height: 120px;
-      bottom: 15%;
-      left: 15%;
-      opacity: 0.6;
-      animation: float 12s ease-in-out infinite;
-    }
-    
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-20px);
-      }
-    }
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/navi.ico">
+    <link rel="icon" type="image/png" href="assets/img/logo/logo22.png">
 
-    /* Indicador de scroll personalizado */
-    .scroll-indicator {
-      position: fixed;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1000;
-      color: #d4af37;
-      font-family: 'Segoe UI', sans-serif;
-      font-size: 14px;
-      text-align: center;
-      opacity: 0.8;
-      transition: opacity 0.3s;
-    }
-    
-    .scroll-indicator:hover {
-      opacity: 1;
-    }
-    
-    .scroll-indicator .arrow {
-      width: 20px;
-      height: 20px;
-      margin: 5px auto 0;
-      border-right: 2px solid #d4af37;
-      border-bottom: 2px solid #d4af37;
-      transform: rotate(45deg);
-      animation: bounce 2s infinite;
-    }
-    
-    @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0) rotate(45deg);
-      }
-      40% {
-        transform: translateY(-10px) rotate(45deg);
-      }
-      60% {
-        transform: translateY(-5px) rotate(45deg);
-      }
-    }
+    <!-- Librerías CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/parallax.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/music-player.css">
 
-    /* ===== ESTILOS PERSONALIZADOS ===== */
-    /* Sección general */
-    .historia {
-      padding: 20px;
-    }
+    <!-- Estilos personalizados consolidados -->
+    <style>
+       
+        /* ===== Estilos mapa alternativo ===== */
+        .map-container {
+            height: 400px;
+            background-color: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
 
-    /* Título principal */
-    .titulo-modern {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #222;
-      margin-bottom: 20px;
-    }
+        .map-placeholder {
+            text-align: center;
+            padding: 20px;
+        }
 
-    /* Línea decorativa */
-    .decorador {
-      width: 300px;
-      height: 4px;
-      background: linear-gradient(90deg, #00284eff, #00e2e2ff);
-      margin: 0 auto 25px auto;
-      border-radius: 10px;
-    }
+        .map-placeholder i {
+            font-size: 48px;
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
 
-    /* Texto introductorio */
-    .texto-intro {
-      color: #666;
-      font-size: 1.1rem;
-      line-height: 1.7;
-      max-width: 600px;
-      margin: 0 auto;
-    }
+        .map-placeholder h3 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
 
-    /* Tarjeta de historia */
-    .card-historia {
-      background: #fff;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card-historia:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 25px rgba(0,0,0,0.15);
-    }
+        .map-placeholder p {
+            margin-bottom: 5px;
+            color: #6c757d;
+        }
 
-    .card-historia h4 {
-      font-weight: 600;
-      color: #444;
-    }
+        .btn-map {
+            background-color: #d4af37;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 15px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
 
-    .card-historia p {
-      color: #555;
-      line-height: 1.6;
-    }
+        .btn-map:hover {
+            background-color: #b8941f;
+            color: white;
+            text-decoration: none;
+        }
 
-    /* Imagen */
-    .story-img img {
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      transition: transform 0.4s ease;
-    }
-    .story-img img:hover {
-      transform: scale(1.05);
-    }
+        /* ===== Pantalla completa y hojas ===== */
+        body {
+            margin: 0;
+            padding: 0;
+            background: #fafafa;
+            overflow-x: hidden;
+            font-family: 'Segoe UI', sans-serif;
+            color: #333;
+        }
 
-    /* Fondo estilo Win11 para contador */
-    .count-down-area {
-      background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(240,240,240,0.9) 100%);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
-      padding: 30px;
-      margin: 40px 0;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-    }
+        .hoja {
+            position: fixed;
+            top: -50px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            pointer-events: none;
+            opacity: 0.9;
+            animation: caer linear;
+        }
 
-    /* Animación sutil */
-    .single-counter {
-      background: rgba(0, 39, 46, 0.6);
-      backdrop-filter: blur(10px);
-      padding: 25px 15px;
-      border-radius: 16px;
-      transition: all 0.3s ease;
-    }
+        @keyframes caer {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
 
-    .single-counter:hover {
-      background: rgba(0, 162, 255, 0.5);
-      transform: translateY(-5px);
-    }
+        /* Botón fijo para activar/desactivar lluvia */
+        #btnLluvia {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 9999;
+        }
 
-    /* Números grandes estilo moderno */
-    .counter {
-      display: block;
-      font-size: 5rem;
-      font-weight: 700;
-      color: #1a1a1a;
-      animation: pop 1s ease-in-out infinite alternate;
-    }
+        #btnLluvia img {
+            width: 50px;
+            height: 50px;
+        }
+        
+        /* Preloader */
+        #preloader-active {
+            position: fixed;
+            inset: 0;
+            background: #fff;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    @keyframes pop {
-      from { transform: scale(1); }
-      to { transform: scale(1.05); }
-    }
+        .preloader-inner {
+            position: relative;
+            width: 120px;
+            height: 120px;
+        }
 
-    /* Texto descriptivo */
-    .single-counter p {
-      margin-top: 10px;
-      font-size: 1.1rem;
-      font-weight: 500;
-      color: #444;
-    }
+        .preloader-circle {
+            position: absolute;
+            inset: 0;
+            border: 4px solid #ccc;
+            border-top: 4px solid #2E8B57;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
 
-    .icon-container {
-        width: 180px;
-        height: 180px;
-        margin: 0 auto 15px auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        background-color: #f8f9fa;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        border: 2px solid #d4af37;
-    }
-    
-    .church-icon {
-        max-width: 150px;
-        max-height: 150px;
-        object-fit: contain;
-    }
+        .preloader-img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) translateY(-500%);
+            width: 60%;
+        }
 
-    /* Estilos para la galería de fotos final */
-    .Gallery {
-      display: block;
-      position: relative;
-      padding-top: 90%;
-      transform-style: preserve-3d;
-      perspective: 100vw;
-    }
+        .preloader-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
 
-    .Gallery > img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      cursor: pointer;
-      --circle-x: 50%;
-      --circle-y: 50%;
-    }
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Nuestra historia */
+        .historia { padding: 20px; }
+        .titulo-modern {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 20px;
+        }
+        .decorador {
+            width: 300px;
+            height: 4px;
+            background: linear-gradient(90deg, #00284eff, #00e2e2ff);
+            margin: 0 auto 25px auto;
+            border-radius: 10px;
+        }
+        .texto-intro {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .card-historia {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-historia:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+        }
+        .card-historia h4 { font-weight: 600; color: #444; }
+        .card-historia p { color: #555; line-height: 1.6; }
+        .story-img img {
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: transform 0.4s ease;
+        }
+        .story-img img:hover { transform: scale(1.05); }
+        
+        /* Icono iglesia */
+        .icon-container {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 15px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #f8f9fa;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border: 2px solid #d4af37;
+        }
+        .church-icon {
+            max-width: 150px;
+            max-height: 150px;
+            object-fit: contain;
+        }
+        
+        /* Contador */
+        .single-counter {
+            background: rgba(0, 39, 46, 0.6);
+            backdrop-filter: blur(10px);
+            padding: 25px 15px;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+        .single-counter:hover {
+            background: rgba(0, 162, 255, 0.5);
+            transform: translateY(-5px);
+        }
+        .counter {
+            display: block;
+            font-size: 5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            animation: pop 1s ease-in-out infinite alternate;
+        }
+        @keyframes pop {
+            from { transform: scale(1); }
+            to { transform: scale(1.05); }
+        }
+        .single-counter p {
+            margin-top: 10px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #444;
+        }
+        
+        /* Galería final */
+        .Gallery {
+            display: block;
+            position: relative;
+            padding-top: 90%;
+            transform-style: preserve-3d;
+            perspective: 100vw;
+        }
+        .Gallery > img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+            --circle-x: 50%;
+            --circle-y: 50%;
+        }
+        @keyframes openup {
+            to { clip-path: circle(100vw at var(--circle-x) var(--circle-y)); }
+        }
+        .open-enter-active {
+            clip-path: circle(0 at var(--circle-x) var(--circle-y));
+        }
+        .open-enter-to {
+            animation: openup 500ms ease-in;
+        }
 
-    @keyframes openup {
-      to {
-        clip-path: circle(100vw at var(--circle-x) var(--circle-y));
-      }
-    }
+        /* ===== MEJORAS PARA EL REPRODUCTOR DE MÚSICA EN MÓVILES ===== */
+        .music-player {
+            padding: 20px 0;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            margin: 20px 0;
+        }
 
-    .open-enter-active {
-      clip-path: circle(0 at var(--circle-x) var(--circle-y));
-    }
+        .music-player h2 {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+        }
 
-    .open-enter-to {
-      animation: openup 500ms ease-in;
-    }
+        #current-song {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            color: #fff;
+            font-size: 16px;
+        }
 
-    /* Preloader */
-    #preloader-active {
-      position: fixed;
-      inset: 0;
-      background: #fff;
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+        #current-song i {
+            margin-right: 10px;
+            color: #d4af37;
+        }
 
-    .preloader-inner {
-      position: relative;
-      width: 120px;
-      height: 120px;
-    }
+        #song-title {
+            font-weight: bold;
+            color: #d4af37;
+        }
 
-    /* círculo fijo en su lugar */
-    .preloader-circle {
-      position: absolute;
-      inset: 0;
-      border: 4px solid #ccc;
-      border-top: 4px solid #2E8B57;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
+        #player {
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
 
-    /* logo perfectamente centrado */
-    .preloader-img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 60%;
-    }
+        #playlist {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+        }
 
-    .preloader-img img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
+        #playlist li {
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
 
-    @keyframes spin {
-      100% {
-        transform: rotate(360deg);
-      }
-    }
+        #playlist li:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
 
-    /* Estilos mapa alternativo */
-    .map-container {
-      height: 400px;
-      background-color: #f8f9fa;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      border-radius: 8px;
-      margin: 20px 0;
-    }
+        #playlist li.playing {
+            background: rgba(212, 175, 55, 0.3);
+            border-left: 4px solid #d4af37;
+        }
 
-    .map-placeholder {
-      text-align: center;
-      padding: 20px;
-    }
+        .music-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
 
-    .map-placeholder i {
-      font-size: 48px;
-      color: #d4af37;
-      margin-bottom: 15px;
-    }
+        .music-btn {
+            padding: 12px 20px;
+            background: #d4af37;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
 
-    .map-placeholder h3 {
-      margin-bottom: 15px;
-      color: #2c3e50;
-    }
+        .music-btn:hover {
+            background: #b8941f;
+            transform: translateY(-2px);
+        }
 
-    .map-placeholder p {
-      margin-bottom: 5px;
-      color: #6c757d;
-    }
+        .music-btn i {
+            margin-right: 8px;
+        }
 
-    .btn-map {
-      background-color: #d4af37;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      margin-top: 15px;
-      text-decoration: none;
-      display: inline-block;
-      transition: background-color 0.3s;
-    }
+        /* Para dispositivos móviles */
+        @media (max-width: 768px) {
+            #player {
+                height: 40px;
+            }
+            
+            #playlist li {
+                padding: 15px;
+                font-size: 16px;
+            }
+            
+            .music-btn {
+                padding: 15px 25px;
+                font-size: 18px;
+            }
+            
+            #current-song {
+                font-size: 18px;
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            #current-song i {
+                margin-right: 0;
+                margin-bottom: 5px;
+                font-size: 24px;
+            }
+        }
 
-    .btn-map:hover {
-      background-color: #b8941f;
-      color: white;
-      text-decoration: none;
-    }
+        #audio-permission.show {
+            display: block;
+            animation: fadeInUp 0.5s ease;
+        }
 
-    /* Estilos para el reproductor de música */
-    .music-player {
-      padding: 40px 0;
-      text-align: center;
-    }
-    
-    #playlist {
-      list-style: none;
-      padding: 0;
-      margin: 20px 0;
-    }
-    
-    #playlist li {
-      padding: 10px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    
-    #playlist li:hover {
-      background: rgba(212, 175, 55, 0.1);
-    }
-    
-    #playlist li.playing {
-      background: rgba(212, 175, 55, 0.2);
-      font-weight: bold;
-    }
-    
-    #current-song {
-      margin-bottom: 15px;
-      font-style: italic;
-    }
-  </style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate(-50%, 20px);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, 0);
+            }
+        }
+
+        /* ===== INDICADOR DE SCROLL ===== */
+        .scroll-indicator {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 999;
+            color: #d4af37;
+            font-family: 'Segoe UI', sans-serif;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+        
+        .scroll-indicator.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .scroll-indicator span {
+            margin-bottom: 10px;
+            font-size: 14px;
+            writing-mode: vertical-lr;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+        }
+        
+        .scroll-indicator .arrow {
+            width: 0px;
+            height: 30px;
+            background-color: #d4af37;
+            position: relative;
+            animation: bounce 2s infinite;
+        }
+        
+        .scroll-indicator .arrow::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: -5px;
+            width: 12px;
+            height: 12px;
+            border-right: 2px solid #d4af37;
+            border-bottom: 2px solid #d4af37;
+            transform: rotate(45deg);
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        
+        /* ===== BOTÓN FLOTANTE DE MÚSICA ===== */
+        .music-floating-btn {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            background: radial-gradient(circle at 30% 30%, #ffc400, #b8941f);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 999;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            overflow: visible;
+        }
+
+        .music-floating-btn.playing {
+            animation: pulseBtn 1.5s ease-in-out infinite;
+        }
+
+        .music-floating-btn .icon {
+            color: #fff;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .music-floating-btn.playing .icon {
+            animation: spin 3s linear infinite;
+        }
+
+        @keyframes pulseBtn {
+            0% { transform: scale(1); box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+            50% { transform: scale(1.15); box-shadow: 0 6px 20px rgba(0,0,0,0.4); }
+            100% { transform: scale(1); box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .music-floating-btn .note {
+            position: absolute;
+            bottom: 60%;
+            font-size: 16px;
+            color: #fff;
+            opacity: 0;
+        }
+
+        .music-floating-btn.playing .note:nth-child(2) { 
+            left: 10%; animation: floatUp 2s ease-out infinite 0.3s;
+            opacity: 1;
+        }
+        .music-floating-btn.playing .note:nth-child(3) { 
+            left: 40%; animation: floatUp 2s ease-out infinite 0.6s;
+            opacity: 1;
+        }
+        .music-floating-btn.playing .note:nth-child(4) { 
+            left: 70%; animation: floatUp 2s ease-out infinite 0.9s;
+            opacity: 1;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0) scale(0.8); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(-50px) scale(1.2); opacity: 0; }
+        }
+    </style>
 </head>
 
 <body>
 
+    <!-- Botón flotante de música -->
+    <div class="music-floating-btn paused" onclick="toggleMusic(this)">
+        <span class="icon">▶</span> <!-- play por defecto -->
+        <span class="note">♪</span>
+        <span class="note">♫</span>
+        <span class="note">♩</span>
+    </div>
+
     <!-- Indicador de scroll -->
     <div class="scroll-indicator">
-      <span>Nos casamos</span>
-      <div class="arrow"></div>
+        <span>Nos casamos</span>
+        <div class="arrow"></div>
     </div>
 
-  <!-- Botón con imagen PNG -->
-  <button id="btnLluvia">
-    <img src="assets/img/kolog/navi.png" alt="lluvia">
-  </button>
-
-  <!-- Capas de fondo para el efecto parallax -->
-  <div class="parallax-bg parallax-bg-1"></div>
-  <div class="parallax-bg parallax-bg-2"></div>
-  <div class="parallax-bg parallax-bg-3"></div>
-  
-  <!-- Elementos flotantes para parallax -->
-  <div class="parallax-element floating-hearts"></div>
-  <div class="parallax-element floating-ring"></div>
-  <div class="parallax-element floating-flower"></div>
-
-<!-- Preloader Start -->
-<div id="preloader-active">
-  <div class="preloader d-flex align-items-center justify-content-center">
-    <div class="preloader-inner">
-      <div class="preloader-circle"></div>
-      <div class="preloader-img">
-        <img src="assets/img/logo/logo.png" alt="Logo Carlos y Raquel">
-      </div>
+    <!-- Botón flotante para control de música (original) -->
+    <div id="music-control-floating" class="music-floating-btn paused">
+        <i class="fas fa-play"></i>
     </div>
-  </div>
-</div>
 
-<main>
-<!-- Slider Area Start -->
-<div class="slider-area">
-    <div class="slider-active" style="height: 500px;">
-        <!-- Single Slider -->
-        <div class="single-slider slider-height hero-overly d-flex align-items-center" style="height: 450px;">
-            <div class="container" style="height: 50px;">
-                <div class="row d-flex align-items-center">
-                    <div class="col-xl-8 col-lg-6 col-md-8">
-                        <div class="hero__caption" style="top: 90px;height: 253.8px;bottom: 0px;">
-                            <span data-animation="fadeInLeft" data-delay=".3s">04 de Octubre de 2025</span>
-                            <h1 data-animation="fadeInLeft" data-delay=".5s" data-duration="2000ms">
-                                Carlos<strong> & </strong> Raquel
-                            </h1>
-                        </div>
-                    </div>
+    <!-- Botón con imagen PNG -->
+    <button id="btnLluvia">
+        <img src="assets/img/kolog/navi.png" alt="lluvia">
+    </button>
+
+    <script>
+        // Array con imágenes de hojas
+        const hojas = [
+            "assets/img/kolog/hoja1.png",
+            "assets/img/kolog/hoja2.png",
+            "assets/img/kolog/hoja3.png",
+            "assets/img/kolog/hoja4.png",
+            "assets/img/kolog/obab.png"
+        ];
+
+        let intervaloLluvia = null;
+        let lluviaActiva = false;
+
+        function crearHoja() {
+            const hoja = document.createElement("div");
+            hoja.classList.add("hoja");
+            const img = hojas[Math.floor(Math.random() * hojas.length)];
+            hoja.style.backgroundImage = `url(${img})`;
+            hoja.style.left = Math.random() * 100 + "vw";
+            const size = 40 + Math.random() * 40;
+            hoja.style.width = size + "px";
+            hoja.style.height = size + "px";
+            const duracion = 5 + Math.random() * 5;
+            hoja.style.animationDuration = duracion + "s";
+            document.body.appendChild(hoja);
+            setTimeout(() => hoja.remove(), duracion * 1000);
+        }
+
+        document.getElementById("btnLluvia").addEventListener("click", () => {
+            if (lluviaActiva) {
+                clearInterval(intervaloLluvia);
+                intervaloLluvia = null;
+                lluviaActiva = false;
+            } else {
+                intervaloLluvia = setInterval(crearHoja, 400);
+                lluviaActiva = true;
+            }
+        });
+    </script>
+
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img">
+                    <img src="assets/img/logo/logo.png" alt="Logo Carlos y Raquel">
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Slider Area End -->
-    
-    <!--? Our Story Start -->
-    <div class="Our-story-area story-padding" style="padding-top: 5px; padding-bottom: 5px;">
-  <div class="container historia">
-    <!-- Título -->
-    <div class="row justify-content-center">
-      <div class="col-xl-7 col-lg-8 text-center">
-        <div class="section-tittle mb-5">
-          <h2 class="titulo-modern">Nuestra Historia de Amor</h2>
-          <div class="decorador"></div>
-          <p class="texto-intro">
-            “Entre los senderos de la vida nos encontramos, construimos nuestro amor con el tiempo y hoy somos felices de recibir la bendición de Dios.”
-          </p>
-        </div>
-      </div>
-    </div>
 
-    <!-- Bloques historia -->
-    <div class="row justify-content-center align-items-center g-5">
-      <!-- Bloque 1 -->
-      <div class="col-lg-5 col-md-6">
-        <div class="card-historia p-4">
-          <h4 class="mb-3">💍 La Propuesta</h4>
-          <p>Lo que parecía una celebración más se convirtió en la sorpresa más hermosa: luces, velas flores y una propuesta para unir nuestras vidas frente a Dios. Con un 'sí', decidimos continuar forjando nuestra leyenda.</p>
-        </div>
-      </div>
-
-      <!-- Imagen -->
-      <div class="col-lg-5 col-md-6">
-        <div class="story-img text-center">
-          <img class="img-fluid" src="assets/img/gallery/story1.jpg" alt="Carlos y Raquel juntos">
-        </div>
-      </div>
-    </div>
-  </div>
-    </div>
-    <!-- Our Story End -->
-    
-    <!--? Services Start -->
-    <section class="pricing-card-area section-padding30 section-bg" data-background="assets/img/gallery/section_bg1.png">
-        <div class="container">
-            <!-- Section Tittle -->
-            <div class="row d-flex justify-content-center">
-                <div class="col-lg-8">
-                    <div class="section-tittle text-center mb-70">
-                        <h2>Información de la boda</h2>
-                        <img src="assets/img/gallery/tittle_img.png" alt="Separador decorativo">
-                        <p>Quisque nec facilisis sem. In at commodo velit. Aliquam tempor volutpat laoreet. Quisque non tellus eleifend arcu gravida aliquam. Vivamus quis consequat nisl</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Tarjeta centrada -->
-<div class="row justify-content-center align-items-end">
-    <div class="col-xl-4 col-lg-4 col-md-6">
-        <div class="single-card active text-center mb-30">
-            <div class="card-top">
-                <!-- Imagen con marco circular -->
-                <div class="icon-container">
-                    <img src="assets/img/gallery/iglesia.png" alt="Iglesia" class="church-icon">
-                </div>
-                <h4>La Ceremonia</h4>
-            </div>
-            <div class="card-bottom">
-                <ul>
-                    <li><i class="fas fa-calendar-alt"></i>04 de Octubre, 2025</li>
-                    <li><i class="far fa-clock"></i>6:00 PM</li>
-                    <li><i class="fas fa-map-marker-alt"></i>Parroquia San Miguel</li>
-                    <li>Arenales N°10, Sucre</li>
-                    <li><a href="#map-section" class="map-link"><i class="far fa-map"></i> Ver en el mapa</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-        </div>
-    </section>
-
-    <!-- Count Down Start -->
-    <div class="count-down-area">
-        <div class="container">
-            <div class="row justify-content-center">
-                     <h2>Faltan estos días para el evento</h2>
-                <div class="col-lg-12 col-md-12">
-                    <div class="count-down-wrapper">
-                        <div class="row justify-content-between">
-                            <div class="col-lg-3 col-md-6 col-sm-6">
-                                <!-- Counter Up -->
-                                <div class="single-counter text-center">
-                                    <span id="days" class="counter">0</span>
-                                    <p>días</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-6 col-sm-6">
-                                <!-- Counter Up -->
-                                <div class="single-counter text-center">
-                                    <span id="hours" class="counter">0</span>
-                                    <p>horas</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-6 col-sm-6">
-                                <!-- Counter Up -->
-                                <div class="single-counter text-center">
-                                    <span id="minutes" class="counter">0</span>
-                                    <p>mins</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6">
-                                <!-- Counter Up -->
-                                <div class="single-counter text-center">
-                                    <span id="seconds" class="counter">0</span>
-                                    <p>seg</p>
+    <main>
+        <!-- Slider Area Start -->
+        <div class="slider-area">
+            <div class="slider-active" style="height: 500px;">
+                <!-- Single Slider -->
+                <div class="single-slider slider-height hero-overly d-flex align-items-center" style="height: 450px;">
+                    <div class="container" style="height: 50px;">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-xl-8 col-lg-6 col-md-8">
+                                <div class="hero__caption" style="top: 90px;height: 253.8px;bottom: 0px;">
+                                    <span data-animation="fadeInLeft" data-delay=".3s">04 de Octubre de 2025</span>
+                                    <h1 data-animation="fadeInLeft" data-delay=".5s" data-duration="2000ms">
+                                        Carlos<strong> & </strong> Raquel
+                                    </h1>
                                 </div>
                             </div>
                         </div>
@@ -665,136 +684,256 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Count Down End -->
-     
-    <!--? Gallery Area Start -->
-    <div class="gallery-area section-padding4">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-gallery mb-30">
-                        <div class="gallery-img" style="background-image: url(assets/img/gallery/gallery1.png);">
+        <!-- Slider Area End -->
+
+        <!-- Our Story Start -->
+        <div class="Our-story-area story-padding" style="padding-top: 5px; padding-bottom: 5px;">
+            <div class="container historia">
+                <div class="row justify-content-center">
+                    <div class="col-xl-7 col-lg-8 text-center">
+                        <div class="section-tittle mb-5">
+                            <h2 class="titulo-modern">Nuestra Historia de Amor</h2>
+                            <div class="decorador"></div>
+                            <p class="texto-intro">
+                                “Entre los senderos de la vida nos encontramos, construimos nuestro amor con el tiempo y hoy somos felices de recibir la bendición de Dios.”
+                            </p>
                         </div>
-                        <div class="thumb-content-box">
-                            <div class="thumb-content">
-                                <h3>Imagen 01</h3>
-                                <a href="assets/img/gallery/gallery1.png" class="menorie-icon"> <i class="ti-plus"></i></a>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center align-items-center g-5">
+                    <div class="col-lg-5 col-md-6">
+                        <div class="card-historia p-4">
+                            <h4 class="mb-3">💍 La Propuesta</h4>
+                            <p>Lo que parecía una celebración más se convirtió en la sorpresa más hermosa: luces, velas flores y una propuesta para unir nuestras vidas frente a Dios. Con un 'sí', decidimos continuar forjando nuestra leyenda.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 col-md-6">
+                        <div class="story-img text-center">
+                            <img class="img-fluid" src="assets/img/gallery/story1.jpg" alt="Carlos y Raquel juntos">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Our Story End -->
+        
+        <!-- Services Start -->
+         
+         <section class="pricing-card-area section-padding30 section-bg" data-background="assets/img/gallery/section_bg1.png" style="background-image: url(&quot;assets/img/gallery/section_bg1.png&quot;);background-size: cover;background-position: center center;background-repeat: no-repeat;padding-top: 10px;padding-bottom: 10px;">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="section-tittle text-center mb-70">
+                            <h2>Información de la boda</h2>
+                            <img src="assets/img/gallery/tittle_img.png" alt="Separador decorativo">
+                            <p>“Cada pareja celebra el amor a su manera; nosotros hemos decidido hacerlo un poco distinto: en lugar de una recepción, cambiaremos el vals y las luces de salón por maletas y paisajes nuevos. Así, nuestro viaje será la mejor manera de recordar para siempre este gran comienzo.”</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row justify-content-center align-items-end">
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="single-card active text-center mb-30">
+                            <div class="card-top">
+                                <div class="icon-container">
+                                    <img src="assets/img/gallery/iglesia.png" alt="Iglesia" class="church-icon">
+                                </div>
+                                <h4>La Ceremonia</h4>
+                            </div>
+                            <div class="card-bottom">
+                                <ul>
+                                    <li><i class="fas fa-calendar-alt"></i>04 de Octubre, 2025</li>
+                                    <li><i class="far fa-clock"></i>6:00 PM</li>
+                                    <li><i class="fas fa-map-marker-alt"></i>Parroquia San Miguel</li>
+                                    <li>Arenales N°10, Sucre</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-8 col-md-6 col-sm-6">
-                    <div class="single-gallery mb-30">
-                        <div class="gallery-img" style="background-image: url(assets/img/gallery/gallery2.png);">
-                        </div>
-                        <div class="thumb-content-box">
-                            <div class="thumb-content">
-                                <h3>Imagen 02</h3>
-                                <a href="assets/img/gallery/gallery2.png" class="menorie-icon"> <i class="ti-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-8 col-md-6 col-sm-6">
-                    <div class="single-gallery mb-30">
-                        <div class="gallery-img" style="background-image: url(assets/img/gallery/gallery3.png);">
-                        </div>
-                        <div class="thumb-content-box">
-                            <div class="thumb-content">
-                                <h3>Imagen 03</h3>
-                                <a href="assets/img/gallery/gallery3.png" class="menorie-icon"> <i class="ti-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-gallery mb-30">
-                        <div class="gallery-img" style="background-image: url(assets/img/gallery/gallery4.png);">
-                        </div>
-                        <div class="thumb-content-box">
-                            <div class="thumb-content">
-                                <h3>Imagen 04</h3>
-                                <a href="assets/img/gallery/gallery4.png" class="menorie-icon"> <i class="ti-plus"></i></a>
+            </div>
+        </section>
+        <!-- Services Card End -->
+
+        <!-- Count Down Start -->
+        <div class="count-down-area">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <h2>Faltan estos días para el evento</h2>
+                    <div class="col-lg-12 col-md-12">
+                        <div class="count-down-wrapper">
+                            <div class="row justify-content-between">
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <div class="single-counter text-center">
+                                        <span id="days" class="counter">0</span>
+                                        <p>días</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-6 col-sm-6">
+                                    <div class="single-counter text-center">
+                                        <span id="hours" class="counter">0</span>
+                                        <p>horas</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-6 col-sm-6">
+                                    <div class="single-counter text-center">
+                                        <span id="minutes" class="counter">0</span>
+                                        <p>mins</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <div class="single-counter text-center">
+                                        <span id="seconds" class="counter">0</span>
+                                        <p>seg</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Gallery Area End -->
-    
-    <!--? Gift Start -->
-    <section class="gift-area gift-padding fix" data-background="assets/img/gallery/section_bg3.png">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="gift-caption text-center">
-                        <h2>El mejor regalo</h2>
-                        <p>es tu presencia en nuestra boda</p>
-                        <a href="#rsvp-section" class="btn btn-whit">Confirmar Asistencia</a>
+        <!-- Count Down End -->
+         
+        <!-- Gallery Area Start -->
+        <div class="gallery-area section-padding4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-gallery mb-30">
+                            <div class="gallery-img" style="background-image: url(assets/img/gallery/gallery1.webp);"></div>
+                            <div class="thumb-content-box">
+                                <div class="thumb-content">
+                                    <h3>Cita especial</h3>
+                                    <a href="assets/img/gallery/gallery1.webp" class="menorie-icon"> <i class="ti-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-6 col-sm-6">
+                        <div class="single-gallery mb-30">
+                            <div class="gallery-img" style="background-image: url(assets/img/gallery/gallery2.webp);"></div>
+                            <div class="thumb-content-box">
+                                <div class="thumb-content">
+                                    <h3>Tercer aniversario</h3>
+                                    <a href="assets/img/gallery/gallery2.webp" class="menorie-icon"> <i class="ti-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-6 col-sm-6">
+                        <div class="single-gallery mb-30">
+                            <div class="gallery-img" style="background-image: url(assets/img/gallery/gallery3.webp);"></div>
+                            <div class="thumb-content-box">
+                                <div class="thumb-content">
+                                    <h3>Primera cita</h3>
+                                    <a href="assets/img/gallery/gallery3.webp" class="menorie-icon"> <i class="ti-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-gallery mb-30">
+                            <div class="gallery-img" style="background-image: url(assets/img/gallery/gallery4.webp);"></div>
+                            <div class="thumb-content-box">
+                                <div class="thumb-content">
+                                    <h3>Nuestro Primer Viaje</h3>
+                                    <a href="assets/img/gallery/gallery4.webp" class="menorie-icon"> <i class="ti-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Gift End -->
-    
-    <!--? Contact form Start -->
-    <div class="contact-form section-padding30 fix" id="rsvp-section">
+        <!-- Gallery Area End -->
+        
+        <!-- Gift Start -->
+        <section class="gift-area gift-padding fix" data-background="assets/img/gallery/section_bg3.webp">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="gift-caption text-center">
+                            <h2>El mejor regalo</h2>
+                            <!-- Texto con efecto resaltado -->
+        <p style="font-size:1.6rem; line-height:1.6; text-align:center; padding:1rem; background:linear-gradient(90deg, #00725fff, #00363aff); border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.15);">
+            <span style="font-weight: normal ; color:#ffffff; text-shadow:1px 1px 3px rgba(0,0,0,0.1);">
+            No cargues con cajas ni envoltorios; mejor ayúdanos a llenar la alcancía para una gran aventura… tu aporte económico nos ayudará a vivirla.
+            </span> 
+        </p>
+
+        <!-- QR centrado -->
+        <div style="text-align: center;">
+            <a href="assets/img/gallery/QR-Carlos-Raquel.png" download="QR_Boda_Carlos&Raquel">
+                <img src="assets/img/gallery/QR-Carlos-Raquel.png" 
+                     alt="QR para aportar" 
+                     style="display:block; margin:0 auto; width:480px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.2); cursor:pointer;" />
+            </a>
+            <p style="margin-top:10px; color:#fff;">Haz clic en el QR para descargarlo</p>
+        </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Gift End -->
+        
+        <section class="brand-area" style="padding-top: 20px; padding-bottom: 0px;">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="section-tittle text-center mb-80" style="margin-bottom: 10px;">
+                            <img src="assets/img/gallery/tittle_img.png" alt="Separador decorativo">
+                            <h3>Con el amor de nuestras familias y el apoyo de nuestros Padrinos uniremos nuestras vidas ante Dios</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    <div class="contact-form fix" id="rsvp-section" style="padding-top: 20px; padding-bottom: 20px;">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-6 col-lg-6">
-                    <div class="form-wrapper">
-                        <form id="contact-form" action="#" method="POST">
-                            <!-- section tittle -->
-                            <div class="row ">
-                                <div class="col-lg-12">
-                                    <div class="section-tittle tittle-form text-center mb-30">
-                                        <h2>¿Vendrás a celebrar con nosotros?</h2>
-                                        <img src="assets/img/gallery/tittle_img2.png" alt="Separador decorativo">
-                                    </div>
+                    <div class="form-wrapper" style="text-align:center;">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="section-tittle tittle-form text-center mb-30">
+                                    <h2>Nuestros Padrinos y Padres</h2>
+                                    <img src="assets/img/gallery/tittle_img2.png" alt="Separador decorativo">
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-box mb-30">
-                                        <input type="text" name="name" placeholder="Nombre completo" required>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="form-box subject-icon mb-30">
-                                        <input type="email" name="email" placeholder="Correo electrónico" required>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 mb-30">
-                                    <div class="select-itms">
-                                        <select name="guests" id="select2" required>
-                                            <option value="">Número de invitados</option>
-                                            <option value="1">1 Invitado</option>
-                                            <option value="2">2 Invitados</option>
-                                            <option value="3">3 Invitados</option>
-                                            <option value="4">4 Invitados</option>
-                                            <option value="5">5 o más invitados</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="form-box message-icon mb-30">
-                                        <textarea name="message" id="message" placeholder="Tu mensaje (opcional)"></textarea>
-                                    </div>
-                                <div class="submit-info">
-                                    <button class="btn" type="submit">Confirmar ahora</button>
-                                </div>
-                                </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 mb-20">
+                                <h3>Padrinos de Religioso</h3>
+                                <p>Oscar José Duran Cárdenas<br>Hilda Ayala Castro</p>
                             </div>
-                        </form>
-                        <!-- Shape inner Flower -->
+
+                            <div class="col-12 mb-20">
+                                <h3>Padrinos de Anillos</h3>
+                                <p>Jorge Encinas Garate<br>Norah M. Cari Cayo</p>
+                            </div>
+
+                            <div class="col-12 mb-20">
+                                <h3>Padres de la Novia</h3>
+                                <p>Porfirio Yucra Bolivar<br>Felicidad Durán Cardenas</p>
+                            </div>
+
+                            <div class="col-12 mb-20">
+                                <h3>Padres del Novio</h3>
+                                <p>Marcos Domingo Antequera Ortega<br>Melbi Encinas Garate</p>
+                            </div>
+                        </div>
+
                         <div class="shape-inner-flower">
                             <img src="assets/img/gallery/shape2.png" class="shpe2" alt="Decoración floral">
                         </div>
-                        <!-- Shape outer Flower -->
                         <div class="shape-outer-flower">
                             <img src="assets/img/flower/from-top.png" class="outer-top" alt="Decoración floral">
                             <img src="assets/img/flower/from-bottom.png" class="outer-bottom" alt="Decoración floral">
@@ -804,70 +943,100 @@
             </div>
         </div>
     </div>
+
     <!-- Contact form End -->
-    
-    <section class="brand-area section-padding-b">
-        <div class="container">
-                <!-- Section Tittle -->
-                <div class="row d-flex justify-content-center">
-                <div class="col-lg-8">
-                    <div class="section-tittle text-center mb-80">
-                        <h2>Lista de Regalos</h2>
-                        <img src="assets/img/gallery/tittle_img.png" alt="Separador decorativo">
-                        <p>Quisque nec facilisis sem. In at commodo velit. Aliquam tempor volutpat laoreet. Quisque non tellus eleifend arcu gravida aliquam. Vivamus quis consequat nisl</p>
+
+        
+
+        <!-- Galería Vue -->
+        <main id="main">
+            <gallery ref="gallery" v-bind:images="images" v-on:next="next"></gallery>
+        </main>
+
+        <template id="gallery_template">
+            <transition-group tag="figure" class="Gallery" name="open">
+                <img v-for="(image, index) in images"
+                     :src="image"
+                     :key="index"
+                     @click="onClick"
+                     :style="{'--circle-x': x, '--circle-y': y}">
+            </transition-group>
+        </template>
+        
+        <!-- Start map Area-->
+        <section class="contact-sections" id="map-section">
+            <div class="d-area">
+                <div id="map-alternative" class="map-container">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+
+                        <h2>Ubicación de la Ceremonia</h2>
+                          <img src="assets/img/gallery/tittle_img.png" alt="Separador decorativo">
+
+                        <h3>Parroquia San Miguel</h3>
+                        <p>Arenales N°10, Sucre</p>
+                        <p>4 de Octubre, 2025 - 6:00 PM</p>
+                        <a href="https://www.google.com/maps?q=Parroquia+San+Miguel+Arenales+Sucre" target="_blank" class="btn-map">Abrir en Google Maps</a>
+                    </div>
+                </div>
+                <div id="map" style="height: 400px; position: relative; overflow: hidden; display: none;"></div>
+            </div>
+        </section>
+        <!-- End map Area -->
+    </main>
+
+    <footer>
+        <!-- Footer Start-->
+        <div class="footer-main" data-background="assets/img/gallery/section_bg4.png">
+            <div class="footer-area footer-padding">
+                <div class="container">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-xl-2  col-lg-3 col-md-5 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="single-footer-caption mb-30">
+                                    <div class="footer-logo">
+                                        <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt="Logo Carlos y Raquel"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-  <main id="main">
-    <gallery ref="gallery" v-bind:images="images" v-on:next="next"></gallery>
-  </main>
-
-  <!-- Template de Vue -->
-  <template id="gallery_template">
-    <transition-group tag="figure" class="Gallery" name="open">
-      <img v-for="(image, index) in images"
-           :src="image"
-           :key="index"
-           @click="onClick"
-           :style="{'--circle-x': x, '--circle-y': y}">
-    </transition-group>
-  </template>
-    
-    <!--? Start map Area-->
-    <section class="contact-sections" id="map-section">
-        <div class="d-area">
-            <!-- Mapa alternativo en caso de que Google Maps falle -->
-            <div id="map-alternative" class="map-container">
-                <div class="map-placeholder">
-                    <i class="fas fa-map-marked-alt"></i>
-                    <h3>Ubicación de la Ceremonia</h3>
-                    <p><strong>Parroquia San Miguel</strong></p>
-                    <p>Arenales N°10, Sucre</p>
-                    <p>4 de Octubre, 2025 - 6:00 PM</p>
-                    <a href="https://www.google.com/maps?q=Parroquia+San+Miguel+Arenales+Sucre" target="_blank" class="btn-map">Abrir en Google Maps</a>
+            <!-- Playlist de música local - VERSIÓN MEJORADA -->
+            <section id="musica" class="music-player">
+                <div class="container">
+                    <h2>Nuestra Música</h2>
+                    <div id="current-song">
+                        <i class="fas fa-music"></i>
+                        <span>Reproduciendo: <span id="song-title">Selecciona una canción</span></span>
+                    </div>
+                    <audio id="player" controls></audio>
+                    <ul id="playlist">
+                        <li data-src="assets/audio/SOWK.mp3">Somewhere Only We Know - Keane</li>
+                        <li data-src="assets/audio/Only-one.mp3">Only one - Yellowcard</li>
+                        <li data-src="assets/audio/Vida-mia.mp3">Vida mía - José y el Toro</li>
+                        <li data-src="assets/audio/The-Reason.mp3">The reason - Hoobastank</li>
+                        <li data-src="assets/audio/TIME.mp3">How Long Will I Love You - Jon Boden</li>
+                    </ul>
+                    <div class="music-controls">
+                        <button id="random-btn" class="music-btn">Aleatoria <i class="fas fa-random"></i></button>
+                    </div>
                 </div>
-            </div>
-            <div id="map" style="height: 400px; position: relative; overflow: hidden; display: none;"></div>
-        </div>
-    </section>
-    <!--? End map Area -->
-</main>
+            </section>
 
-<footer>
-    <!-- Footer Start-->
-    <div class="footer-main" data-background="assets/img/gallery/section_bg4.png">
-        <div class="footer-area footer-padding" >
-            <div class="container">
-                <div class="row d-flex justify-content-between">
-                    <div class="col-xl-2  col-lg-3 col-md-5 col-sm-6">
-                        <div class="single-footer-caption mb-50">
-                            <div class="single-footer-caption mb-30">
-                                <!-- logo -->
-                                <div class="footer-logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt="Logo Carlos y Raquel"></a>
+            <!-- footer-bottom area -->
+            <div class="footer-bottom-area">
+                <div class="container">
+                    <div class="footer-border">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-xl-12 ">
+                                <div class="footer-copy-right text-center">
+                                    <p>
+                                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> Carlos & Raquel 
+                                        | Diseñado con <i class="fa fa-heart" aria-hidden="true"></i> para nuestro día especial
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -875,51 +1044,8 @@
                 </div>
             </div>
         </div>
-
-        <!-- Playlist de música local -->
-        <section id="musica" class="music-player">
-            <div class="container">
-                <h2>Nuestra Música</h2>
-                
-                <div id="current-song">
-                    <i class="fas fa-music"></i>
-                    <span>Reproduciendo: <span id="song-title">Selecciona una canción</span></span>
-                </div>
-                
-                <audio id="player" controls></audio>
-                
-                <ul id="playlist">
-                    <li data-src="assets/audio/SOWK.mp3">Somewhere Only We Know - Keane</li>
-                    <li data-src="assets/audio/Only-one.mp3">Only one - Yellowcard</li>
-                    <li data-src="assets/audio/Vida-mia.mp3">Vida mía - José y el Toro</li>
-                    <li data-src="assets/audio/The-Reason.mp3">The reason - Hoobastank</li>
-                    <li data-src="assets/audio/TIME.mp3">How Long Will I Love You - Jon Boden</li>
-                </ul>
-                
-                <button id="random-btn" class="btn">Canción Aleatoria <i class="fas fa-random"></i></button>
-            </div>
-        </section>
-
-        <!-- footer-bottom area -->
-        <div class="footer-bottom-area">
-            <div class="container">
-                <div class="footer-border">
-                    <div class="row d-flex align-items-center">
-                        <div class="col-xl-12 ">
-                            <div class="footer-copy-right text-center">
-                                <p>
-                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> Carlos & Raquel 
-                                    | Diseñado con <i class="fa fa-heart" aria-hidden="true"></i> para nuestro día especial
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End-->
-</footer>
+        <!-- Footer End-->
+    </footer>
 
     <!-- JS aquí -->
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
@@ -945,65 +1071,84 @@
     <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script src="assets/js/parallax.js"></script>
+    
+    <!-- Scripts personalizados -->
+    <script src="assets/js/music-player.js"></script>
+    <script src="assets/js/gallery.js"></script>
     
     <!-- VueJS (incluye desde CDN) -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
-    <!-- Scripts personalizados -->
+    
+    <!-- Scripts consolidados -->
     <script>
-        // Array con imágenes de hojas
-        const hojas = [
-          "assets/img/kolog/hoja1.png",
-          "assets/img/kolog/hoja2.png",
-          "assets/img/kolog/hoja3.png",
-          "assets/img/kolog/hoja4.png",
-          "assets/img/kolog/obab.png"
-        ];
-
-        let intervaloLluvia = null; // Guardar el setInterval
-        let lluviaActiva = false;   // Estado de la lluvia
-
-        function crearHoja() {
-          const hoja = document.createElement("div");
-          hoja.classList.add("hoja");
-
-          // Imagen aleatoria
-          const img = hojas[Math.floor(Math.random() * hojas.length)];
-          hoja.style.backgroundImage = `url(${img})`;
-
-          // Posición aleatoria
-          hoja.style.left = Math.random() * 100 + "vw";
-
-          // Tamaño aleatorio
-          const size = 40 + Math.random() * 40;
-          hoja.style.width = size + "px";
-          hoja.style.height = size + "px";
-
-          // Duración caída aleatoria
-          const duracion = 5 + Math.random() * 5;
-          hoja.style.animationDuration = duracion + "s";
-
-          document.body.appendChild(hoja);
-
-          // Eliminar después de caer
-          setTimeout(() => hoja.remove(), duracion * 1000);
-        }
-
-        // Función para activar/desactivar la lluvia
-        document.getElementById("btnLluvia").addEventListener("click", () => {
-          if (lluviaActiva) {
-            // Apagar lluvia
-            clearInterval(intervaloLluvia);
-            intervaloLluvia = null;
-            lluviaActiva = false;
-          } else {
-            // Encender lluvia
-            intervaloLluvia = setInterval(crearHoja, 400);
-            lluviaActiva = true;
-          }
+        // Componente Vue para la galería
+        Vue.component('gallery', {
+            template: '#gallery_template',
+            props: {
+                images: Array
+            },
+            data() {
+                return {
+                    x: '50%',
+                    y: '50%'
+                }
+            },
+            methods: {
+                onClick(event) {
+                    const x = event.offsetX - event.target.offsetLeft;
+                    const y = event.offsetY - event.target.offsetTop;
+                    const xPercent = `${Math.round(100 * x / event.target.offsetWidth)}%`;
+                    const yPercent = `${Math.round(100 * y / event.target.offsetHeight)}%`;
+                    this.x = xPercent;
+                    this.y = yPercent;
+                    this.$emit('next', {x: xPercent, y: yPercent});
+                }
+            }
         });
 
-        // Script para el contador regresivo
+        // Instancia Vue para la galería
+        const vm = new Vue({
+            el: '#main',
+            data: {
+                images: [
+                    'assets/img/gallery/gallery01.webp',
+                    'assets/img/gallery/gallery02.webp',
+                    'assets/img/gallery/gallery03.webp',
+                    'assets/img/gallery/gallery04.webp',
+                    'assets/img/gallery/gallery05.webp',
+                    'assets/img/gallery/gallery06.webp'
+                ],
+                intervalId: null,
+                isPaused: false
+            },
+            methods: {
+                next() {
+                    const image = this.images.shift();
+                    this.$nextTick(() => this.images.push(image));
+                },
+                startAuto() {
+                    this.intervalId = setInterval(() => {
+                        if (!this.isPaused) this.next();
+                    }, 20000);
+                },
+                stopAuto() {
+                    clearInterval(this.intervalId);
+                    this.intervalId = null;
+                },
+                pauseAuto() {
+                    this.isPaused = true;
+                },
+                resumeAuto() {
+                    this.isPaused = false;
+                }
+            },
+            mounted() {
+                this.startAuto();
+            }
+        });
+
+        // Contador regresivo
         const countdownDate = new Date("October 4, 2025 18:00:00").getTime();
 
         function updateCountdown() {
@@ -1033,7 +1178,7 @@
         const countdownInterval = setInterval(updateCountdown, 1000);
         updateCountdown();
 
-        // Script para ajustar imágenes en móviles - Optimizado
+        // Ajustar imágenes para móviles
         function adjustImagesForMobile() {
             document.querySelectorAll('img').forEach(function(img) {
                 if (!img.classList.contains('img-responsive')) {
@@ -1046,19 +1191,13 @@
                 el.style.backgroundPosition = 'center';
                 el.style.backgroundRepeat = 'no-repeat';
                 
-                if (window.innerWidth < 768) {
-                    if (!el.style.minHeight) {
-                        el.style.minHeight = '250px';
-                    }
+                if (window.innerWidth < 768 && !el.style.minHeight) {
+                    el.style.minHeight = '250px';
                 }
             });
             
             document.querySelectorAll('.gallery-img').forEach(function(galleryImg) {
-                if (window.innerWidth < 768) {
-                    galleryImg.style.height = '250px';
-                } else {
-                    galleryImg.style.height = '';
-                }
+                galleryImg.style.height = (window.innerWidth < 768) ? '250px' : '';
             });
         }
 
@@ -1066,220 +1205,244 @@
         window.addEventListener('resize', adjustImagesForMobile);
         document.addEventListener('DOMContentLoaded', adjustImagesForMobile);
 
-        // Script para validación del formulario
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
+        // ===== BOTÓN FLOTANTE DE MÚSICA =====
+        document.addEventListener('DOMContentLoaded', function() {
+            const floatingBtn = document.getElementById('music-control-floating');
+            const player = document.getElementById('player');
             
-            const name = this.querySelector('input[name="name"]').value;
-            const email = this.querySelector('input[name="email"]').value;
-            const guests = this.querySelector('select[name="guests"]').value;
+            // Estado inicial
+            let isPlaying = false;
             
-            if (!name || !email || !guests) {
-                alert('Por favor, complete todos los campos obligatorios.');
-                return;
+            // Función para alternar reproducción
+            function togglePlayback() {
+                if (isPlaying) {
+                    player.pause();
+                    floatingBtn.classList.remove('playing');
+                    floatingBtn.classList.add('paused');
+                } else {
+                    player.play().catch(function(error) {
+                        console.log('Error al reproducir:', error);
+                    });
+                    floatingBtn.classList.remove('paused');
+                    floatingBtn.classList.add('playing');
+                }
+                isPlaying = !isPlaying;
             }
             
-            alert('¡Gracias por confirmar su asistencia! Nos vemos el 4 de Octubre.');
-            this.reset();
+            // Event listener para el botón flotante
+            floatingBtn.addEventListener('click', togglePlayback);
+            
+            // Actualizar estado cuando el audio cambie
+            player.addEventListener('play', function() {
+                isPlaying = true;
+                floatingBtn.classList.remove('paused');
+                floatingBtn.classList.add('playing');
+            });
+            
+            player.addEventListener('pause', function() {
+                isPlaying = false;
+                floatingBtn.classList.remove('playing');
+                floatingBtn.classList.add('paused');
+            });
+            
+            // Ocultar indicador de scroll al hacer scroll
+            window.addEventListener('scroll', function() {
+                const scrollIndicator = document.querySelector('.scroll-indicator');
+                if (window.scrollY > 100) {
+                    scrollIndicator.classList.add('hidden');
+                } else {
+                    scrollIndicator.classList.remove('hidden');
+                }
+            });
         });
 
-        // Script para el reproductor de música
+        // ===== REPRODUCTOR DE MÚSICA MEJORADO =====
         document.addEventListener('DOMContentLoaded', function() {
             const player = document.getElementById('player');
             const playlist = document.getElementById('playlist');
             const items = playlist.getElementsByTagName('li');
             const songTitle = document.getElementById('song-title');
             const randomBtn = document.getElementById('random-btn');
-            
+            const audioPermissionBtn = document.getElementById('audio-permission');
+            const audioOverlay = document.getElementById('audio-overlay');
+            const activateAudioBtn = document.getElementById('activate-audio');
+
             let currentIndex = 0;
             let shuffledPlaylist = [];
-            
-            // Función para barajar la lista de reproducción
+            let audioEnabled = false;
+
+            // Detectar dispositivo móvil
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+            if (isMobile) {
+                audioOverlay.style.display = 'flex';
+                audioPermissionBtn.classList.add('show');
+            } else {
+                // Desktop: intentar autoplay tras 1 segundo
+                setTimeout(enableAudio, 1000);
+            }
+
+            // Botones de activación de audio
+            activateAudioBtn.addEventListener('click', enableAudio);
+            audioPermissionBtn.addEventListener('click', enableAudio);
+
+            // Shuffle playlist
             function shufflePlaylist() {
                 shuffledPlaylist = Array.from(items);
                 for (let i = shuffledPlaylist.length - 1; i > 0; i--) {
                     const j = Math.floor(Math.random() * (i + 1));
                     [shuffledPlaylist[i], shuffledPlaylist[j]] = [shuffledPlaylist[j], shuffledPlaylist[i]];
                 }
-                // Seleccionar un índice aleatorio inicial
                 currentIndex = Math.floor(Math.random() * shuffledPlaylist.length);
             }
-            
+
             // Reproducir canción
             function playSong(index) {
+                if (!audioEnabled) return;
+
                 currentIndex = index;
                 const song = shuffledPlaylist[index];
-                const src = song.getAttribute('data-src');
-                player.src = src;
-                player.play().catch(error => {
-                    console.log('La reproducción automática fue prevenida:', error);
-                });
-                songTitle.textContent = song.textContent;
+                player.src = song.getAttribute('data-src');
 
-                // Actualizar clases
-                for (let j = 0; j < items.length; j++) {
-                    items[j].classList.remove('playing');
-                }
-                song.classList.add('playing');
-            }
-            
-            // Inicializar: mezclar y empezar con canción aleatoria
-            shufflePlaylist();
-            playSong(currentIndex);
-            
-            // Reproducir al hacer clic en una canción de la lista
-            for (let i = 0; i < items.length; i++) {
-                items[i].addEventListener('click', function() {
-                    const index = shuffledPlaylist.indexOf(this);
-                    if (index !== -1) {
-                        playSong(index);
+                player.play().then(() => {
+                    songTitle.textContent = song.textContent;
+                    Array.from(items).forEach(li => li.classList.remove('playing'));
+                    song.classList.add('playing');
+                }).catch(error => {
+                    console.log('Error al reproducir:', error);
+                    if (error.name === 'NotAllowedError') {
+                        audioPermissionBtn.classList.add('show');
                     }
                 });
             }
-            
-            // Botón de canción aleatoria (nuevo orden aleatorio)
-            randomBtn.addEventListener('click', function() {
+
+            function playNext() {
+                currentIndex = (currentIndex + 1) % shuffledPlaylist.length;
+                playSong(currentIndex);
+            }
+
+            function playPrev() {
+                currentIndex = (currentIndex - 1 + shuffledPlaylist.length) % shuffledPlaylist.length;
+                playSong(currentIndex);
+            }
+
+            // Inicializar playlist
+            shufflePlaylist();
+
+            Array.from(items).forEach(item => {
+                item.addEventListener('click', () => {
+                    const index = shuffledPlaylist.indexOf(item);
+                    if (index !== -1) playSong(index);
+                });
+            });
+
+            randomBtn.addEventListener('click', () => {
                 shufflePlaylist();
                 playSong(currentIndex);
             });
-            
-            // Pasar a la siguiente canción al terminar
-            player.addEventListener('ended', function() {
-                currentIndex = (currentIndex + 1) % shuffledPlaylist.length;
-                playSong(currentIndex);
-            });
-        });
 
-        // Script para activar sonido al click (solo una vez)
-        document.addEventListener('DOMContentLoaded', function() {
-            const audio = document.getElementById('player');
-            let audioEnabled = false;
-            
-            document.addEventListener('click', function() {
-                if (!audioEnabled) {
-                    audio.play().then(() => {
-                        audioEnabled = true;
-                    }).catch(error => {
-                        console.log('La reproducción automática fue prevenida:', error);
-                    });
-                }
-            });
-        });
+            player.addEventListener('ended', playNext);
 
-        // Script para el efecto parallax
-        document.addEventListener('DOMContentLoaded', function() {
-            // Inicializar el efecto parallax
-            initParallax();
-            
-            function initParallax() {
-                const parallaxElements = document.querySelectorAll('.parallax-bg, .parallax-element');
-                const scrollSpeed = 0.5;
-                
-                // Ajustar la posición inicial
-                window.addEventListener('scroll', updateParallax);
-                updateParallax();
-                
-                function updateParallax() {
-                    const scrollY = window.pageYOffset;
-                    
-                    parallaxElements.forEach(element => {
-                        // Obtener la profundidad del elemento
-                        let depth = 0;
-                        if (element.classList.contains('parallax-bg-1')) depth = -0.5;
-                        else if (element.classList.contains('parallax-bg-2')) depth = -0.3;
-                        else if (element.classList.contains('parallax-bg-3')) depth = -0.1;
-                        else if (element.classList.contains('floating-hearts')) depth = 0.1;
-                        else if (element.classList.contains('floating-ring')) depth = 0.2;
-                        else if (element.classList.contains('floating-flower')) depth = 0.15;
-                        
-                        const movement = -(scrollY * depth * scrollSpeed);
-                        const translate = `translate3d(0, ${movement}px, 0)`;
-                        
-                        // Aplicar la transformación
-                        element.style.transform = translate;
-                    });
-                }
+            // Activar sonido al primer clic en desktop
+            if (!isMobile) {
+                document.addEventListener('click', function initAudio() {
+                    if (!audioEnabled) {
+                        player.play().then(() => {
+                            audioEnabled = true;
+                        }).catch(err => console.log('Autoplay bloqueado:', err));
+                        document.removeEventListener('click', initAudio);
+                    }
+                });
             }
-            
-            // Asegurar que el parallax no interfiera con elementos existentes
-            const mainContent = document.querySelector('main');
-            if (mainContent) {
-                mainContent.style.position = 'relative';
-                mainContent.style.zIndex = '2';
-            }
-
-            // Ocultar preloader cuando la página cargue
-            window.addEventListener('load', function() {
-                setTimeout(function() {
-                    document.getElementById('preloader-active').style.display = 'none';
-                }, 1500);
-            });
-        });
-
-        // Script para la galería Vue
-        Vue.component('gallery', {
-          template: '#gallery_template',
-          props: {
-            images: Array
-          },
-          data() {
-            return {
-              x: '50%',
-              y: '50%'
-            }
-          },
-          methods: {
-            onClick(event) {
-              const x = event.offsetX - event.target.offsetLeft
-              const y = event.offsetY - event.target.offsetTop
-              const xPercent = `${Math.round(100 * x / event.target.offsetWidth)}%`
-              const yPercent = `${Math.round(100 * y / event.target.offsetHeight)}%`
-              this.x = xPercent
-              this.y = yPercent
-              this.$emit('next', {x: xPercent, y: yPercent})
-            }
-          }
-        })
-
-        const vm = new Vue({
-          el: '#main',
-          data: {
-            images: [
-              'assets/img/gallery/gallery01.png',
-              'assets/img/gallery/gallery02.png',
-              'assets/img/gallery/gallery03.png',
-              'assets/img/gallery/gallery04.png',
-              'assets/img/gallery/gallery05.png',
-              'assets/img/gallery/gallery06.png'
-            ],
-            intervalId: null,   // guardamos el temporizador
-            isPaused: false     // control para pausar/reanudar
-          },
-          methods: {
-            next() {
-              const image = this.images.shift()
-              this.$nextTick(() => this.images.push(image))
-            },
-            startAuto() {
-              this.intervalId = setInterval(() => {
-                if (!this.isPaused) this.next()
-              }, 20000)
-            },
-            stopAuto() {
-              clearInterval(this.intervalId)
-              this.intervalId = null
-            },
-            pauseAuto() {
-              this.isPaused = true
-            },
-            resumeAuto() {
-              this.isPaused = false
-            }
-          },
-          mounted() {
-            this.startAuto()   // inicia el carrusel automático al cargar
-          }
         });
     </script>
+
+    <script>
+function toggleMusic(btn){
+    btn.classList.toggle('playing');
+    btn.classList.toggle('paused');
+    
+    const icon = btn.querySelector('.icon');
+    if(btn.classList.contains('playing')){
+        icon.textContent = '❚❚'; // pausa
+    } else {
+        icon.textContent = '▶'; // play
+    }
+}
+</script>
+<style>
+.music-floating-btn {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle at 30% 30%, #ffc400, #b8941f);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    overflow: visible;
+}
+
+.music-floating-btn.playing {
+    animation: pulseBtn 1.5s ease-in-out infinite;
+}
+
+.music-floating-btn .icon {
+    color: #fff;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.music-floating-btn.playing .icon {
+    animation: spin 3s linear infinite;
+}
+
+@keyframes pulseBtn {
+    0% { transform: scale(1); box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+    50% { transform: scale(1.15); box-shadow: 0 6px 20px rgba(0,0,0,0.4); }
+    100% { transform: scale(1); box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.music-floating-btn .note {
+    position: absolute;
+    bottom: 60%;
+    font-size: 16px;
+    color: #fff;
+    opacity: 0;
+}
+
+.music-floating-btn.playing .note:nth-child(2) { 
+    left: 10%; animation: floatUp 2s ease-out infinite 0.3s;
+    opacity: 1;
+}
+.music-floating-btn.playing .note:nth-child(3) { 
+    left: 40%; animation: floatUp 2s ease-out infinite 0.6s;
+    opacity: 1;
+}
+.music-floating-btn.playing .note:nth-child(4) { 
+    left: 70%; animation: floatUp 2s ease-out infinite 0.9s;
+    opacity: 1;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0) scale(0.8); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-50px) scale(1.2); opacity: 0; }
+}
+</style>
+
+
 </body>
 </html>

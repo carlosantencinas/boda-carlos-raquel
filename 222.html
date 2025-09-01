@@ -35,6 +35,21 @@
     <!-- Librerías CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <!-- ... (el resto de tus estilos) ... -->
+    
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <!-- Vista responsive y pantalla completa -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/navi.ico">
+
+    <!-- Librerías CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/flaticon.css">
     <link rel="stylesheet" href="assets/css/slicknav.css">
     <link rel="stylesheet" href="assets/css/animate.min.css">
@@ -50,7 +65,46 @@
 
     <!-- Estilos personalizados consolidados -->
     <style>
-       
+
+        
+        .floating-hearts {
+            background: url('assets/img/parallax/hearts.png') no-repeat;
+            width: 150px;
+            height: 150px;
+            top: 20%;
+            left: 10%;
+            opacity: 0.7;
+            transform: translateZ(100px) scale(0.8);
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        .floating-ring {
+            background: url('assets/img/parallax/ring.png') no-repeat;
+            width: 100px;
+            height: 100px;
+            top: 60%;
+            right: 15%;
+            opacity: 0.8;
+            transform: translateZ(200px) scale(0.7);
+            animation: float 10s ease-in-out infinite;
+        }
+        
+        .floating-flower {
+            background: url('assets/img/parallax/flower.png') no-repeat;
+            width: 120px;
+            height: 120px;
+            bottom: 15%;
+            left: 15%;
+            opacity: 0.6;
+            transform: translateZ(150px) scale(0.9);
+            animation: float 12s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateZ(100px) scale(0.8); }
+            50% { transform: translateY(-20px) translateZ(100px) scale(0.8); }
+        }
+        
         /* ===== Estilos mapa alternativo ===== */
         .map-container {
             height: 400px;
@@ -168,7 +222,7 @@
             border: 4px solid #ccc;
             border-top: 4px solid #2E8B57;
             border-radius: 50%;
-            animation: spin0 1s linear infinite;
+            animation: spin 1s linear infinite;
         }
 
         .preloader-img {
@@ -185,7 +239,7 @@
             display: block;
         }
 
-        @keyframes spin0 {
+        @keyframes spin {
             100% { transform: rotate(360deg); }
         }
         
@@ -349,6 +403,8 @@
             border-radius: 5px;
         }
 
+      
+
         #playlist {
             list-style: none;
             padding: 0;
@@ -433,6 +489,24 @@
             }
         }
 
+        /* Botón de activación de audio para móviles */
+        #audio-permission {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 15px 25px;
+            background: #d4af37;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 10000;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
         #audio-permission.show {
             display: block;
             animation: fadeInUp 0.5s ease;
@@ -449,166 +523,74 @@
             }
         }
 
-        /* ===== INDICADOR DE SCROLL ===== */
-        .scroll-indicator {
+        /* Overlay para activar audio */
+        .audio-overlay {
             position: fixed;
-            bottom: 30px;
-            right: 10px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
             display: flex;
             flex-direction: column;
-            align-items: center;
-            z-index: 999;
-            color: #d4af37;
-            font-family: 'Segoe UI', sans-serif;
-            font-weight: 600;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-            opacity: 1;
-            transition: opacity 0.5s ease;
-        }
-        
-        .scroll-indicator.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-        
-        .scroll-indicator span {
-            margin-bottom: 10px;
-            font-size: 14px;
-            writing-mode: vertical-lr;
-            text-orientation: mixed;
-            transform: rotate(180deg);
-        }
-        
-        .scroll-indicator .arrow {
-            width: 0px;
-            height: 30px;
-            background-color: #d4af37;
-            position: relative;
-            animation: bounce 2s infinite;
-        }
-        
-        .scroll-indicator .arrow::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: -5px;
-            width: 12px;
-            height: 12px;
-            border-right: 2px solid #d4af37;
-            border-bottom: 2px solid #d4af37;
-            transform: rotate(45deg);
-        }
-        
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-10px);
-            }
-            60% {
-                transform: translateY(-5px);
-            }
-        }
-        
-        /* ===== BOTÓN FLOTANTE DE MÚSICA ===== */
-.music-floating-btn {
-    position: fixed;
-    top: 20px;
-    left: 15px;
-    width: 45px; /* ligeramente más pequeño */
-    height: 45px;
-    background: rgba(255, 196, 0, 0.4); /* más transparente */
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 999;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2); /* menos agresivo */
-    overflow: visible;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-        .music-floating-btn.playing {
-            animation: pulseBtn 1.5s ease-in-out infinite;
-        }
-
-        .music-floating-btn .icon {
-            color: #fff;
-            font-size: 22px;
-            display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
+            z-index: 9998;
+            color: white;
+            text-align: center;
+            padding: 20px;
         }
 
-        .music-floating-btn.playing .icon {
-            animation: spin 3s linear infinite;
+        .audio-overlay h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #d4af37;
         }
 
-        @keyframes pulseBtn {
-            0% { transform: scale(1); box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
-            50% { transform: scale(1.1); box-shadow: 0 6px 20px rgba(0,0,0,0.4); }
-            100% { transform: scale(1); box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+        .audio-overlay p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 500px;
         }
 
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+        .audio-overlay-btn {
+            padding: 15px 30px;
+            background: #d4af37;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
         }
 
-        .music-floating-btn .note {
-            position: absolute;
-            bottom: 60%;
-            font-size: 16px;
-            color: #fff;
-            opacity: 0;
-        }
-
-        .music-floating-btn.playing .note:nth-child(2) { 
-            left: 10%; animation: floatUp 2s ease-out infinite 0.3s;
-            opacity: 1;
-        }
-        .music-floating-btn.playing .note:nth-child(3) { 
-            left: 40%; animation: floatUp 2s ease-out infinite 0.6s;
-            opacity: 1;
-        }
-        .music-floating-btn.playing .note:nth-child(4) { 
-            left: 70%; animation: floatUp 2s ease-out infinite 0.9s;
-            opacity: 1;
-        }
-
-        @keyframes floatUp {
-            0% { transform: translateY(0) scale(0.8); opacity: 0; }
-            50% { opacity: 1; }
-            100% { transform: translateY(-50px) scale(1.2); opacity: 0; }
+        .audio-overlay-btn:hover {
+            background: #b8941f;
+            transform: scale(1.05);
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Botón flotante de música -->
-<!-- Botón flotante de música unificado -->
-<div id="music-control-floating" class="music-floating-btn paused" onclick="toggleMusic(this)">
-    <span class="icon">▶</span> <!-- Play por defecto -->
-    <span class="note">♪</span>
-    <span class="note">♫</span>
-    <span class="note">♩</span>
-</div>
 
     <!-- Indicador de scroll -->
     <div class="scroll-indicator">
         <span>Nos casamos</span>
         <div class="arrow"></div>
+        
     </div>
-
-
 
     <!-- Botón con imagen PNG -->
     <button id="btnLluvia">
         <img src="assets/img/kolog/navi.png" alt="lluvia">
     </button>
+
+
+    <!-- Botón flotante para control de música -->
+<div id="music-control-floating" class="music-floating-btn">
+    <i class="fas fa-play"></i>
+</div>
 
     <script>
         // Array con imágenes de hojas
@@ -727,7 +709,7 @@
                         <div class="section-tittle text-center mb-70">
                             <h2>Información de la boda</h2>
                             <img src="assets/img/gallery/tittle_img.png" alt="Separador decorativo">
-                            <p>“Cada pareja celebra el amor a su manera; nosotros hemos decidido hacerlo un poco distinto: en lugar de una recepción, cambiaremos el vals y las luces de salón por maletas y paisajes nuevos. Así, nuestro viaje será la mejor manera de recordar para siempre este gran comienzo.”</p>
+                            <p>“Cada pareja celebra el amor a su manera; nosotros hemos decidido hacerlo un poco distinto: en lugar de una recepción, cambiaremos el vals y las luces de salón por maletas y paisajes nuevos. Así, nuestro viaje será la mejor manera de recordar para siempre este gran comienzo.”</p>
                         </div>
                     </div>
                 </div>
@@ -1204,172 +1186,141 @@
         window.addEventListener('resize', adjustImagesForMobile);
         document.addEventListener('DOMContentLoaded', adjustImagesForMobile);
 
-        // ===== BOTÓN FLOTANTE DE MÚSICA =====
-        document.addEventListener('DOMContentLoaded', function() {
-            const floatingBtn = document.getElementById('music-control-floating');
-            const player = document.getElementById('player');
-            
-            // Estado inicial
-            let isPlaying = false;
-            
-            // Función para alternar reproducción
-            function togglePlayback() {
-                if (isPlaying) {
-                    player.pause();
-                    floatingBtn.classList.remove('playing');
-                    floatingBtn.classList.add('paused');
-                } else {
-                    player.play().catch(function(error) {
-                        console.log('Error al reproducir:', error);
-                    });
-                    floatingBtn.classList.remove('paused');
-                    floatingBtn.classList.add('playing');
-                }
-                isPlaying = !isPlaying;
-            }
-            
-            // Event listener para el botón flotante
-            floatingBtn.addEventListener('click', togglePlayback);
-            
-            // Actualizar estado cuando el audio cambie
-            player.addEventListener('play', function() {
-                isPlaying = true;
-                floatingBtn.classList.remove('paused');
-                floatingBtn.classList.add('playing');
-            });
-            
-            player.addEventListener('pause', function() {
-                isPlaying = false;
-                floatingBtn.classList.remove('playing');
-                floatingBtn.classList.add('paused');
-            });
-            
-            // Ocultar indicador de scroll al hacer scroll
-            window.addEventListener('scroll', function() {
-                const scrollIndicator = document.querySelector('.scroll-indicator');
-                if (window.scrollY > 100) {
-                    scrollIndicator.classList.add('hidden');
-                } else {
-                    scrollIndicator.classList.remove('hidden');
-                }
-            });
-        });
+       
 
         // ===== REPRODUCTOR DE MÚSICA MEJORADO =====
-        document.addEventListener('DOMContentLoaded', function() {
-            const player = document.getElementById('player');
-            const playlist = document.getElementById('playlist');
-            const items = playlist.getElementsByTagName('li');
-            const songTitle = document.getElementById('song-title');
-            const randomBtn = document.getElementById('random-btn');
-            const audioPermissionBtn = document.getElementById('audio-permission');
-            const audioOverlay = document.getElementById('audio-overlay');
-            const activateAudioBtn = document.getElementById('activate-audio');
+document.addEventListener('DOMContentLoaded', function() {
+    const player = document.getElementById('player');
+    const playlist = document.getElementById('playlist');
+    const items = playlist.getElementsByTagName('li');
+    const songTitle = document.getElementById('song-title');
+    const randomBtn = document.getElementById('random-btn');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const audioPermissionBtn = document.getElementById('audio-permission');
+    const audioOverlay = document.getElementById('audio-overlay');
+    const activateAudioBtn = document.getElementById('activate-audio');
 
-            let currentIndex = 0;
-            let shuffledPlaylist = [];
-            let audioEnabled = false;
+    let currentIndex = 0;
+    let shuffledPlaylist = [];
+    let audioEnabled = false;
 
-            // Detectar dispositivo móvil
-            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    // =====================
+    // =====================
+    // Detectar dispositivo móvil
+    // =====================
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-            if (isMobile) {
-                audioOverlay.style.display = 'flex';
+    if (isMobile) {
+
+    
+        audioOverlay.style.display = 'flex';
+        audioPermissionBtn.classList.add('show');
+    } else {
+        // Desktop: intentar autoplay tras 1 segundo
+        setTimeout(enableAudio, 1000);
+    }
+
+    // =====================
+    // Botones de activación de audio
+    // =====================
+    activateAudioBtn.addEventListener('click', enableAudio);
+    audioPermissionBtn.addEventListener('click', enableAudio);
+
+    // =====================
+    // Shuffle playlist
+    // =====================
+    function shufflePlaylist() {
+        shuffledPlaylist = Array.from(items);
+        for (let i = shuffledPlaylist.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffledPlaylist[i], shuffledPlaylist[j]] = [shuffledPlaylist[j], shuffledPlaylist[i]];
+        }
+        currentIndex = Math.floor(Math.random() * shuffledPlaylist.length);
+    }
+
+    // =====================
+    // Reproducir canción
+    // =====================
+    function playSong(index) {
+        if (!audioEnabled) return;
+
+        currentIndex = index;
+        const song = shuffledPlaylist[index];
+        player.src = song.getAttribute('data-src');
+
+        player.play().then(() => {
+            songTitle.textContent = song.textContent;
+            Array.from(items).forEach(li => li.classList.remove('playing'));
+            song.classList.add('playing');
+        }).catch(error => {
+            console.log('Error al reproducir:', error);
+            if (error.name === 'NotAllowedError') {
                 audioPermissionBtn.classList.add('show');
-            } else {
-                // Desktop: intentar autoplay tras 1 segundo
-                setTimeout(enableAudio, 1000);
-            }
-
-            // Botones de activación de audio
-            activateAudioBtn.addEventListener('click', enableAudio);
-            audioPermissionBtn.addEventListener('click', enableAudio);
-
-            // Shuffle playlist
-            function shufflePlaylist() {
-                shuffledPlaylist = Array.from(items);
-                for (let i = shuffledPlaylist.length - 1; i > 0; i--) {
-                    const j = Math.floor(Math.random() * (i + 1));
-                    [shuffledPlaylist[i], shuffledPlaylist[j]] = [shuffledPlaylist[j], shuffledPlaylist[i]];
-                }
-                currentIndex = Math.floor(Math.random() * shuffledPlaylist.length);
-            }
-
-            // Reproducir canción
-            function playSong(index) {
-                if (!audioEnabled) return;
-
-                currentIndex = index;
-                const song = shuffledPlaylist[index];
-                player.src = song.getAttribute('data-src');
-
-                player.play().then(() => {
-                    songTitle.textContent = song.textContent;
-                    Array.from(items).forEach(li => li.classList.remove('playing'));
-                    song.classList.add('playing');
-                }).catch(error => {
-                    console.log('Error al reproducir:', error);
-                    if (error.name === 'NotAllowedError') {
-                        audioPermissionBtn.classList.add('show');
-                    }
-                });
-            }
-
-            function playNext() {
-                currentIndex = (currentIndex + 1) % shuffledPlaylist.length;
-                playSong(currentIndex);
-            }
-
-            function playPrev() {
-                currentIndex = (currentIndex - 1 + shuffledPlaylist.length) % shuffledPlaylist.length;
-                playSong(currentIndex);
-            }
-
-            // Inicializar playlist
-            shufflePlaylist();
-
-            Array.from(items).forEach(item => {
-                item.addEventListener('click', () => {
-                    const index = shuffledPlaylist.indexOf(item);
-                    if (index !== -1) playSong(index);
-                });
-            });
-
-            randomBtn.addEventListener('click', () => {
-                shufflePlaylist();
-                playSong(currentIndex);
-            });
-
-            player.addEventListener('ended', playNext);
-
-            // Activar sonido al primer clic en desktop
-            if (!isMobile) {
-                document.addEventListener('click', function initAudio() {
-                    if (!audioEnabled) {
-                        player.play().then(() => {
-                            audioEnabled = true;
-                        }).catch(err => console.log('Autoplay bloqueado:', err));
-                        document.removeEventListener('click', initAudio);
-                    }
-                });
             }
         });
-    </script>
-
-    <script>
-function toggleMusic(btn){
-    btn.classList.toggle('playing');
-    btn.classList.toggle('paused');
-    
-    const icon = btn.querySelector('.icon');
-    if(btn.classList.contains('playing')){
-        icon.textContent = '❚❚'; // pausa
-    } else {
-        icon.textContent = '▶'; // play
     }
-}
-</script>
 
+    function playNext() {
+        currentIndex = (currentIndex + 1) % shuffledPlaylist.length;
+        playSong(currentIndex);
+    }
 
+    function playPrev() {
+        currentIndex = (currentIndex - 1 + shuffledPlaylist.length) % shuffledPlaylist.length;
+        playSong(currentIndex);
+    }
+
+    // =====================
+    // Inicializar playlist
+    // =====================
+    shufflePlaylist();
+
+    Array.from(items).forEach(item => {
+        item.addEventListener('click', () => {
+            const index = shuffledPlaylist.indexOf(item);
+            if (index !== -1) playSong(index);
+        });
+    });
+
+    randomBtn.addEventListener('click', () => {
+        shufflePlaylist();
+        playSong(currentIndex);
+    });
+
+    prevBtn.addEventListener('click', playPrev);
+    nextBtn.addEventListener('click', playNext);
+
+    player.addEventListener('ended', playNext);
+
+    // =====================
+    // Activar sonido al primer clic en desktop
+    // =====================
+    if (!isMobile) {
+        document.addEventListener('click', function initAudio() {
+            if (!audioEnabled) {
+                player.play().then(() => {
+                    audioEnabled = true;
+                }).catch(err => console.log('Autoplay bloqueado:', err));
+                document.removeEventListener('click', initAudio);
+            }
+        });
+    }
+});
+    </script>
+     <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const player = document.getElementById('player');
+
+      function startAudio() {
+        player.play().catch(err => console.log("No se pudo reproducir aún:", err));
+        document.removeEventListener('click', startAudio);
+        document.removeEventListener('touchstart', startAudio);
+      }
+
+      document.addEventListener('click', startAudio, { once: true });
+      document.addEventListener('touchstart', startAudio, { once: true });
+    });
+  </script>
 </body>
 </html>
